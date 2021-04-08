@@ -4,40 +4,52 @@
 <head>
     <meta charset="utf-8">
     <title> Kontakt </title>
+    <link rel="stylesheet" href="style_kontakt.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index2.html">Hauptseite</a></li>
-                <li><a href="übermich.html">Über mich</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
+        <div>
+            <nav>
+                <li class="navigationoben"><a href="index2.html">Hauptseite</a></li>
+                <li class="navigationoben"><a href="übermich.html">Über mich</a></li>
+                <li class="navigationoben"><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <hr>
+
     <main>
         <section>
             <h1> Ich freue mich über deine Nachricht! </h1>
-            Möchtest Du mir etwas mitteilen? Hast Du Fragen? Bitte schicke mir einfach eine Nachricht mit Deinem
-            Anliegen. Vielen Dank!
+            <p class="text1">
+                Möchtest Du mir etwas mitteilen? Hast Du Fragen? Bitte schicke mir einfach eine Nachricht
+                mit Deinem Anliegen. Vielen Dank!
+            </p>
         </section>
 
-        <div>
+        <div class="kontaktformular">
             <form action="#">
                 <fieldset>
-                    <legend> Kontaktformular </legend>
+                    <legend id="formular-überschrift"> Kontaktformular </legend>
+                    
                     <label for="name"> Name </label>
-                    <input type="text" name="name" id="name" required>
+                    <div>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    
                     <p>
                         <label for="email"> Email </label>
+                    <div>
                         <input type="email" name="email" id="email" required>
+                    </div>
                     </p>
+                    
                     <p>
                         <label for="betreff"> Betreff </label>
-                        <input type="text" name="betreff" id="betreff" required>
+                    <div><input type="text" name="betreff" id="betreff" required></div>
                     </p>
+                    
                 </fieldset>
                 <fieldset>
                     <label for="nachricht"> Ihre Nachricht</label>
