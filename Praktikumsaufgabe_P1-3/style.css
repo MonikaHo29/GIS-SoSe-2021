@@ -56,10 +56,10 @@ main {
 }
 
 hr {
-    background-color:#9EAC9F;
+    background-color:white;
     display: block;
-    width: 70%;
-    height: 5px;
+    width: 90%;
+    height: 2px;
     border-width: 0;
     opacity: 0.5;
 }
