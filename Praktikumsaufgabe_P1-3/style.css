@@ -34,7 +34,8 @@ text-align: center;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: lighter;
 font-style: italic;
-margin-right: 400px;
+margin-right: 350px;
+
 
 }
 
@@ -56,7 +57,7 @@ nav{                                                                /* Navigatio
     width: auto;
     height:auto;
  
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 ul{
@@ -352,7 +353,7 @@ footer{
     height: 350px;
 }
 
-.kontakt{
+.footerkontakt{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 font-size: 1.2em;
@@ -363,12 +364,52 @@ padding-bottom: 20px;
 
 }
 
-.kontakt a{
+.footerkontakt a{
     color:white;
     font-weight: bolder;
 
 }
+.footertext{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: white;
+font-size: 1.2em;
+margin-top: -210px;
+margin-left: 700px;
+margin-right: 700px;
+}
 
+.footerbutton{
+    color: white;
+}
+
+.smcontainer{
+    margin-left: 1350px;
+    margin-top: -200px;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fa{
+    text-decoration: none;
+    padding:10px;
+    margin-left: 1380px;
+    margin-top: 10px;
+    
+}
+.fa.fa-instagram{
+    font-size: 50px;
+    color:white
+}
+.fa.fa-twitter{
+    font-size: 50px;
+    color:white;
+   
+}
+.fa.fa-pinterest{
+    font-size: 50px;
+    color:white
+}
 
 .navigationunten{
     
