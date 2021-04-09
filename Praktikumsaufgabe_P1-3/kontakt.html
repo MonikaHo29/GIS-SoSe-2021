@@ -23,51 +23,58 @@
     </header>
     <main>
         <section>
-            <h1> Ich freue mich über deine Nachricht! </h1>
+            <h2> Ich freue mich über deine Nachricht! </h2>
             <p class="text1">
                 Möchtest Du mir etwas mitteilen? Hast Du Fragen? Bitte schicke mir einfach eine Nachricht
                 mit Deinem Anliegen. Vielen Dank!
             </p>
         </section>
 
-        <div class="kontaktformular">
-            <form action="#">
-                <fieldset>
-                    <legend id="formular-überschrift"> Kontaktformular </legend>
+        <form action="#">
+            <fieldset>
 
-                    <label for="name"> Name </label>
-                    <div>
-                        <input type="text" name="name" id="name" required>
-                    </div>
+                <label for="name"> Name </label>
+                <input type="text" name="name" id="name" required>
 
-                    <p>
-                        <label for="email"> Email </label>
-                    <div>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    </p>
+                <div>
+                    <label for="email"> Email </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="betreff"> Betreff </label>
+                    <input type="text" name="betreff" id="betreff" required>
+                </div>
 
-                    <p>
-                        <label for="betreff"> Betreff </label>
-                    <div><input type="text" name="betreff" id="betreff" required></div>
-                    </p>
 
-                </fieldset>
-                <fieldset>
-                    <label for="nachricht"> Ihre Nachricht</label>
-                    <div class="textfeld">
-                        <input type="text" name="nachricht" id="nachricht" required>
-                    </div>
-                </fieldset>
+                <div>
+                    <label for="nachricht"> Nachricht </label>
+                    <textarea class="textfeld" placeholder="schreibe hier deine Nachricht..."></textarea>
+                </div>
+              
                 <button type="submit"> Senden </button>
-            </form>
+           
+            </fieldset>
+        </form>
         </div>
-        <div>
-            <div> Weitere Kontaktmöglichkeiten </div>
-            <a href="mailto:hocamtumonika29@gmail.com"> hocamtumonika29@gmail.com </a>
-            <div><a href="https://www.instagram.com/monikaho29/">Instagram </a></div>
-        </div>
-
+        <footer>
+            <div class="kontakt">
+                <p><div>
+                    <strong> Impressum </strong>
+                    <section> Monika Ho </section>
+                    <section> Sesamstraße 65 </section>
+                    <section> 78120 Furtwangen im Schwarzwald </section>
+                </div>
+            </p>
+                <div>
+    
+                    <strong> Kontakt </strong>
+                    <section> Email: 
+                    <a class="emailadresse" href="mailto:hocamtumonika29@gmail.com"> hocamtumonika29@gmail.com </a>
+                    </section>
+                </div>
+            </div>
+    
+        </footer>
     </main>
 
 </body>
