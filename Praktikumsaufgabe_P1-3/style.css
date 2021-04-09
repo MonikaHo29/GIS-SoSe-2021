@@ -2,6 +2,7 @@ body{
     width: 100%;
     height: 1000px;
     margin: 0px;
+    margin-top: 150px;
 }
 
 
@@ -25,13 +26,14 @@ header{
 }
 
 #Titel{
-font-size: 3em;
+font-size: 2.5em;
 margin-top: -100px;
 margin-bottom: -100px;
 text-align: center;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-weight: lighter;
 font-style: italic;
+margin-right: 400px;
 
 }
 
@@ -102,9 +104,9 @@ hr {
     height: 2px;
     border-width: 0;
     opacity: 0.5;
-    border-style: dotted;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
 h1 {
     padding-top: 100px;
     margin-top: 200px;
@@ -119,15 +121,13 @@ h1 {
 
 h3{
     margin-left: 280px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-size: 3em;
-    margin-top: 50px;
+    margin-top: 100px;
     font-style: italic;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
     color: white;
-}
-
 }
 
 #portfolio{                                                         
@@ -150,23 +150,25 @@ h3{
 .bild1u2{
     width: 650px;
     height: 420px;
-    padding: 20px;
-    padding-top: 100px;
+    padding-inline: 20px;
     float: left;
 }
 
 .bild3{
     display: table;
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 150px;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 100px;
     width:500px;
 }                                                                   /* Bilder */
 
 video{                                                              /* Video */
     display: table;
     margin: auto;
-    padding-top:100px;
+    width: 960px;
+    height: 540px;
+    
 }
 
 audio{                                                              /* Audio */
@@ -174,16 +176,20 @@ audio{                                                              /* Audio */
     margin: auto;
     padding-top: 100px;
     padding-bottom: 150px;
+    width: 960px;
+    margin-bottom: 100px;
+    padding-bottom: 0px;
 }
 
 .gif{                                                               /* Gif */
     display: table;
     margin: auto;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    width: 800px;
-    height: 600px;
+    width: 960px;
+    height: 720px;
+    margin-bottom: 150px;
+
 }
+
 .button{      
     background-color: #9EAC9F;                                                      /* Button, nach oben */
     
@@ -264,23 +270,33 @@ footer{
     background-color:#9EAC9F;
     
     width: auto;
-    height: 300px;
+    margin-top: -100px;
+    margin-bottom: 0px;
+    height: 350px;
 }
 
-.impressumtext{
-    margin-left: 200px;
-    padding-top: 40px;
-    
+.kontakt{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight:lighter;
+font-size: 1.2em;
+font-weight: normal;
+margin-left: 180px;
+padding-top: 50px;
+padding-bottom: 20px;
+
 }
+
+.kontakt a{
+    color:white;
+    font-weight: bolder;
+
+}
+
 
 .navigationunten{
     
     display: block;
-    margin-bottom: 20px;
+    text-align: right;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
