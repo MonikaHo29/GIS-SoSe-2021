@@ -78,7 +78,7 @@ nav a{
 }                                                                   /* Navigation Ende */
 
 main {                                                              /* Main */
-    margin-top: 200px;
+    margin-top: -150px;
 
     background-color: #C3D4C4;
 }
@@ -353,6 +353,13 @@ button{
 }                                                                      /* Formular und Main Ende*/
 
 #hilfslinie{                                                           /* Footer*/
+    background-color:#9EAC9F;
+}
+
+#hilfslinie2{
+    width: 10%;
+    margin-bottom: 50px;
+
     background-color:#9EAC9F;
 }
 
