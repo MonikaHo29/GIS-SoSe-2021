@@ -8,7 +8,7 @@ body{
 
 header{                                                             /* Header */
     width: 100%;
-    height: 200x;
+    height: 200px;
     margin: 0px;
     border:0px;
 
@@ -71,7 +71,7 @@ nav li a:hover{
 }
 
 nav a{                                                                                   
-    padding-inline: 25px;
+    padding: 25px;
 
     text-decoration: none;
     color: white;
@@ -174,14 +174,14 @@ h4{
 .bild1u2{
     width: 650px;
     height: 420px;
-    padding-inline: 20px;
+    padding: 20px;
     float: left;
 }
 
 .bild3{
     width:500px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 100px;
     padding: 0;
 
@@ -321,7 +321,7 @@ input{
     font-size: 1.2em;
 }
 
-.textfeld{
+#textfeld{
     width: 600px;
     height: 196px;
     margin-left: -300px;
@@ -383,7 +383,7 @@ footer{
 }
 
 .footertext{
-    margin-top: -210px;
+    margin-top: -180px;
     margin-left: 700px;
     margin-right: 700px;
 
