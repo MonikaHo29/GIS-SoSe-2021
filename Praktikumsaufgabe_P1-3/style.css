@@ -79,8 +79,7 @@ nav a{
 
 main {                                                              /* Main */
     margin-top: -150px;
-
-    background-color: #C3D4C4;
+    background-color:#C3D4C4;
 }
 
 #logoimMain{
@@ -168,7 +167,7 @@ h4{
     content:"";
     clear: both;
     display: table;
-    margin: auto;;
+    margin: auto;
 }
 
 .bild1u2{
