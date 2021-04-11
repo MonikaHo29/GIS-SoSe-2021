@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Kontakt </title>
+    <title> Monis Blog </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <div class="sticky">                                                                                    <!--Sticky-->
-            <nav>                                                                                               <!--Navigation-->
+        <div class="sticky"><!--Sticky-->
+            <nav><!--Navigation-->
                 <ul>
                     <li class="navigationoben"><a href="index2.html">Hauptseite</a></li>
                     <li class="navigationoben"><a href="übermich.html">Über mich</a></li>
@@ -22,17 +22,16 @@
         <img id="logo" src="Logo2.png" alt="Logo">
         <h1 id="Titel"> Monis Blog</h1>
     </header>
-
     <main>
-        <section>                                                                                               <!--Kontakt-->
-            <h2 id="kontakt"> Ich freue mich über deine Nachricht! </h2>                                        
+        <section><!--Kontakt-->
+            <h2 id="kontakt"> Ich freue mich über deine Nachricht! </h2>
             <p class="textoben">
                 Möchtest Du mir etwas mitteilen? Hast Du Fragen? Bitte schicke mir einfach eine Nachricht
                 mit Deinem Anliegen. Vielen Dank!
             </p>
         </section>
-        
-        <form action="#">                                                                                       <!--Formular-->
+
+        <form action="#"> <!--Formular-->
             <fieldset>
                 <label for="name"> Name </label>
                 <input type="text" name="name" id="name" required>
@@ -47,47 +46,32 @@
                 <div>
                     <label for="textfeld"> Nachricht </label>
                     <textarea id="textfeld" placeholder="schreibe hier deine Nachricht..."></textarea>
-                </div> 
-                <div class ="datenschutztext">
+                </div>
+                <div class="datenschutztext">
                     Mit Absenden der Nachricht bestätige ich den <a id="datenschutz" href="#">Datenschutz</a>
                 </div>
-                <button type="submit"> Senden </button> 
-            </fieldset>                                                                                        
-        </form>                                                                                             <!--Formular Ende-->                                                                                                                                                                                           
+                <button type="submit"> Senden </button>
+            </fieldset>
+        </form> <!--Formular Ende-->
     </main>
 
-    <footer>                                                                                                    <!--Footer-->
-        <div>
-            <a class="button" href="#kontakt">nach oben</a>
-        </div> 
-        <div class="footerkontakt">                                               
-            <div>                                                                                               <!--Kontakt-->
-                <strong> Impressum </strong>                                                              
-                <aside> Monika Ho </aside>
-                <aside> Sesamstraße 65 </aside>
-                <aside> 78120 Furtwangen im Schwarzwald </aside>
-                <aside> Email: <a class="emailadresse" href="mailto:hocamtumonika29@gmail.com"> hocamtumonika29@gmail.com </a></aside> 
-            </div>
-        </div>
-        <div class="footertext">
-            <p><strong>Über mich</strong></p>
-            <strong>Herzlich willkommen auf meinem Blog!</strong> Ich heiße Monika Ho und bin 21 Jahre alt. Momentan
-            studiere ich Online Medien an der Hochschule Furtwangen. Meine Interessen sind vielfältig vor allem mag ich 
-            es kreativ zu sein. Klickt hier um über mich mehr zu erfahren. :)
-         <div>
-             <a class="footerbutton" href="übermich.html"> Hier klicken</a>
-        </div>
-        </div>
-        <div class="smcontainer">
-            <strong>Finde mich auf</strong>
-        </div>                                                                                             
+    <footer>                                                                                              <!--Footer-->
+        <a class="button" href="#Titel">nach oben</a>
+
+        <div class="footerimpressum">
+            <p><strong> Impressum </strong></p>
+            <aside> Monika Ho </aside>
+            <aside> Sesamstraße 40</aside>
+            <aside> 78120 Furtwangen </aside>
+            <aside> Email: <a href="mailto:hocamtumonika29@gmail.com"> hocamtumonika29@gmail.com </a></aside>
+        </div>                                                                                    
+        <div id="footersocialmedia">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <a href="https://www.instagram.com/monikaho29/" class="fa fa-instagram"></a>
             <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
             <a href="https://www.pinterest.de/" class="fa fa-pinterest"></a>
         </div>
-    </footer>                                                                                                <!--Footer Ende-->
-
+    </footer>
 </body>
 
 </html>
