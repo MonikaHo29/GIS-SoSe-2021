@@ -373,11 +373,11 @@ label{
 
 input{
     width: 600px;
-    height: 30px;
+    height: 40px;
     margin-left: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 20px 10px 20px;
     box-sizing: border-box;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
