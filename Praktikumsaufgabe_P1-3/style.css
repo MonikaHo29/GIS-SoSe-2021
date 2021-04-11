@@ -3,7 +3,7 @@ body{                                                              /* Body */
     height: 100%;
     margin: 0px;
     
-    background-color:#C3D4C4;
+    background-image: url(bg.png);
 }
 
 header{                                                         /* Header */
@@ -40,8 +40,8 @@ header{                                                         /* Header */
 .sticky{                                                       /* Sticky Navigation */
     top:0;
     height: 60px;
-    width: 800px;
-    margin-left: 552px;
+    width: 1300px;
+    margin-left: 302px;
     padding:0;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -64,7 +64,6 @@ ul{
     margin-bottom: 0px;
     padding-left: 0px;
     height: 60px;
-    padding-right: 10px;
 
     list-style-type: none;
     float:right;
@@ -83,11 +82,32 @@ nav a{
 nav li a:hover{                                             /* Navigationspunkt wird hervorgeboben wenn man mit der Maus Rüberfährt */
     font-weight: bold;
     
-    color: #4A332E;                                               
+    color: #4A332E;                                                
 }                                                           /* Header und Navigation ENDE */
 
+#index{                                                     /* aktuelle Seite im Navigation wird hervorgehoben*/
+    padding: 20px;
+
+    background-color: #C3D4C4;
+    display: inline;
+}
+
+#übermich{ 
+    padding: 20px;
+    
+    background-color: #C3D4C4;
+    display: inline;
+}
+
+#kontakt{ 
+    padding: 20px;
+    
+    background-color: #C3D4C4;
+    display: inline;
+}
+
 main {                                                      /* Main */
-    width: 800px;                                           /* gesamte Inhalt ist 800 Pixel breit */
+    width: 1300px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
     height: auto;
     margin:auto;
 
@@ -96,7 +116,8 @@ main {                                                      /* Main */
 
 h1 {                                                          /* alle verwendete h-Tags*/
     margin-bottom: 50px;
-    margin-top:100px;
+    margin-top: 0px;
+    padding-top: 100px;
 
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -106,8 +127,10 @@ h1 {                                                          /* alle verwendete
 }
 
 h2{
-    margin-top: 100px;
-    margin-bottom: 50px;
+    width: 800px;
+    margin:auto;
+    padding-top: 100px;
+    margin-bottom: 20px;
     
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -119,6 +142,7 @@ h2{
 h3{
     margin-top: 100px;
     margin-bottom: 40px;
+    margin-left: 250px;
 
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -132,7 +156,7 @@ h4{
     width: 220px;
     margin-top: -420px;
     margin-left: 500px;
-    margin-left: 360px;
+    margin-left: 600px;
 
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -180,10 +204,10 @@ hr {
 }
 
 .bild1u2{
-    width: 650px;
-    height: 420px;
+    width: 800px;
     padding:0px;
     padding-bottom: 50px;
+    margin-left: 250px;
 
     float: left;
 }
@@ -192,23 +216,26 @@ hr {
     width:500px;
     margin-top: 20px;
     margin-bottom: 100px;
+    margin-left: 250px;
     padding: 0;
 
     display: table;
 }       
 
 video{                                                         /* Video */
-    width: 100%; 
-    height: 540px;                                                           
+    width: 800px;
+    height: 450px;;
+    margin-left: 250px;                                                           
     margin: auto;
 
     display: table;
 }
 
 audio{                                                         /* Audio */
-    width: 100%;
+    width: 800px;
     margin-top: -50px;
     margin-bottom: 100px;
+    margin-left: 250px;
     padding-top: 100px;
     padding-bottom: 0px;
 
@@ -218,6 +245,7 @@ audio{                                                         /* Audio */
 .pdf{                                                          /* PDF */
     margin-bottom: 50px;
     margin-top: 50px;
+    margin-left: 250px;
     padding-bottom: 20px;
     
     color: white;
@@ -231,7 +259,7 @@ audio{                                                         /* Audio */
     margin: auto;
     width: 800px;
     height: 600px;
-    margin-bottom: 150px;
+    padding-bottom: 150px;
 
     display: table;
 }
@@ -240,13 +268,13 @@ audio{                                                         /* Audio */
 #porträtbild{                                                  /* ÜBER MICH SEITE */ 
     margin-top:100px;
     width: 300px;
+    margin-left: 250px;
     
 }
 
 table{                                                         /* Tabelle/Steckbrief */ 
-    margin-right: 0px;
+    margin-right: 240px;
     margin-top: 10px;
-    margin-left: 360px;
 
     color: #4A332E;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -260,7 +288,9 @@ tr{
 }
 
 .persönlichedaten{
+    width: 250px;
     padding-left: 50px;
+    margin-right: 240px; 
 
     color:#4A332E;
     font-weight:normal;                                            
@@ -276,9 +306,10 @@ tr{
 }
 
 .textübermich{                                                   /* Box Model verwendet */
+    width:750px;
     margin-top: 450px;
-    margin-bottom: 150px;
-    margin-left: 0px;
+    margin-bottom: 100px;
+    margin-left: 250px;
     margin-right: 0px;
     padding-left: 20px;
     padding-right: 20px;
@@ -292,7 +323,8 @@ tr{
     border-bottom-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;
-    border-style: none;
+    border-style: solid;
+    border-color: #9EAC9F;
 
     color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -301,8 +333,17 @@ tr{
 
     background-color:#9EAC9F; 
 }
+#logoimMainübermich {
+    width: 300px;
+    margin: auto;
+    padding-bottom: 150px;
+   
+    display: table;
+}
 
 .textoben{                                                          /* KONTAKT SEITE*/
+    width: 800px;
+    margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
 
