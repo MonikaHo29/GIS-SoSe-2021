@@ -1,11 +1,12 @@
-body{
+body{                                                              /* Body */
     width: 100%;
     height: 100%;
     margin: 0px;
+    
     background-color:#C3D4C4;
 }
 
-header{                                                             /* Header */
+header{                                                         /* Header */
     width: 100%;
     height: 250px;
 
@@ -15,9 +16,10 @@ header{                                                             /* Header */
 #logo{
     height: 150px;
     width: 150px;
-    margin-left: 551px;
-    margin-top: 50px;
+    margin-left: 552px;
+    margin-top: 60px;
     margin-bottom: 50px;
+    
     float: left;
 }
 
@@ -28,19 +30,18 @@ header{                                                             /* Header */
     margin-left: 800px;
     padding-top: 120px;
 
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 5em;
     font-weight: lighter;
     font-style: italic;
     text-align: center;
 }
 
-.sticky{
+.sticky{                                                       /* Sticky Navigation */
     top:0;
-    position:fixed;
-    height: 50px;
-    width: 500px;
-    margin-left: 952px;
+    height: 60px;
+    width: 800px;
+    margin-left: 552px;
     padding:0;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,72 +49,52 @@ header{                                                             /* Header */
     font-weight:normal;
     text-align: center;
 
+    position:fixed;
     line-height: 4.5em;
     background-color: #9EAC9F;
-}                                                                   /* Header Ende */
+}                                                                   
 
-nav{                                                                /* Navigation */
+nav{                                                          /* Navigation */
     width: auto;
     height: 60px;
 }
 
 ul{
-    list-style-type: none;
     margin-top: -30px;
     margin-bottom: 0px;
     padding-left: 0px;
     height: 60px;
+    padding-right: 10px;
 
+    list-style-type: none;
+    float:right;
 }
-
+ 
 .navigationoben{
-    display: inline;
     padding: 20px;
-   
-}
-
-nav li a:hover{      
-    font-weight: bold;
-    
-    color: #4A332E;                                               
+    display: inline;
 }
 
 nav a{                                                                                   
-
     text-decoration: none;
     color: white;
-}                                                                   /* Navigation Ende */
+}   
 
-main {                                                              /* Main */
+nav li a:hover{                                             /* Navigationspunkt wird hervorgeboben wenn man mit der Maus Rüberfährt */
+    font-weight: bold;
+    
+    color: #4A332E;                                               
+}                                                           /* Header und Navigation ENDE */
+
+main {                                                      /* Main */
+    width: 800px;                                           /* gesamte Inhalt ist 800 Pixel breit */
     height: auto;
-
-    width: 800px;
     margin:auto;
+
     background-color:#C3D4C4;
 }
 
-#logoimMain{
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    margin-bottom: 50px;
-   
-    display: table;
-}
-
-hr {
-    width: 800px;
-    height: 2.5px;
-    margin:auto;
-    border-width: 0;
-
-
-    display: table;
-    opacity: 0.5;
-    background-color:#4A332E;
-}
-
-h1 {                                                                    /* alle verwendete h-Tags*/
+h1 {                                                          /* alle verwendete h-Tags*/
     margin-bottom: 50px;
     margin-top:100px;
 
@@ -153,12 +134,31 @@ h4{
     margin-left: 500px;
     margin-left: 360px;
 
-    font-style: italic;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3em;
     font-style: italic;
     font-weight: lighter;
-    color: white;
+}
+
+#logoimMain{                                                /* HAUPTSEITE/PORTFOLIO */
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 50px;
+   
+    display: table;
+}
+
+hr {
+    width: 800px;
+    height: 2.5px;
+    margin:auto;
+    border-width: 0;
+
+    display: table;
+    opacity: 0.5;
+    background-color:#4A332E;
 }
 
 #portfolio{        
@@ -172,7 +172,7 @@ h4{
     text-align: center;
 }
 
-.bild-container{                                                    /* Bilder */
+.bild-container{                                              /* Bilder */
     content:"";
     clear: both;
     display: table;
@@ -182,10 +182,10 @@ h4{
 .bild1u2{
     width: 650px;
     height: 420px;
-    float: left;
     padding:0px;
     padding-bottom: 50px;
 
+    float: left;
 }
 
 .bild3{
@@ -197,15 +197,15 @@ h4{
     display: table;
 }       
 
-video{                                                                /* Video */
-    width: 100%;                                                            
+video{                                                         /* Video */
+    width: 100%; 
+    height: 540px;                                                           
     margin: auto;
-    height: 540px;
 
     display: table;
 }
 
-audio{                                                              /* Audio */
+audio{                                                         /* Audio */
     width: 100%;
     margin-top: -50px;
     margin-bottom: 100px;
@@ -215,7 +215,7 @@ audio{                                                              /* Audio */
     display: table;
 }
 
-.pdf{                                                                /* PDF */
+.pdf{                                                          /* PDF */
     margin-bottom: 50px;
     margin-top: 50px;
     padding-bottom: 20px;
@@ -226,22 +226,24 @@ audio{                                                              /* Audio */
     
     display: table;
 }
-.gif{                                                               /* Gif */
-    display: table;
+
+.gif{                                                          /* Gif */
     margin: auto;
     width: 800px;
     height: 600px;
     margin-bottom: 150px;
+
+    display: table;
 }
 
 
-#porträtbild{                                                     /* Über mich Seite */ 
+#porträtbild{                                                  /* ÜBER MICH SEITE */ 
     margin-top:100px;
     width: 300px;
     
 }
 
-table{                                                              /* Tabelle/Steckbrief */ 
+table{                                                         /* Tabelle/Steckbrief */ 
     margin-right: 0px;
     margin-top: 10px;
     margin-left: 360px;
@@ -262,22 +264,19 @@ tr{
 
     color:#4A332E;
     font-weight:normal;                                            
-}                                                                   /* Tabelle/Steckbrief Ende */ 
+}                                                                 /* Tabelle/Steckbrief ENDE */ 
+
 #textüberschrift{
+    margin-top:-65px;
+
     color:#4A332E;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
     font-weight: lighter;
-    margin-top:-65px;
 }
 
-.textübermich{
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
-    font-weight: lighter;
-    background-color:#9EAC9F; 
-
+.textübermich{                                                   /* Box Model verwendet */
+    margin-top: 450px;
     margin-bottom: 150px;
     margin-left: 0px;
     margin-right: 0px;
@@ -286,31 +285,39 @@ tr{
     padding-bottom: 20px;
     padding-top: 20px;
     border-left-width: 5px;
-    border-left-style: none;
     border-bottom-width: 5px;
-    border-bottom-style: none;
-    border-right-style: none;
+    border-bottom-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;
-    border-top-style: none;
-    margin-top: 450px;
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-style: none;
+
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: lighter;
+
+    background-color:#9EAC9F; 
 }
 
-.textoben{                                                            /* Kontakt Seite*/
+.textoben{                                                          /* KONTAKT SEITE*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     color:white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-form{
+form{                                                               /* Kontaktformular */
     display:table;
     margin: auto;
 }
-label{                                                                /* Formular*/
+label{                                                                
     width: 150px;
     margin-top:10px;
     margin-bottom: 10px;
@@ -325,7 +332,7 @@ label{                                                                /* Formula
 
 input{
     width: 600px;
-    height: 30;
+    height: 30px;
     margin-left: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -359,13 +366,14 @@ fieldset{
     background-color: #C3D4C4;
 }
 
-button{
+button{                                                                 /*Button absenden*/
     width: 90px;
     height: 40px;
     margin-top: 20px;
     margin-bottom: 150px;
 
     font-size: 1em;
+    
     float:right;
 } 
 
@@ -377,9 +385,10 @@ button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 } 
+
 #datenschutz{
     color:white;
-}                                                                       /* Formular und Main Ende*/                                                        /* Footer*/
+}                                                                  /* Formular und Main ENDE*/                                                        /* Footer*/
 
 
 .button{                                                          /* Button, nach oben */
@@ -398,18 +407,18 @@ button{
 
     display: block;
     background-color: #9EAC9F;   
-}
+}                                                                  
 
-footer{  
+footer{                                                               /* Footer */
     width: auto;
-    height: 350px;
+    height: 300px;
     margin-top: 0px;
     margin-bottom: 0px;
    
     background-color:#9EAC9F;
 }
 
-.footerimpressum{                                                         /* Impressum & Kontakt*/
+.footerimpressum{                                                         /* Impressum */
     width: 340px;
     margin-left: 551px;
     
@@ -441,7 +450,7 @@ footer{
     color: white;
 }
 
-#footersocialmedia{                                                               /* Social Media*/
+#footersocialmedia{                                                           /* Icons, Social Media*/
     margin-left: 1000px;
     margin-top: -150px;
 
@@ -453,7 +462,7 @@ footer{
 }
 
 
-.fa.fa-instagram{
+.fa.fa-instagram{                                                               
     font-size: 50px;
     color:white;
     text-decoration: none;
@@ -471,4 +480,20 @@ footer{
     font-size: 50px;
     color:white;
     text-decoration: none;
-}                                                                            /* Footer Ende*/
+}  
+#footersocialmedia a:hover{                                             /* Icon wird optisch hervorgehoben */
+    color: #4A332E;                                               
+}
+
+.datenschutz{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-left: 551px;
+
+    display: table;
+    margin-top: 140px;
+    margin-left: 551px;
+
+}                                                                        /* Footer ENDE*/
