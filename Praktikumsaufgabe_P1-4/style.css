@@ -1,6 +1,6 @@
 body{                                                              /* Body */
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0px;
     max-width: 100%;
     overflow-x: hidden;
@@ -72,7 +72,7 @@ nav{                                                          /* Navigation */
 }*/
  
 .navigationoben{
-    padding: 20px;
+    padding: 10px;
     display: inline;
 }
 
@@ -88,21 +88,21 @@ nav li a:hover{                                             /* Navigationspunkt 
 }                                                           /* Header und Navigation ENDE */
 
 #index{                                                     /* aktuelle Seite im Navigation wird hervorgehoben*/
-    padding: 20px;
+    padding: 10px;
 
     background-color: #C3D4C4;
     display: inline;
 }
 
 #übermich{ 
-    padding: 20px;
+    padding: 10px;
     
     background-color: #C3D4C4;
     display: inline;
 }
 
 #kontakt{ 
-    padding: 20px;
+    padding: 10px;
     
     background-color: #C3D4C4;
     display: inline;
@@ -613,61 +613,57 @@ h3:hover{
 
 @media all and (max-width: 500px) {
         
-
-
 main{
     width: 500px;
     height: auto;
     border: none;
     background-color:#C3D4C4 ;
 }
-
 header{
     width: 100%;
 }
-
 .gif{
     width: 100%;
     height: auto;
 }
-
 .sticky{
     width: 500px;
     margin: 0px;
 }
-
 hr{
     width: 400px;
 }
 h2{
-    width:100%
+    padding-top: 50px;
+    width:100%;
+    font-size: 3em; 
 }
-
 h3{
     width: 100%;
-    text-align: center;
+    float:left;
+    padding-left: 50px;
 }
-
 h4{
     display:none;
     text-align: center;
 }
-
 footer{
-    height: 400px;
+    height: 350px;
+    margin-top: -20px;
+}
+
+.pdf{
+    font-size: 1.2em;
+    display: block;
+    width: 400px;
+    margin-left: 50px;
 }
 
 video{
     width: 100%;
-    height: 280px;;                                                          
-    margin: auto;
-
-    display: table;
-
-}
-.pdf{
-    font-size: 1.2em;
-    display: block;
+height: 280px;
+margin: auto;
+display: table;
 }
 
 .button{
@@ -693,7 +689,10 @@ table{
     font-size: 1.2em;
     width: 400px;
     margin: auto;
+    height: 300px;
+    margin-top: 350px;
 }
+
 #logoimMainübermich{
 width: 200px;
 margin-top: 50px;
@@ -718,6 +717,26 @@ input{
     display: block;
 }
 
+.datenschutztext{
+    width: 400px;
+}
 
+.footerimpressum{
+    margin: auto;
+    display: block;
+    padding-top: 20px;
+}
+#footersocialmedia{
+    padding-top:20px;
+    margin: auto;
+    display:block;
+    padding-bottom: 20px;
+    margin-left: 80px;
+}
+.datenschutz{
+    margin:auto;
+    display: block;
+    margin-left: 80px;
+}
 
 }
