@@ -1,4 +1,4 @@
-body{                                                              /* Body */
+body{                                                             /* Body */
     width: 100%;
     height: auto;
     margin: 0px;
@@ -70,7 +70,7 @@ nav{                                                          /* Navigation */
     list-style-type: none;
     float:right;
 }*/
- 
+
 .navigationoben{
     padding: 10px;
     display: inline;
@@ -224,7 +224,7 @@ hr {
     padding: 0;
 
     display: table;
-}       
+}
 
 video{                                                         /* Video */
     width: 100%;
@@ -265,7 +265,6 @@ audio{                                                         /* Audio */
     display: table;
 }
 
-
 #porträtbild{                                                  /* ÜBER MICH SEITE */ 
     margin-top:100px;
     width: 300px;
@@ -293,8 +292,8 @@ tr{
 
     color:#4A332E;
     font-weight:normal;                                            
-}                                                                 /* Tabelle/Steckbrief ENDE */ 
-
+}    
+                                                                 /* Tabelle/Steckbrief ENDE */ 
 #textüberschrift{
     margin-top:-65px;
 
@@ -427,9 +426,8 @@ button{                                                                 /*Button
 
 #datenschutz{
     color:white;
-}                                                                  /* Formular und Main ENDE*/                                                        /* Footer*/
-
-
+} 
+                                                                 /* Formular und Main ENDE*/                                                        /* Footer*/
 .button{                                                          /* Button, nach oben */
 
     padding-top: 10px;
@@ -446,7 +444,7 @@ button{                                                                 /*Button
 
     display: block;
     background-color: #9EAC9F;   
-}                                                                  
+} 
 
 footer{                                                               /* Footer */
     width: auto;
@@ -500,7 +498,6 @@ footer{                                                               /* Footer 
     display:table;
 }
 
-
 .fa.fa-instagram{                                                               
     font-size: 50px;
     color:white;
@@ -550,8 +547,7 @@ div ul {                                                                 /*Nachf
     padding-left: 0px;
 
     list-style-type: none;
-    float:right;
-    
+    float:right;  
 }
 
 div > label {                                                           /*Eltern/Kind, Kontaktformular*/
@@ -606,21 +602,88 @@ h3{                                                                      /* Tran
 
 h3:hover{
     background-color: #9EAC9F;
-    width: 800px;
-    
+    width: 800px;  
 }
 
+@media screen and (max-width: 800px) {
+    /*main{
+        width: 600px;
+        height: auto;
+        border: none;
+        background-color:#C3D4C4 ;
+    }*/
+    main {                                                      /* Main */
+        width: 500px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
+        height: auto;
+        margin:auto;
+        border-style: solid ;
+        border-color: #C3D4C4;
+        border-left-width: 50px ;
+        border-right-width: 50px ;
+    
+        background-color:#C3D4C4;
+    }
+    
+    header{
+        width: 100%;
+        height:300px;
+    }
+    .sticky{
+        width: 100%;
+        margin: 0px;
+    }
+    #logo{
+        display: block;
+        float: left;
+        margin: 0px;
+        padding-top: 100px;
+        margin-left: 100px;
+    }
+    #Titel{
+        margin-left: 0px;
+        width: 800px;
+    }
 
-@media all and (max-width: 500px) {
+    h1{
+        font-size: 3em;
+    }
+    h2{
+    margin: auto;
+    display: block;
+    width: 500px;
+    }
+
+    hr{
+        width: 500px;
+    }
+    h3{
+        width: 600px;
+        float:left;
+        margin-left: 100px;
+    }
+    h3:hover{
+        background-color: #9EAC9F;
+        width: 600px;  
+    }
+
+    .bild1u2{
+        width: 100%;
+        margin:auto;
+        display: block;
+    }
+    
+
+@media screen and (max-width: 500px) {
         
 main{
-    width: 500px;
+    width: 100%;
     height: auto;
     border: none;
     background-color:#C3D4C4 ;
 }
 header{
     width: 100%;
+    height:400px;
 }
 .gif{
     width: 100%;
@@ -641,7 +704,7 @@ h2{
 h3{
     width: 100%;
     float:left;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 h4{
     display:none;
@@ -702,7 +765,7 @@ margin-top: 50px;
     width: 400px;
     font-size: 1.2em;
     text-align: inherit;
-    
+
 }
 input{
     width: 400px;
@@ -738,5 +801,20 @@ input{
     display: block;
     margin-left: 80px;
 }
+#Titel{
+    margin: 0px;
+    font-size: 4em;
+    padding: 0px;
+    width: 500px;
+}
+#logo{
+    display: block;
+    margin: auto;
+    margin-bottom: auto;
+    float: none;
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
 
+}
 }
