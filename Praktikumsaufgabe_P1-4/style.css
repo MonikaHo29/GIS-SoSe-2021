@@ -3,21 +3,20 @@ body{                                                              /* Body */
     height: 100%;
     margin: 0px;
 
-    background-image: url(bg.png);
 
 }
 
 header{                                                         /* Header */
-    width: 100%;
+    width: 1300px;
     height: 250px;
-    
+    margin:auto;
+
     background-color: #9EAC9F;
 }
 
 #logo{
     height: 150px;
     width: 150px;
-    margin-left: 552px;
     margin-top: 60px;
     margin-bottom: 50px;
     
@@ -25,10 +24,9 @@ header{                                                         /* Header */
 }
 
 #Titel{
-    margin:0px;
+    margin: auto;
     height: 100px;
     width: 500px;
-    margin-left: 800px;
     padding-top: 120px;
 
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -39,10 +37,9 @@ header{                                                         /* Header */
 }
 
 .sticky{                                                       /* Sticky Navigation */
-    top:0;
+    
     height: 60px;
     width: 1300px;
-    margin-left: 302px;
     padding:0;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -54,12 +51,6 @@ header{                                                         /* Header */
     line-height: 4.5em;
     background-color: #9EAC9F;
 }                                                                   
-
-nav{                                                          /* Navigation */
-    width: auto;
-    height: 60px;
-  
-}
 
 /*ul{
     margin-top: -30px;
@@ -109,11 +100,15 @@ nav li a:hover{                                             /* Navigationspunkt 
 }
 
 main {                                                      /* Main */
-    width: 1300px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
+    width: 800px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
     height: auto;
     margin: auto;
-    grid-area: main;
- 
+    border-style: solid;
+    border-color: #C3D4C4;
+    border-left-width: 250px;
+    border-right-width: 250px;
+    border-top: 0px;
+    border-bottom: 0px;
     background-color:#C3D4C4;
 }
 
@@ -207,38 +202,34 @@ hr {
 }
 
 .bild1u2{
-    width: 800px;
+    width: 100%;
     padding:0px;
     padding-bottom: 50px;
-    margin-left: 250px;
 
     float: left;
 }
 
 .bild3{
-    width:500px;
+    width:100%;
     margin-top: 20px;
     margin-bottom: 100px;
-    margin-left: 250px;
     padding: 0;
 
     display: table;
 }       
 
 video{                                                         /* Video */
-    width: 800px;
-    height: 450px;;
-    margin-left: 250px;                                                           
+    width: 100%;
+    height: 450px;;                                                           
     margin: auto;
 
     display: table;
 }
 
 audio{                                                         /* Audio */
-    width: 800px;
+    width: 100%;
     margin-top: -50px;
     margin-bottom: 100px;
-    margin-left: 250px;
     padding-top: 100px;
     padding-bottom: 0px;
 
@@ -248,7 +239,6 @@ audio{                                                         /* Audio */
 .pdf{                                                          /* PDF */
     margin-bottom: 50px;
     margin-top: 50px;
-    margin-left: 250px;
     padding-bottom: 20px;
     
     color: white;
@@ -260,7 +250,7 @@ audio{                                                         /* Audio */
 
 .gif{                                                          /* Gif */
     margin: auto;
-    width: 800px;
+    width: 100%;
     height: 600px;
     padding-bottom: 150px;
 
@@ -271,12 +261,10 @@ audio{                                                         /* Audio */
 #porträtbild{                                                  /* ÜBER MICH SEITE */ 
     margin-top:100px;
     width: 300px;
-    margin-left: 250px;
     
 }
 
 table{                                                         /* Tabelle/Steckbrief */ 
-    margin-right: 260px;
     margin-top: 10px;
 
     color: #4A332E;
@@ -312,7 +300,7 @@ tr{
     width:750px;
     margin-top: 450px;
     margin-bottom: 100px;
-    margin-left: 250px;
+    margin-left: 0px;
     margin-right: 0px;
     padding-left: 20px;
     padding-right: 20px;
@@ -548,8 +536,6 @@ footer{                                                               /* Footer 
 /*-------------------------- Praktikumsabgabe 1.4 --------------------------- */
 
 div ul {                                                                 /*Nachfahren, Navigation*/
-    margin-top: -30px;
-    margin-bottom: 0px;
     padding-left: 0px;
     height: 60px;
     
@@ -576,8 +562,7 @@ img + h4{                                                               /*Folgee
     margin-bottom: 0px;
     width: 220px;
     margin-top: -420px;
-    margin-left: 500px;
-    margin-left: 600px;
+    margin-left: 357px;
 
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -588,9 +573,6 @@ img + h4{                                                               /*Folgee
 }
 
 div ~ h3 {                                                               /*Geschwister, index, Überschrift über Portfolio*/
-    margin-top: 100px;
-    margin-bottom: 40px;
-    margin-left: 250px;
 
     color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -611,34 +593,45 @@ div ~ h3 {                                                               /*Gesch
     font-size: 1.5 em;
 }*/
 
-h3{                                                                      /* Transition */
+h3{                                                                      /* Transition, index, Überschrift über Medieninhalte */
     transition-property: background-color;
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-timing-function: ease-in-out;
+    width:800px;
     
 }
 
 h3:hover{
     background-color: #9EAC9F;
     width: 800px;
-    opacity: 0.5;
+    
 }
 
 
-/*@media screen and (max-width: 600px) {
+@media all and (max-width: 500px) {
 
-body{
-    background-color: white;
-}
 
 main {                                                     
-    width: 600px;                                          
+    width: 100%;                                          
     height: auto;
     margin:auto;
+    border:0px;
     
     background-color:#C3D4C4;
     }
 
-}*/
+header{                                                        
+    width: 100%;
+    height: 250px;
+    
+    background-color: #9EAC9F;
+    }
+
+.sticky{
+    width: 100%;
+}
+
+
+}
 
 
