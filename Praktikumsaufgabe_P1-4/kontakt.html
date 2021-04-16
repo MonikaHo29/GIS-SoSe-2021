@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title> Monis Blog </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>                                                                                    <!--Header-->
+        <div class="sticky">                                                                    <!--Sticky Navigation-->
+            <nav>
+                <ul class="nav">
+                    <li class="navigationoben"><a href="index2.html">Hauptseite</a></li>
+                    <li class="navigationoben"><a href="übermich.html">Über mich</a></li>
+                    <li id="kontakt"><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img id="logo" src="Logo.png" alt="Logo">
+        <h1 id="Titel"> Monis Blog</h1>
+    </header>                                                                                  <!--Header ENDE-->
+
+    <main>                                                                                     <!--Main-->
+        <section>                                                                              <!--Kontakt-->
+            <h2> Ich freue mich über deine Nachricht! </h2>
+            <p class="textoben">
+                Möchtest Du mir etwas mitteilen? Hast Du Fragen? Bitte schicke mir einfach eine Nachricht
+                mit Deinem Anliegen. Vielen Dank! :)
+            </p>
+        </section>
+
+        <form action="#">                                                                       <!--Kontaktformular-->
+            <fieldset>
+                <label for="name"> Name </label>
+                <input type="text" name="name" id="name" required>
+                <div>
+                    <label for="email"> Email </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="betreff"> Betreff </label>
+                    <input type="text" name="betreff" id="betreff" required>
+                </div>
+                <div>
+                    <label for="textfeld"> Nachricht </label>                                      <!--Nachrichtenfeld-->    
+                    <textarea id="textfeld" placeholder="schreibe hier deine Nachricht..."></textarea>
+                </div>
+                <div class="datenschutztext">
+                    Mit Absenden der Nachricht bestätige ich den <a id="datenschutz" href="#">Datenschutz</a>
+                </div>
+                <button type="submit"> Senden </button>                                             <!--Sendenbutton-->
+            </fieldset>
+        </form>                                                                                     <!--Formular ENDE-->
+    </main>                                                                                         <!--Main ENDE-->
+
+    <footer>                                                                                         <!--Footer-->
+        <a class="button" href="#Titel">nach oben</a>
+
+        <div class="footerimpressum">
+            <p><strong> Impressum </strong></p>
+            <aside> Monika Ho </aside>
+            <aside> Sesamstraße 40</aside>
+            <aside> 78120 Furtwangen </aside>
+            <aside> Email: <a href="mailto:hocamtumonika29@gmail.com"> hocamtumonika29@gmail.com </a></aside>
+        </div>                                                                                    
+        <div id="footersocialmedia">                                                                   <!--Icons, Social Media-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a href="https://www.instagram.com/monikaho29/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
+            <a href="https://www.pinterest.de/" class="fa fa-pinterest"></a>
+        </div>
+        <a class="datenschutz" href="#">Datenschutz</a>
+    </footer>                                                                                           <!--Footer ENDE-->
+
+</body>
+
+</html>
