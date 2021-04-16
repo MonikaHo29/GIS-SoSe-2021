@@ -2,14 +2,15 @@ body{                                                              /* Body */
     width: 100%;
     height: 100%;
     margin: 0px;
-
-
+    max-width: 100%;
+    overflow-x: hidden;
+    
+    background-image: url(bg.png);
 }
 
 header{                                                         /* Header */
-    width: 1300px;
+    width: 100%;
     height: 250px;
-    margin:auto;
 
     background-color: #9EAC9F;
 }
@@ -17,6 +18,7 @@ header{                                                         /* Header */
 #logo{
     height: 150px;
     width: 150px;
+    margin-left: 552px;
     margin-top: 60px;
     margin-bottom: 50px;
     
@@ -24,9 +26,10 @@ header{                                                         /* Header */
 }
 
 #Titel{
-    margin: auto;
+    margin:0px;
     height: 100px;
     width: 500px;
+    margin-left: 800px;
     padding-top: 120px;
 
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -37,9 +40,10 @@ header{                                                         /* Header */
 }
 
 .sticky{                                                       /* Sticky Navigation */
-    
+    top:0;
     height: 60px;
     width: 1300px;
+    margin-left: 302px;
     padding:0;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,8 +56,13 @@ header{                                                         /* Header */
     background-color: #9EAC9F;
 }                                                                   
 
+nav{                                                          /* Navigation */
+    width: auto;
+    height: 60px;
+}
+
 /*ul{
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 0px;
     padding-left: 0px;
     height: 60px;
@@ -102,17 +111,16 @@ nav li a:hover{                                             /* Navigationspunkt 
 main {                                                      /* Main */
     width: 800px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
     height: auto;
-    margin: auto;
-    border-style: solid;
+    margin:auto;
+    border-style: solid ;
     border-color: #C3D4C4;
-    border-left-width: 250px;
-    border-right-width: 250px;
-    border-top: 0px;
-    border-bottom: 0px;
+    border-left-width: 250px ;
+    border-right-width: 250px ;
+
     background-color:#C3D4C4;
 }
 
-h1 {                                                          /*alle verwendete h-Tags*/
+h1 {                                                          /* alle verwendete h-Tags*/
     margin-bottom: 50px;
     margin-top: 0px;
     padding-top: 100px;
@@ -203,14 +211,14 @@ hr {
 
 .bild1u2{
     width: 100%;
-    padding:0px;
-    padding-bottom: 50px;
+    padding-bottom: 30px ;
+    margin: auto;
 
     float: left;
 }
 
 .bild3{
-    width:100%;
+    width:500px;
     margin-top: 20px;
     margin-bottom: 100px;
     padding: 0;
@@ -220,7 +228,7 @@ hr {
 
 video{                                                         /* Video */
     width: 100%;
-    height: 450px;;                                                           
+    height: 450px;;                                                          
     margin: auto;
 
     display: table;
@@ -250,7 +258,7 @@ audio{                                                         /* Audio */
 
 .gif{                                                          /* Gif */
     margin: auto;
-    width: 100%;
+    width: 800px;
     height: 600px;
     padding-bottom: 150px;
 
@@ -324,7 +332,6 @@ tr{
 
     background-color:#9EAC9F; 
 }
-
 #logoimMainübermich {
     width: 300px;
     margin: auto;
@@ -350,7 +357,6 @@ form{                                                               /* Kontaktfo
     display:table;
     margin: auto;
 }
-
 /*label{                                                                
     width: 150px;
     margin-top:10px;
@@ -413,7 +419,6 @@ button{                                                                 /*Button
 
 .datenschutztext{
     width: 500px;
-    margin-left: 150px;
 
     color:white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -515,7 +520,8 @@ footer{                                                               /* Footer 
     color:white;
     text-decoration: none;
 }  
-/*#footersocialmedia a:hover{                                             Icon wird optisch hervorgehoben 
+/*
+#footersocialmedia a:hover{                                             Icon wird optisch hervorgehoben 
     color: #4A332E;                                               
 }*/
 
@@ -532,13 +538,17 @@ footer{                                                               /* Footer 
 
 }                                                                        /* Footer ENDE*/
 
-
 /*-------------------------- Praktikumsabgabe 1.4 --------------------------- */
 
 div ul {                                                                 /*Nachfahren, Navigation*/
-    padding-left: 0px;
+    margin: 0px;
+    padding: 0px;
     height: 60px;
-    
+    height: 60px;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+
     list-style-type: none;
     float:right;
     
@@ -562,7 +572,7 @@ img + h4{                                                               /*Folgee
     margin-bottom: 0px;
     width: 220px;
     margin-top: -420px;
-    margin-left: 357px;
+    margin-left: 360px;
 
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -586,13 +596,6 @@ div ~ h3 {                                                               /*Gesch
     color: #4A332E;                                               
 }
 
-/*strong ::before{
-    content: "";
-    color:#4A332E;
-    font-style: italic;
-    font-size: 1.5 em;
-}*/
-
 h3{                                                                      /* Transition, index, Überschrift über Medieninhalte */
     transition-property: background-color;
     transition-duration: 1s;
@@ -609,29 +612,112 @@ h3:hover{
 
 
 @media all and (max-width: 500px) {
+        
 
 
-main {                                                     
-    width: 100%;                                          
+main{
+    width: 500px;
     height: auto;
-    margin:auto;
-    border:0px;
-    
-    background-color:#C3D4C4;
-    }
+    border: none;
+    background-color:#C3D4C4 ;
+}
 
-header{                                                        
+header{
     width: 100%;
-    height: 250px;
-    
-    background-color: #9EAC9F;
-    }
+}
+
+.gif{
+    width: 100%;
+    height: auto;
+}
 
 .sticky{
+    width: 500px;
+    margin: 0px;
+}
+
+hr{
+    width: 400px;
+}
+h2{
+    width:100%
+}
+
+h3{
     width: 100%;
+    text-align: center;
+}
+
+h4{
+    display:none;
+    text-align: center;
+}
+
+footer{
+    height: 400px;
+}
+
+video{
+    width: 100%;
+    height: 280px;;                                                          
+    margin: auto;
+
+    display: table;
+
+}
+.pdf{
+    font-size: 1.2em;
+    display: block;
+}
+
+.button{
+    float:left;
+    display:none;
+    margin: 0px;
+}
+
+#porträtbild{                                                  /* ÜBER MICH SEITE */ 
+    margin-top:50px;
+    width: 300px;
+    display: block;
+    margin:auto;
+    margin-top: 150px;
+}
+table{
+    font-size: 1.2em;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+.textübermich{
+    font-size: 1.2em;
+    width: 400px;
+    margin: auto;
+}
+#logoimMainübermich{
+width: 200px;
+margin-top: 50px;
+}
+
+.textoben{
+    width: 400px;
+    font-size: 1.2em;
+    text-align: inherit;
+    
+}
+input{
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#textfeld{
+    width: 360px;
+    margin:auto;
+    display: block;
 }
 
 
+
 }
-
-
