@@ -88,21 +88,21 @@ nav li a:hover{                                             /* Navigationspunkt 
 }                                                           /* Header und Navigation ENDE */
 
 #index{                                                     /* aktuelle Seite im Navigation wird hervorgehoben*/
-    padding: 10px;
+    padding: 12px;
 
     background-color: #C3D4C4;
     display: inline;
 }
 
 #übermich{ 
-    padding: 10px;
+    padding: 12px;
     
     background-color: #C3D4C4;
     display: inline;
 }
 
 #kontakt{ 
-    padding: 10px;
+    padding: 20px;
     
     background-color: #C3D4C4;
     display: inline;
@@ -538,16 +538,14 @@ footer{                                                               /* Footer 
 /*-------------------------- Praktikumsabgabe 1.4 --------------------------- */
 
 div ul {                                                                 /*Nachfahren, Navigation*/
-    margin: 0px;
-    padding: 0px;
     height: 60px;
-    height: 60px;
-    margin-top: -20px;
-    margin-bottom: 0px;
-    padding-left: 0px;
 
     list-style-type: none;
-    float:right;  
+    float:right; 
+    margin-top: -25px;
+    padding-left: 0px;
+    margin:0x;
+
 }
 
 div > label {                                                           /*Eltern/Kind, Kontaktformular*/
@@ -657,22 +655,118 @@ h3:hover{
         width: 500px;
     }
     h3{
-        width: 600px;
+        width: 500px;
         float:left;
-        margin-left: 100px;
     }
     h3:hover{
         background-color: #9EAC9F;
-        width: 600px;  
+        width: 500px;  
     }
 
     .bild1u2{
         width: 100%;
         margin:auto;
         display: block;
+
+        float:left;
+    }
+    video{
+    width: 100%;
+    height: 290px;
+    margin: auto;
+    display: table;
+    }
+
+    .pdf{
+        font-size: 1.5em;
     }
     
+    .gif{
+    width: 500px;
+    height: auto;
+    }
 
+    .footerimpressum{
+    margin-left: 120px;
+    }
+
+    .datenschutz{
+    margin-left: 120px;
+    padding-top: 20px;
+    margin-top: 0px;
+    }
+
+    h4{
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:0px;
+    }
+    #porträtbild{
+    display: flex;
+    margin: auto;
+    padding-top: 100px;
+    }
+    table{
+        font-size: 1.2em;
+        margin:auto;
+        margin-bottom: 50px;
+    }
+
+    .textübermich{
+        font-size: 1.2em;
+        width: 400px;
+        margin: auto;
+        height: 300px;
+        margin-top: 800px;
+    }
+    .textübermich{
+        font-size: 1.2em;
+        width: 400px;
+        margin: auto;
+        height: 300px;
+        margin-top: 350px;
+    }
+    input{
+        width: 500px;
+    }
+    #textfeld{
+        width: 459px;
+    }
+    .textoben{
+        font-size: 1.2em;
+        float: left;
+        width: 500px;
+        display: block;
+        text-align: inherit;
+    }
+    h2{
+        font-size: 3em;
+        
+    }
+    #footersocialmedia{
+    margin-left: 0px;
+    float: right;
+    margin-right: 120px;
+    }
+    table{
+    margin-top: 50px;
+}
+img + h4{
+    margin:auto;
+}
+}
+.textübermich{
+    margin-top: 450px;
+    margin-bottom: 100px;
+    height: 220px;
+}
+
+div ul{
+    margin-right: 20px;
+}
+    
+    
 @media screen and (max-width: 500px) {
         
 main{
@@ -706,10 +800,7 @@ h3{
     float:left;
     margin-left: 50px;
 }
-h4{
-    display:none;
-    text-align: center;
-}
+
 footer{
     height: 350px;
     margin-top: -20px;
@@ -720,6 +811,9 @@ footer{
     display: block;
     width: 400px;
     margin-left: 50px;
+}
+img + h4{
+    margin:auto;
 }
 
 video{
@@ -736,11 +830,10 @@ display: table;
 }
 
 #porträtbild{                                                  /* ÜBER MICH SEITE */ 
-    margin-top:50px;
     width: 300px;
     display: block;
     margin:auto;
-    margin-top: 150px;
+    padding-top:50px;
 }
 table{
     font-size: 1.2em;
@@ -750,7 +843,7 @@ table{
 
 .textübermich{
     font-size: 1.2em;
-    width: 400px;
+    width: 500px;
     margin: auto;
     height: 300px;
     margin-top: 350px;
@@ -765,6 +858,7 @@ margin-top: 50px;
     width: 400px;
     font-size: 1.2em;
     text-align: inherit;
+    float: none;
 
 }
 input{
@@ -795,11 +889,13 @@ input{
     display:block;
     padding-bottom: 20px;
     margin-left: 80px;
+    float:left;
 }
 .datenschutz{
     margin:auto;
     display: block;
     margin-left: 80px;
+    padding-top:120px;
 }
 #Titel{
     margin: 0px;
@@ -815,6 +911,11 @@ input{
     padding-top: 100px;
     margin-bottom: 20px;
 }
+div ul{
+    margin:0px;
+    float:none;
+    height: 59px;
+    margin-top:-25px;
+}
+}
 
-}
-}
