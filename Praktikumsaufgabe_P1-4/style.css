@@ -1,4 +1,4 @@
-body{                                                             /* Body */
+body{                                                             /* Praktikumsaufgabe P.4: Zeile 454  */
     margin: 0px;
     max-width: 100%;
     overflow-x: hidden;
@@ -246,8 +246,8 @@ tr{
 
     color:#4A332E;
     font-weight:normal;                                            
-}    
-                                                                 /* Tabelle/Steckbrief ENDE */ 
+}                                                                /* Tabelle/Steckbrief ENDE */ 
+
 #textüberschrift{
     margin-top:-65px;
 
