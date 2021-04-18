@@ -1,11 +1,12 @@
 body{                                                             /* Body */
-    width: 100%;
-    height: auto;
     margin: 0px;
     max-width: 100%;
     overflow-x: hidden;
     
     background-image: url(bg.png);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    color: white;
 }
 
 header{                                                         /* Header */
@@ -48,8 +49,6 @@ header{                                                         /* Header */
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:1.5em;
-    font-weight:normal;
-    text-align: center;
 
     position:fixed;
     line-height: 4.5em;
@@ -61,19 +60,9 @@ nav{                                                          /* Navigation */
     height: 60px;
 }
 
-/*ul{
-    margin-top: -30px;
-    margin-bottom: 0px;
-    padding-left: 0px;
-    height: 60px;
-
-    list-style-type: none;
-    float:right;
-}*/
- 
 .navigationoben{
-    padding: 20px;
     display: inline;
+    padding: 20px;
 }
 
 nav a{                                                                                   
@@ -88,30 +77,25 @@ nav li a:hover{                                             /* Navigationspunkt 
 }                                                           /* Header und Navigation ENDE */
 
 #index{                                                     /* aktuelle Seite im Navigation wird hervorgehoben*/
-    padding: 10px;
+    padding: 20px;
 
     background-color: #C3D4C4;
     display: inline;
-    border-bottom-width:2px;
-    border-color: #9EAC9F;
+
 }
 
 #übermich{ 
-    padding: 10px;
+    padding: 20px;
     
     background-color: #C3D4C4;
     display: inline;
-    border-bottom-width:2px;
-    border-color: #9EAC9F;
 }
 
 #kontakt{ 
-    padding: 10px;
+    padding: 20px;
     
     background-color: #C3D4C4;
     display: inline;
-    border-bottom-width:2px;
-    border-color: #9EAC9F;
 }
 
 main {                                                      /* Main */
@@ -128,54 +112,22 @@ main {                                                      /* Main */
 
 h1 {                                                          /* alle verwendete h-Tags*/
     margin-bottom: 50px;
-    margin-top: 0px;
-    padding-top: 100px;
+    margin-top: 100px;
 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
     font-size: 3.5em;
-    font-weight:normal;
     text-align: center;
 }
 
 h2{
-    width: 800px;
     margin:auto;
     padding-top: 100px;
     margin-bottom: 20px;
     
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4em;
     font-weight:lighter;
     text-align: center;
 }
-
-/*h3{
-    margin-top: 100px;
-    margin-bottom: 40px;
-    margin-left: 250px;
-
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3em;
-    font-style: italic;
-    font-weight: lighter;
-}*/
-
-/*h4{
-    margin-bottom: 0px;
-    width: 220px;
-    margin-top: -420px;
-    margin-left: 500px;
-    margin-left: 600px;
-
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3em;
-    font-style: italic;
-    font-weight: lighter;
-}*/
 
 #logoimMain{                                                /* HAUPTSEITE/PORTFOLIO */
     height: 250px;
@@ -187,7 +139,7 @@ h2{
 }
 
 hr {
-    width: 800px;
+    width: 100%;
     height: 2.5px;
     margin:auto;
     border-width: 0;
@@ -201,8 +153,6 @@ hr {
     margin-top: 50px;
     padding-top: 0px; 
 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 5em;
     font-weight: lighter;
     text-align: center;
@@ -224,7 +174,7 @@ hr {
 }
 
 .bild3{
-    width:500px;
+    width:100%;
     margin-top: 20px;
     margin-bottom: 100px;
     padding: 0;
@@ -251,12 +201,12 @@ audio{                                                         /* Audio */
 }
 
 .pdf{                                                          /* PDF */
+    width: 100%;
     margin-bottom: 50px;
     margin-top: 50px;
     padding-bottom: 20px;
     
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.7em;
     
     display: table;
@@ -264,7 +214,7 @@ audio{                                                         /* Audio */
 
 .gif{                                                          /* Gif */
     margin: auto;
-    width: 800px;
+    width: 100%;
     height: 600px;
     padding-bottom: 150px;
 
@@ -273,15 +223,13 @@ audio{                                                         /* Audio */
 
 #porträtbild{                                                  /* ÜBER MICH SEITE */ 
     margin-top:100px;
-    width: 300px;
-    
+    width: 300px;  
 }
 
 table{                                                         /* Tabelle/Steckbrief */ 
     margin-top: 10px;
 
     color: #4A332E;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;;
 
     float:right;
@@ -304,13 +252,12 @@ tr{
     margin-top:-65px;
 
     color:#4A332E;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
     font-weight: lighter;
 }
 
 .textübermich{                                                   /* Box Model verwendet */
-    width:750px;
+    width:100%;
     margin-top: 450px;
     margin-bottom: 100px;
     margin-left: 0px;
@@ -330,8 +277,6 @@ tr{
     border-style: solid;
     border-color: #9EAC9F;
 
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     font-weight: lighter;
 
@@ -351,8 +296,6 @@ tr{
     padding-top: 30px;
     padding-bottom: 30px;
 
-    color:white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
@@ -362,18 +305,6 @@ form{                                                               /* Kontaktfo
     display:table;
     margin: auto;
 }
-/*label{                                                                
-    width: 150px;
-    margin-top:10px;
-    margin-bottom: 10px;
-    padding:0px;
-
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.4em;
-    font-weight: normal;
-    float:left;
-}*/
 
 input{
     width: 600px;
@@ -384,7 +315,6 @@ input{
     padding: 10px 20px 10px 20px;
     box-sizing: border-box;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 }
 
@@ -396,7 +326,6 @@ input{
     margin-left: 0px;
     padding: 10px 20px 10px 20px;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 
     resize: vertical;
@@ -425,8 +354,6 @@ button{                                                                 /*Button
 .datenschutztext{
     width: 500px;
 
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 } 
 
@@ -442,7 +369,6 @@ button{                                                                 /*Button
     width: 110px;
 
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
     font-weight:lighter;
     text-align: center;  
@@ -465,8 +391,6 @@ footer{                                                               /* Footer 
     width: 340px;
     margin-left: 551px;
     
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
     font-weight: lighter;
 }
@@ -475,6 +399,7 @@ footer{                                                               /* Footer 
     font-weight: bold;
 }
 .footerimpressum a{
+
     color: white;
     font-weight: bold;
 }
@@ -484,8 +409,6 @@ footer{                                                               /* Footer 
     margin-left: 700px;
     margin-right: 700px;
 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 }
 
@@ -497,8 +420,6 @@ footer{                                                               /* Footer 
     margin-left: 1000px;
     margin-top: -150px;
 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
 
     display:table;
@@ -516,17 +437,6 @@ footer{                                                               /* Footer 
     color:white;
     text-decoration: none;
 }
-
-.fa.fa-pinterest{
-    padding-left: 20px;
-    font-size: 50px;
-    color:white;
-    text-decoration: none;
-}  
-/*
-#footersocialmedia a:hover{                                             Icon wird optisch hervorgehoben 
-    color: #4A332E;                                               
-}*/
 
 .datenschutz{
     color:white;
@@ -559,8 +469,6 @@ div > label {                                                           /*Eltern
     margin-bottom: 10px;
     padding:0px;
 
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.4em;
     font-weight: normal;
     float:left;
@@ -573,8 +481,6 @@ img + h4{                                                               /*Folgee
     margin-top: -420px;
     margin-left: 360px;
 
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3em;
     font-style: italic;
     font-weight: lighter;
@@ -583,8 +489,6 @@ img + h4{                                                               /*Folgee
 
 div ~ h3 {                                                               /*Geschwister, index, Überschrift über Portfolio*/
 
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3em;
     font-style: italic;
     font-weight: lighter;
@@ -594,6 +498,13 @@ div ~ h3 {                                                               /*Gesch
 #footersocialmedia a:hover{                                             /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
     color: #4A332E;                                               
 }
+
+.fa.fa-pinterest{
+    padding-left: 20px;
+    font-size: 50px;
+    color:white;
+    text-decoration: none;
+}  
 
 h3{                                                                      /* Transition, index, Überschrift über Medieninhalte */
     transition-property: background-color;
@@ -605,18 +516,12 @@ h3{                                                                      /* Tran
 
 h3:hover{
     background-color: #9EAC9F;
-    width: 100%;  
+    width: 800px;  
 }
 
-@media screen and (max-width: 800px) {
-    /*main{
-        width: 600px;
-        height: auto;
-        border: none;
-        background-color:#C3D4C4 ;
-    }*/
-    main {                                                      /* Main */
-        width: 500px;                                          /* Main ist 1300 px wegen Design, aber der gesamte Inhalt ist 800 Pixel breit */
+@media screen and (max-width: 800px) {                                  /*Media Queries, Tablet*/
+    main {                                                 
+        width: 500px;                                          
         height: auto;
         margin:auto;
         border-style: solid ;
@@ -635,6 +540,7 @@ h3:hover{
         width: 100%;
         margin: 0px;
         height: 60px;
+        float:right;
     } 
 
     #logo{
@@ -644,6 +550,7 @@ h3:hover{
         padding-top: 100px;
         margin-left: 100px;
     }
+
     #Titel{
         margin-left: 0px;
         width: 800px;
@@ -653,14 +560,11 @@ h3:hover{
         font-size: 3em;
     }
     h2{
-    margin: auto;
-    display: block;
-    width: 500px;
-    }
-
-    hr{
+        margin: auto;
+        display: block;
         width: 500px;
     }
+
     h3{
         width: 500px;
         float:left;
@@ -678,10 +582,10 @@ h3:hover{
         float:left;
     }
     video{
-    width: 100%;
-    height: 290px;
-    margin: auto;
-    display: table;
+        width: 100%;
+        height: 290px;
+        margin: auto;
+        display: table;
     }
 
     .pdf{
@@ -689,18 +593,18 @@ h3:hover{
     }
     
     .gif{
-    width: 500px;
-    height: auto;
+        width: 500px;
+        height: auto;
     }
 
     .footerimpressum{
-    margin-left: 120px;
+        margin-left: 120px;
     }
 
     .datenschutz{
-    margin-left: 120px;
-    padding-top: 20px;
-    margin-top: 0px;
+        margin-left: 120px;
+        padding-top: 20px;
+        margin-top: 0px;
     }
 
     h4{
@@ -710,9 +614,9 @@ h3:hover{
         margin-top:0px;
     }
     #porträtbild{
-    display: flex;
-    margin: auto;
-    padding-top: 100px;
+        display: flex;
+        margin: auto;
+        padding-top: 100px;
     }
     table{
         font-size: 1.2em;
@@ -749,185 +653,198 @@ h3:hover{
     }
     h2{
         font-size: 3em;
-        
     }
     #footersocialmedia{
-    margin-left: 0px;
-    float: right;
-    margin-right: 120px;
+        margin-left: 0px;
+        float: right;
+        margin-right: 120px;
     }
     table{
-    margin-top: 50px;
-}
-img + h4{
-    margin:auto;
-}
-}
-.textübermich{
-    margin-top: 450px;
-    margin-bottom: 100px;
-    height: 220px;
-}
+        margin-top: 50px;
+    }
+    img + h4{
+        margin:auto;
+    }
+    .textübermich{
+        margin-top: 450px;
+        margin-bottom: 100px;
+        height: 220px;
+    }
 
-div ul{
-    margin-right: 20px;
-}
+    div ul{
+        margin-right: 20px;
+    }
     
     
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {                              /*Media Queries, Smartphone*/
         
-main{
-    width: 100%;
-    height: auto;
-    border: none;
-    background-color:#C3D4C4 ;
-}
-header{
-    width: 100%;
-    height:400px;
-}
-.gif{
-    width: 100%;
-    height: auto;
-}
-.sticky{
-    width: 500px;
-    margin: 0px;
-    height: 57px;
-}
-hr{
-    width: 400px;
-}
-h2{
-    padding-top: 50px;
-    width:100%;
-    font-size: 3em; 
-}
-h3{
-    width: 500px;
-    float:left;
-    margin-left: 50px;
-}
-h3:hover{
-    background-color: #9EAC9F;
-    width: 500px;  
-}
+    main{
+        width: 100%;
+        height: auto;
+        border: none;
+        background-color:#C3D4C4 ;
+    }
 
-footer{
-    height: 350px;
-    margin-top: -20px;
-}
+    header{
+        width: 100%;
+        height:400px;
+    }
+    .gif{
+        width: 100%;
+        height: auto;
+    }
 
-.pdf{
-    font-size: 1.2em;
-    display: block;
-    width: 400px;
-    margin-left: 50px;
-}
-img + h4{
-    margin:auto;
-}
+    .sticky{
+        width: 100%;
+        margin: 0px;
+        height: 60px;
+    }
+    h1{
+        margin-top: 0px;
+        padding-top: 80px;
+    }
 
-video{
-    width: 100%;
-    height: 280px;
-    margin: auto;
-    display: table;
-}
+    h2{
+        padding-top: 50px;
+        width:100%;
+        font-size: 3em; 
+        float:none;
+    }
 
-.button{
-    float:left;
-    display:none;
-    margin: 0px;
-}
+    h3{
+        width: 500px;
+        text-align: center;
+    }
+    h3:hover{
+        background-color: #9EAC9F;
+        width: 500px;
+        display:table;  
+    }
 
-#porträtbild{                                                  /* ÜBER MICH SEITE */ 
-    width: 300px;
-    display: block;
-    margin:auto;
-    padding-top:50px;
-}
-table{
-    font-size: 1.2em;
-    margin:auto;
-    margin-bottom: 50px;
-}
+    footer{
+        height: 350px;
+        margin-top: -20px;
+    }
 
-.textübermich{
-    font-size: 1.2em;
-    width: 500px;
-    margin: auto;
-    height: 300px;
-    margin-top: 350px;
-}
+    .pdf{
+        font-size: 1.2em;
+        display: block;
+        width: 400px;
+        margin-left: 50px;
+    }
+    img + h4{
+        margin:auto;
+    }
 
-#logoimMainübermich{
-width: 200px;
-margin-top: 50px;
-}
+    video{
+        width: 100%;
+        height: 280px;
+        margin: auto;
+        display: table;
+    }
 
-.textoben{
-    width: 400px;
-    font-size: 1.2em;
-    text-align: inherit;
-    float: none;
+    .button{
+        float:left;
+        display:none;
+        margin: 0px;
+    }
 
-}
-input{
-    width: 400px;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
-}
+    #porträtbild{                                                 
+        width: 300px;
+        display: block;
+        margin:auto;
+        padding-top:50px;
+    }
+    table{
+        font-size: 1.2em;
+        margin:auto;
+        margin-bottom: 50px;
+    }
 
-#textfeld{
-    width: 360px;
-    margin:auto;
-    display: block;
-}
+    .textübermich{
+        font-size: 1.2em;
+        width: 350px;
+        margin: auto;
+        height: 300px;
+        margin-top: 350px;
+    }
 
-.datenschutztext{
-    width: 400px;
-}
+    #logoimMainübermich{
+        width: 200px;
+        margin-top: 50px;
+        }
 
-.footerimpressum{
-    margin: auto;
-    display: block;
-    padding-top: 20px;
-}
-#footersocialmedia{
-    padding-top:20px;
-    margin: auto;
-    display:block;
-    padding-bottom: 20px;
-    margin-left: 80px;
-    float:left;
-}
-.datenschutz{
-    margin:auto;
-    display: block;
-    margin-left: 80px;
-    padding-top:120px;
-}
-#Titel{
-    margin: 0px;
-    font-size: 4em;
-    padding: 0px;
-    width: 500px;
-}
-#logo{
-    display: block;
-    margin: auto;
-    margin-bottom: auto;
-    float: none;
-    padding-top: 100px;
-    margin-bottom: 20px;
-}
-div ul{
-    margin:0px;
-    float:none;
-    height: 59px;
-    margin-top:-25px;
-}
-}
+    .textoben{
+        width: 400px;
+        font-size: 1.2em;
+        text-align: inherit;
+        float: none;
+    }
 
+    input{
+        width: 400px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    #textfeld{
+        width: 360px;
+        margin:auto;
+        display: block;
+    }
+
+    .datenschutztext{
+        width: 400px;
+    }
+
+    .footerimpressum{
+        margin: auto;
+        display: block;
+        padding-top: 20px;
+    }
+
+    #footersocialmedia{
+        padding-top:20px;
+        margin: auto;
+        display:block;
+        padding-bottom: 20px;
+        margin-left: 80px;
+        float:left;
+    }
+    .datenschutz{
+        margin:auto;
+        display: block;
+        margin-left: 80px;
+        padding-top:120px;
+    }
+    #Titel{
+        margin: 0px;
+        font-size: 4em;
+        padding: 0px;
+        width: 500px;
+    }
+    #logo{
+        display: block;
+        margin: auto;
+        margin-bottom: auto;
+        float: none;
+        padding-top: 100px;
+        margin-bottom: 20px;
+    }
+    div ul{
+        margin:0px;
+        height: 60px;
+        margin-top:-25px;
+    }
+    #index{
+        padding:15px;
+    }
+    #übermich{
+        padding:15px;
+    }
+    #kontakt{
+        padding:15px;
+    }
+}
+}
