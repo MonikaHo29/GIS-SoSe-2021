@@ -62,7 +62,7 @@ nav{                                                          /* Navigation */
 }
 
 /*ul{
-    margin-top: -20px;
+    margin-top: -30px;
     margin-bottom: 0px;
     padding-left: 0px;
     height: 60px;
@@ -70,9 +70,9 @@ nav{                                                          /* Navigation */
     list-style-type: none;
     float:right;
 }*/
-
+ 
 .navigationoben{
-    padding: 10px;
+    padding: 20px;
     display: inline;
 }
 
@@ -88,24 +88,30 @@ nav li a:hover{                                             /* Navigationspunkt 
 }                                                           /* Header und Navigation ENDE */
 
 #index{                                                     /* aktuelle Seite im Navigation wird hervorgehoben*/
-    padding: 12px;
+    padding: 10px;
 
     background-color: #C3D4C4;
     display: inline;
+    border-bottom-width:2px;
+    border-color: #9EAC9F;
 }
 
 #übermich{ 
-    padding: 12px;
+    padding: 10px;
     
     background-color: #C3D4C4;
     display: inline;
+    border-bottom-width:2px;
+    border-color: #9EAC9F;
 }
 
 #kontakt{ 
-    padding: 20px;
+    padding: 10px;
     
     background-color: #C3D4C4;
     display: inline;
+    border-bottom-width:2px;
+    border-color: #9EAC9F;
 }
 
 main {                                                      /* Main */
@@ -538,14 +544,13 @@ footer{                                                               /* Footer 
 /*-------------------------- Praktikumsabgabe 1.4 --------------------------- */
 
 div ul {                                                                 /*Nachfahren, Navigation*/
+    margin-top: -30px;
+    margin-bottom: 0px;
+    padding-left: 0px;
     height: 60px;
 
     list-style-type: none;
-    float:right; 
-    margin-top: -25px;
-    padding-left: 0px;
-    margin:0x;
-
+    float:right;
 }
 
 div > label {                                                           /*Eltern/Kind, Kontaktformular*/
@@ -600,7 +605,7 @@ h3{                                                                      /* Tran
 
 h3:hover{
     background-color: #9EAC9F;
-    width: 800px;  
+    width: 100%;  
 }
 
 @media screen and (max-width: 800px) {
@@ -629,7 +634,9 @@ h3:hover{
     .sticky{
         width: 100%;
         margin: 0px;
-    }
+        height: 60px;
+    } 
+
     #logo{
         display: block;
         float: left;
@@ -786,6 +793,7 @@ header{
 .sticky{
     width: 500px;
     margin: 0px;
+    height: 57px;
 }
 hr{
     width: 400px;
@@ -796,9 +804,13 @@ h2{
     font-size: 3em; 
 }
 h3{
-    width: 100%;
+    width: 500px;
     float:left;
     margin-left: 50px;
+}
+h3:hover{
+    background-color: #9EAC9F;
+    width: 500px;  
 }
 
 footer{
@@ -818,9 +830,9 @@ img + h4{
 
 video{
     width: 100%;
-height: 280px;
-margin: auto;
-display: table;
+    height: 280px;
+    margin: auto;
+    display: table;
 }
 
 .button{
