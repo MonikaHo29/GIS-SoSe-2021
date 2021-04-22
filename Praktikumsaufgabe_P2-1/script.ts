@@ -68,9 +68,12 @@ a2();
 
 /* Aufgabe 3 - Fehler erkennen und vermeiden lernen */
 
-/* a) siehe oben im Code */
+/*  a) siehe oben im Code */
 
 
 
 /* Aufgabe 4 - Gobal vs Lokal*/
 
+/* 
+    a) In der Konsole wird "Hallo" ausgege
+*/
