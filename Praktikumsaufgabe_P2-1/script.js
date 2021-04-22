@@ -36,9 +36,9 @@ function func3() {
 */
 /* Aufgabe 2 - Kontinuierliche Variablenmanipulation*/
 /*
-In der FUnktion a2 ist eine Variable i, welches den Anfangswert 9 besitzt. Diese Variable durchläuft eine Do-While-Schleife.
+In der FUnktion a2 ist eine Variable i, welches den Anfangswert 9 besitzt. Diese Variable wird im folgenden eine Do-While-Schleife durchlaufen. Vorher
 I wird dabei immer um 1 subtrahiert. Die Schleife läuft solange bis i nicht mehr größer als 0 ist --> while (i > 0).
-Dannach wird das Programm beendet.
+In der Konsole wird dann alle Zahlen von 9 bis 1 ausgegeben. Dannach wird das Programm beendet.
 */
 function a2() {
     let i = 9;
@@ -48,4 +48,7 @@ function a2() {
     } while (i > 0);
 }
 a2();
+/* Aufgabe 3 - Fehler erkennen und vermeiden lernen */
+/* a) siehe oben im Code */
+/* Aufgabe 4 - Gobal vs Lokal*/
 //# sourceMappingURL=script.js.map
