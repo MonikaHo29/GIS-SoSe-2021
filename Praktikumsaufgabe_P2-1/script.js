@@ -52,6 +52,90 @@ a2();
 /*  a) siehe oben im Code */
 /* Aufgabe 4 - Gobal vs Lokal*/
 /*
-    a) In der Konsole wird "Hallo" ausgege
-*/ 
+    a)  In der Konsole wird folgendes ausgegeben: "Hallo Bla Hallo Blubb Test Hallo" (untereinander)
+        Bei function func2 wird nicht Hallo sondern Blubb ausgegeben, weil func2 eine lokale Variable ist.
+        Hier ist die lokale Variable vorrangig und dadurch wird die globale Variable überschireben.
+*/
+let x = "Hallo";
+console.log(x);
+func4(x);
+console.log(x);
+func5();
+func6();
+console.log(x); /*Wieso wird diese Zeile nicht ausgegeben*/
+function func4(y) {
+    y = "Bla";
+    console.log(y);
+}
+function func5() {
+    let x = "Blubb";
+    console.log(x);
+}
+function func6() {
+    x = "Test";
+}
+/*
+    b)  Globale Variablen sind überall sichtbar und können auch von überall zugegriffen werden.
+        Lokale Variablen existieren nur innerhalb einer Funktion.
+        Außerdem kann man eine lokale Variable deklarieren, welches die globale Variable überschreiben wird, da es vorrangig ist.
+        Jedoch gilt es nur innerhalb dessen Funktion und dannch nicht mehr.
+*/
+/* Aufgabe 5 - Schleifen, Funktionen und andere Kontrollstrukturen*/
+//a)
+let xa = 8;
+let ya = 9;
+function multiply(x1, y1) {
+    let ergebnis = x1 * y1;
+    return ergebnis;
+}
+console.log(multiply(xa, ya));
+//b)
+function max(x1, y1) {
+    if (x1 > y1) {
+        return x1;
+    }
+    else {
+        return y1;
+    }
+}
+console.log(max(xa, ya));
+//c)
+let i = 1;
+let ergebnis = 0;
+while (i <= 100) {
+    ergebnis += i;
+    ++i;
+}
+console.log(ergebnis);
+//d)
+let xd = 0;
+let yd = 100;
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+for (let i = 0; i < 10; i++) {
+    console.log(getRandomArbitrary(xd, yd));
+}
+//e)
+function factorial(fakultät) {
+    let faktor = 1;
+    let ergebnis = 1;
+    do {
+        ergebnis = ergebnis * faktor;
+        faktor++;
+    } while (faktor < fakultät + 1);
+    return ergebnis;
+}
+console.log(factorial(7));
+//f)
+let anfangsjahr = 1900;
+let endjahr = 2021;
+leapyear(anfangsjahr, endjahr);
+function leapyear(anfang, ende) {
+    for (let i = anfang; i < ende + 1; i++) {
+        if (i % 100 != 0 && i % 4 == 0 || i % 400 == 0) {
+            console.log(i);
+        }
+    }
+}
 //# sourceMappingURL=script.js.map

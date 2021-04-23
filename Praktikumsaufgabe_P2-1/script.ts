@@ -59,7 +59,7 @@ function a2(): void {
     do {
         console.log(i);
         i = i - 1;
-    } while ( i > 0);
+    } while (i > 0);
 }
 
 a2();
@@ -75,5 +75,120 @@ a2();
 /* Aufgabe 4 - Gobal vs Lokal*/
 
 /* 
-    a) In der Konsole wird "Hallo" ausgege
+    a)  In der Konsole wird folgendes ausgegeben: "Hallo Bla Hallo Blubb Test Hallo" (untereinander)
+        Bei function func2 wird nicht Hallo sondern Blubb ausgegeben, weil func2 eine lokale Variable ist. 
+        Hier ist die lokale Variable vorrangig und dadurch wird die globale Variable überschireben. 
 */
+
+let x: string = "Hallo";
+console.log(x);
+func4(x);
+console.log(x);
+func5();
+func6();
+console.log(x); /*Wieso wird diese Zeile nicht ausgegeben*/
+
+function func4(y: string): void {
+    y = "Bla";
+    console.log(y);
+}
+
+function func5(): void {
+    let x: string = "Blubb";
+    console.log(x);
+}
+
+function func6(): void {
+    x = "Test";
+}
+
+/*
+    b)  Globale Variablen sind überall sichtbar und können auch von überall zugegriffen werden.
+        Lokale Variablen existieren nur innerhalb einer Funktion. 
+        Außerdem kann man eine lokale Variable deklarieren, welches die globale Variable überschreiben wird, da es vorrangig ist. 
+        Jedoch gilt es nur innerhalb dessen Funktion und dannch nicht mehr.   
+*/
+
+
+/* Aufgabe 5 - Schleifen, Funktionen und andere Kontrollstrukturen*/
+
+//a)
+
+let xa: number = 8;
+let ya: number = 9;
+
+function multiply(x1: number, y1: number): number {
+    let ergebnis: number = x1 * y1;
+    return ergebnis;
+}
+
+console.log(multiply(xa, ya));
+
+
+//b)
+function max(x1: number, y1: number): number {
+    if (x1 > y1) {
+        return x1;
+    } else {
+        return y1;
+    }
+}
+console.log(max(xa, ya));
+
+
+//c)
+
+let i: number = 1;
+let ergebnis: number = 0;
+while (i <= 100) {
+
+    ergebnis += i;
+    ++i;
+}
+
+console.log(ergebnis);
+
+//d)
+
+let xd: number = 0;
+let yd: number = 100;
+
+function getRandomArbitrary(min: number, max: number): number {
+    return Math.random() * (max - min) + min;
+}
+
+for (let i: number = 0; i < 10; i++) {
+    console.log(getRandomArbitrary(xd, yd));
+}
+
+//e)
+function factorial(fakultät: number): number {
+
+    let faktor: number = 1;
+    let ergebnis: number = 1;
+
+    do {
+        ergebnis = ergebnis * faktor;
+        faktor++;
+    }
+    while (faktor < fakultät + 1); 
+    return ergebnis;
+}
+console.log(factorial(7));
+
+//f)
+
+let anfangsjahr: number = 1900;
+let endjahr: number = 2021;
+leapyear(anfangsjahr, endjahr);
+
+function leapyear (anfang: number, ende: number): void {
+
+    for (let i: number = anfang; i < ende + 1; i++) {
+        if (i % 100 != 0 && i % 4 == 0 || i % 400 == 0) {
+            console.log(i); 
+        }
+    }
+}
+
+
