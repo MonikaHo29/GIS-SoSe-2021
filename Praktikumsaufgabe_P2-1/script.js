@@ -1,6 +1,7 @@
 "use strict";
-/*Praktikumsaufgabe zur 2.1 EInführung TypeScript*/
+/*Praktikumsaufgabe 2.1 Einführung TypeScript*/
 /* Aufgabe 1 - Basics*/
+/*  a)  Es wird "Alles Klar? Logo!" in der Konsole ausgegeben   */
 function a1() {
     let x = "Alles";
     console.log(x);
@@ -20,11 +21,9 @@ function func2() {
 function func3() {
     console.log("Logo!");
 }
-/*  a)   Es wird "Alles Klar? Logo!" in der Konsole ausgegeben
+/*  a)  Zulässige Variablennamen sind können Ziffer, Buchstaben oder Sonderzeichen haben.
         
-        zulässige Variablennamen sind mit Ziffer, Buchstaben oder Sonderzeichen
-        
-        nicht zulässige Variablennamen dürfen nicht mit Ziffer beginnen, keine Leerzeichen od. Bindestrich haben
+        Nicht zulässige Variablennamen dürfen nicht mit Ziffer beginnen, keine Leerzeichen oder Bindestrich haben
         oder Schlüsselwörter wie string, boolean, number etc.
 
      b) Mit dem Schalter "Schritt darüber" werden nur die Zeile von 4-7 nacheinander durchgeführt.
@@ -136,6 +135,24 @@ function leapyear(anfang, ende) {
         if (i % 100 != 0 && i % 4 == 0 || i % 400 == 0) {
             console.log(i);
         }
+    }
+}
+//6a
+let zeichen = " ";
+for (let i = 0; i < 7; i++) {
+    zeichen = zeichen + "#";
+    console.log(zeichen);
+}
+//6b
+for (let i = 1; i < 100; i++) {
+    if (i % 3 == 0) {
+        console.log("Fizz");
+    }
+    else if (i % 5 == 0) {
+        console.log("Buzz");
+    }
+    else {
+        console.log(i);
     }
 }
 //# sourceMappingURL=script.js.map
