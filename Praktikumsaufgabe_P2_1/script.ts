@@ -1,4 +1,4 @@
-namespace Praktikumsaufgabe_2_2{
+namespace Praktikumsaufgabe_2_1 {
 
 /* Praktikumsaufgabe 2.1 Einführung TypeScript */
 

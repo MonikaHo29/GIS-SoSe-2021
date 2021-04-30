@@ -1,6 +1,6 @@
 "use strict";
-var Praktikumsaufgabe_2_2;
-(function (Praktikumsaufgabe_2_2) {
+var Praktikumsaufgabe_2_1;
+(function (Praktikumsaufgabe_2_1) {
     /* Praktikumsaufgabe 2.1 Einführung TypeScript */
     // Aufgabe 1 - Basics
     //  a)  In der Konsole wird "Alles Klar? Logo!" ausgegeben  
@@ -286,5 +286,5 @@ var Praktikumsaufgabe_2_2;
         console.log(schachbrett1);
     }
     schachbrett2(5);
-})(Praktikumsaufgabe_2_2 || (Praktikumsaufgabe_2_2 = {}));
+})(Praktikumsaufgabe_2_1 || (Praktikumsaufgabe_2_1 = {}));
 //# sourceMappingURL=script.js.map
