@@ -1,3 +1,5 @@
+namespace Praktikumsaufgabe_2_2{
+
 /* Praktikumsaufgabe 2.1 Einführung TypeScript */
 
 // Aufgabe 1 - Basics
@@ -127,7 +129,7 @@ a2();
 
     g1();
 
-    function funktion2(): void {   --> Fehler! die Variablename von Funktion g1 stimmt nicht. Es muss function function1 heißen. (siehe Zeile 120)     
+    function funktion2(): void {   --> Fehler! Der Variablename von Funktion g1 stimmt nicht. Es muss function function1 heißen. (siehe Zeile 120)     
         console.log("Klar?");
     }
 
@@ -136,7 +138,7 @@ a2();
         console.log("Alles Klar?");
     }
 
-    function d2(): number {        --> Fehler! Rückgabetyp ist falsch. Es musst void sein, da die Funktion nichts in der Konsole ausgibt. 
+    function d2(): number {        --> Fehler! Rückgabetyp ist falsch. Es musst void sein, da die Funktion nichts in der Konsole ausgegebn wird. 
         let i: number = 9;
 
 
@@ -322,7 +324,7 @@ function schachbrett(): void {
     }
 }
 
-//e) --> Leider konnte ich die Teilaufgabe e) nicht lösen. Dazu habe ich einen Ansatz. Aber bin mir nicht sicher ob es stimmt. 
+//e) 
 
 let hashtag: string = "#";
 let leer: string = " ";
@@ -350,3 +352,4 @@ function schachbrett2(seitenlänge: number): void {
 }
 schachbrett2(5);
 
+}
