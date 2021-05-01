@@ -17,21 +17,23 @@ namespace Praktikumsaufgabe_2_2 {
 
 
     // b)
-    let randomZahl: number = 75;                             // 50 --> true
+    let randomZahl: number = 75;                             
 
-    function isEven(_n: number): boolean {
-        if (_n == 0) {                                     
+    function isEven(_zahl: number): boolean {
+        if (_zahl == 0) {
             return true;
         }
-        if (_n == 1) {                                       
+        if (_zahl == 1) {
             return false;
         }
-        return isEven(_n - 2);                               
+        return isEven(_zahl - 2);
     }
     console.log(isEven(randomZahl));
 
-    /* bei minus 1 bricht die Funktion immer zusammen, da die B . Dadurch wird es nie 0 oder 1 werden. Bei -1 bricht die Funktion zusammen, da die Bedingung _x-2 immer ausgeführt wird.
-
+    /*  Die Funktion bricht bei -1 zusammen. Bei Negative Zahlen wird es nie 0 oder 1 werden, weil die Bedingung 
+        in Zeile 29 immer ausgeführt wird.
+        Vielleicht kann man in die Funktion einen Exception einfügen.? 
+    */
 
     //c)
 
@@ -84,6 +86,7 @@ namespace Praktikumsaufgabe_2_2 {
     console.log(s1.name);
     console.log(s2.matrikelnummer);
     console.log(s3.name + ", " + s3.studiengang);
+    console.log(studentArray[3].name);
 
     //c-4
     function showInfo(s: Student): void {
@@ -96,7 +99,8 @@ namespace Praktikumsaufgabe_2_2 {
     showInfo(studentArray[3]);
 
     //c-5 (siehe Zeile 39)
-    
+
+
 
     /* Aufgabe 2 - Arrays*/
 
@@ -114,14 +118,13 @@ namespace Praktikumsaufgabe_2_2 {
 
 
     //b)
-    let gerade: number[] = [12, 14, 16, 18];
-    let ungerade: number[] = [11, 23, 35, 47];
+    let zweitesArray: number[] = [15, 9001, -440];
 
     function join(_array1: number[], _array2: number[]): void {
-        let zahlenZusammen: number[] = _array1.concat(_array2);
-        console.log(zahlenZusammen);
+        let arrayZusammenfügen: number[] = _array1.concat(_array2);
+        console.log(arrayZusammenfügen);
     }
-    join(gerade, ungerade);
+    join(arr, zweitesArray);
 
 
     //c)
@@ -151,6 +154,7 @@ namespace Praktikumsaufgabe_2_2 {
     //Haus mit Dach
     context.fillStyle = "#A6A6A6";
     context.fillRect(100, 150, 150, 150);
+
     context.beginPath();
     context.fillStyle = "#B04238";
     context.moveTo(175, 50);
@@ -174,18 +178,22 @@ namespace Praktikumsaufgabe_2_2 {
     context.arc(320, 50, 30, 0, Math.PI * 2);
     context.fillStyle = "white";
     context.fill();
+
     context.beginPath();                                //rechts oben
     context.arc(360, 50, 30, 0, Math.PI * 2);
     context.fillStyle = "white";
     context.fill();
+
     context.beginPath();                                //links unten                    
     context.arc(300, 80, 30, 0, Math.PI * 2);
     context.fillStyle = "white";
     context.fill();
+
     context.beginPath();                                //links mitte 
     context.arc(340, 80, 30, 0, Math.PI * 2);
     context.fillStyle = "white";
     context.fill();
+
     context.beginPath();                                //links unten
     context.arc(380, 80, 30, 0, Math.PI * 2);
     context.fillStyle = "white";
@@ -199,48 +207,45 @@ namespace Praktikumsaufgabe_2_2 {
 
 
     //b)
-
     let canvas2: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("mySecondCanvas");
     let context2: CanvasRenderingContext2D = canvas2.getContext("2d");
 
-    class Rechteck { /* b*/
+    class Rechteck {
         xKoordinate: number;
         yKoordinate: number;
         breite: number;
         höhe: number;
 
 
-        constructor() { /*c*/
-            this.createRect(); /*Methode in einen Parameter fungieren*/
+    //c)
+        constructor() {
+            this.createRect();
         }
 
         createRect(): void {
-            this.xKoordinate = Math.random() * 501; /*erster wert immer bei der x Korrd - bei fillreact.*/
-            this.yKoordinate = Math.random() * 401; /*zweiter wert immer bei der x Korrd - bei fillreact.*/
+            this.xKoordinate = Math.random() * 400;
+            this.yKoordinate = Math.random() * 500;
             this.breite = Math.random() * 200;
             this.höhe = Math.random() * 200;
         }
 
-        drawRect(): void { /*d*/
+     
+    //d)    
+        drawRect(): void {      
             context2.fillRect(this.xKoordinate, this.yKoordinate, this.breite, this.höhe);
         }
     }
-//e)
+
+
+    //e)                                                            
     let rechteckArray: Rechteck[] = [];
-    for (let i: number = 0; i < 16; i++) {
-        rechteckArray.push(new Rechteck); 
+
+    for (let i: number = 0; i < 10; i++) {
+        rechteckArray.push(new Rechteck);
         rechteckArray[i].drawRect();
     }
 
-
-
-
-
-
-
-
-
-
+    
 }
 
 
