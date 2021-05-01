@@ -4,107 +4,142 @@ namespace Praktikumsaufgabe_2_2 {
 
     // a)
 
-    let xa: number = 5;
+    let xa: number = 8;
     let ya: number = 9;
 
-    function min(x1: number, y1: number): number {
-        if (x1 < y1) {
-            return x1;
+    function min(_x1: number, _x2: number): number {
+        if (_x1 < _x2) {
+            return _x1;
         } else {
-            return y1;
+            return _x2;
         }
+
     }
     console.log(min(xa, ya));
 
-    /*
-        let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
-        let input: number = backwards(arr);
-        function backwards(input: number[]): number {
-            let arr: number[] = new Array;
-            for (let i: number = input.length - 1; i >= 0; i--) {
-                arr.push(input[i]);
-            }
-            return backwards(arr);
-        }
-    
-        console.log(input);
-    */
-
-    let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
-    let input: number = backwards(arr);
-    function backwards(input: number[]): void {
-        let arr: number[] = new Array;
-        for (let i: number = 0; i < arr.length; i++) {
-            arr[i] = arr[(arr.length - 1) - i];
-            // for (let i: number = input.length - 1; i >= 0; i--) {
-            // arr.push(input[i]);
-            // }
-            return i;
-        }
-
-        console.log(input);
-
-    }
 
     // b)
+    /*
+        let zahl: number;
+    
+        function isEven(_n: number): number {
+            
+            let gerade: number = 0;
+            while (_n == 0) {
+                gerade = 0; 
+            }
+            return gerade;
+    
+            }
+            console.log()
+    
+        }
+    */
+
 
     //c)
     /*
-    interface Student {
-        vorname: string;
-        nachname: string;
+    class Student {
+        name: string;
         alter: number;
         matrikelnummer: number;
+        studiengang: string;
+
+        constructor(_name: string, _alter: number, _matrikelnummer: number, _studiengang: string): void {
+            this.name = _name;
+            this.alter = _alter;
+            this.matrikelnummer = _matrikelnummer;
+            this.studiengang = _studiengang;
+        }
+
+        public showInfo(_student: Student): void {
+            console.log(_student.name, _student.alter, _student.matrikelnummer, _student.studiengang);
+        }
+
     }
     */
 
-    class Student {
-        vorname: string;
-        nachname: string;
+    interface Student {
+        name: string;
         alter: number;
         matrikelnummer: number;
+        studiengang: string;
+    }
 
-        constructor(_vorname: string, _nachname: string, _alter: number, _matrikelnummer: number) {
-            this.vorname = _vorname;
-            this.nachname = _nachname;
-            this.alter = _alter;
-            this.matrikelnummer = _matrikelnummer;
-        }
 
-        showInfo(_vorname: string, _nachname: string, _alter: number, _matrikelnummer: number): void {
-            console.log(this.vorname);
-        }
-        
+    let s1: Student = erschaffeStudent("Monika Ho", 21, 24563, "OMB");
+    let s2: Student = erschaffeStudent("Lena Haigis", 20, 27869, "MKB");
+    let s3: Student = erschaffeStudent("Luis Gustavo ", 25, 23648, "MIB");
 
-    let s1: Student = erschaffeStudent("Monika", "Ho", 21, 42264);
-    let s2: Student = erschaffeStudent("Timo", "Werner", 26, 56335);
-    let s3: Student = erschaffeStudent("Hanna", "Hanz", 22, 46945);
-
-    console.log(s1.vorname);
-    console.log(s2.alter);
-    console.log(s3.nachname);
-
-    function erschaffeStudent(_vorname: string, _nachname: string, _alter: number, _matrikelnummer: number): Student {
-        let s: Student = { vorname: _vorname, nachname: _nachname, alter: _alter, matrikelnummer: _matrikelnummer };
+    function erschaffeStudent(_name: string, _alter: number, _matrikelnummer: number, _studiengang: string): Student {
+        let s: Student = { name: _name, alter: _alter, matrikelnummer: _matrikelnummer, studiengang: _studiengang };
         return s;
     }
 
-    let studentenArray: Student[] = [];
-    studentenArray.push(s1);
-    studentenArray.push(s2);
-    studentenArray.push(s3);
-    studentenArray.push({ vorname: "Otto", nachname: "Heinz", alter: 25, matrikelnummer: 46984 });
+    let studentArray: Student[] = [];
+    studentArray.push(s1);
+    studentArray.push(s2);
+    studentArray.push(s3);
+    studentArray.push({ name: "Otto Werner", alter: 28, matrikelnummer: 24869, studiengang: "OMB" });
 
-    //4
+    console.log(s1.name);
+    console.log(s2.matrikelnummer);
+    console.log(s3.studiengang);
+
+
     function showInfo(s: Student): void {
-        console.log(s.nachname);
+        console.log(s.name);
         console.log(s.matrikelnummer);
-
     }
     showInfo(s1);
     showInfo(s2);
     showInfo(s3);
-    showInfo(studentenArray[3]);
+    showInfo(studentArray[3]);
 
-/* Aufgabe 2 - Arrays*/
 
+
+    /* Aufgabe 2 - Arrays*/
+
+    let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
+
+    //a)
+    function backwards(_input: number[]): number[] {
+        let arr: number[] = new Array;
+        for (let i: number = _input.length - 1; i >= 0; i--) {
+            arr.push(_input[i]);
+        }
+        return arr;
+    }
+    console.log(backwards(arr));
+
+
+    //b)
+    let gerade: number[] = [12, 14, 16, 18];
+    let ungerade: number[] = [11, 23, 35, 47];
+
+    function join(_array1: number[], _array2: number[]): void {
+        let zahlenZusammen: number[] = _array1.concat(_array2);
+        console.log(zahlenZusammen);
+    }
+    join(gerade, ungerade);
+
+
+    //c)
+
+    let index1: number = 0;
+    let index2: number = 4;
+    function split (_arr: number[], _index1: number, _index2: number): number[] {
+        return _arr.slice(_index1, _index2);    
+    }
+    console.log(split(arr, index1, index2));
+
+
+     /* Aufgabe 3 - Endlich was visuelles!*/
+
+
+
+
+
+
+
+}

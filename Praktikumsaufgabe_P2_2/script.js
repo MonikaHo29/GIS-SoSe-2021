@@ -3,89 +3,66 @@ var Praktikumsaufgabe_2_2;
 (function (Praktikumsaufgabe_2_2) {
     /* Aufgabe 1 - Mehr “langweilige” Konsolenausgaben*/
     // a)
-    let xa = 5;
+    let xa = 8;
     let ya = 9;
-    function min(x1, y1) {
-        if (x1 < y1) {
-            return x1;
+    function min(_x1, _x2) {
+        if (_x1 < _x2) {
+            return _x1;
         }
         else {
-            return y1;
+            return _x2;
         }
     }
     console.log(min(xa, ya));
-    /*
-        let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
-        let input: number = backwards(arr);
-        function backwards(input: number[]): number {
-            let arr: number[] = new Array;
-            for (let i: number = input.length - 1; i >= 0; i--) {
-                arr.push(input[i]);
-            }
-            return backwards(arr);
-        }
-    
-        console.log(input);
-    */
-    let arr = [5, 42, 17, 2018, -10, 60, -10010];
-    let input = backwards(arr);
-    function backwards(input) {
-        let arr = new Array;
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] = arr[(arr.length - 1) - i];
-            // for (let i: number = input.length - 1; i >= 0; i--) {
-            // arr.push(input[i]);
-            // }
-            return i;
-        }
-        console.log(input);
-    }
-    // b)
-    //c)
-    /*
-    interface Student {
-        vorname: string;
-        nachname: string;
-        alter: number;
-        matrikelnummer: number;
-    }
-    */
-    class Student {
-        constructor(_vorname, _nachname, _alter, _matrikelnummer) {
-            this.vorname = _vorname;
-            this.nachname = _nachname;
-            this.alter = _alter;
-            this.matrikelnummer = _matrikelnummer;
-        }
-        showInfo(_vorname, _nachname, _alter, _matrikelnummer) {
-            console.log(this.vorname);
-        }
-    }
-    let s1 = erschaffeStudent("Monika", "Ho", 21, 42264);
-    let s2 = erschaffeStudent("Timo", "Werner", 26, 56335);
-    let s3 = erschaffeStudent("Hanna", "Hanz", 22, 46945);
-    console.log(s1.vorname);
-    console.log(s2.alter);
-    console.log(s3.nachname);
-    function erschaffeStudent(_vorname, _nachname, _alter, _matrikelnummer) {
-        let s = { vorname: _vorname, nachname: _nachname, alter: _alter, matrikelnummer: _matrikelnummer };
+    let s1 = erschaffeStudent("Monika Ho", 21, 24563, "OMB");
+    let s2 = erschaffeStudent("Lena Haigis", 20, 27869, "MKB");
+    let s3 = erschaffeStudent("Luis Gustavo ", 25, 23648, "MIB");
+    function erschaffeStudent(_name, _alter, _matrikelnummer, _studiengang) {
+        let s = { name: _name, alter: _alter, matrikelnummer: _matrikelnummer, studiengang: _studiengang };
         return s;
     }
-    let studentenArray = [];
-    studentenArray.push(s1);
-    studentenArray.push(s2);
-    studentenArray.push(s3);
-    studentenArray.push({ vorname: "Otto", nachname: "Heinz", alter: 25, matrikelnummer: 46984 });
-    //4
+    let studentArray = [];
+    studentArray.push(s1);
+    studentArray.push(s2);
+    studentArray.push(s3);
+    studentArray.push({ name: "Otto Werner", alter: 28, matrikelnummer: 24869, studiengang: "OMB" });
+    console.log(s1.name);
+    console.log(s2.matrikelnummer);
+    console.log(s3.studiengang);
     function showInfo(s) {
-        console.log(s.nachname);
+        console.log(s.name);
         console.log(s.matrikelnummer);
     }
     showInfo(s1);
     showInfo(s2);
     showInfo(s3);
-    showInfo(studentenArray[3]);
+    showInfo(studentArray[3]);
     /* Aufgabe 2 - Arrays*/
+    let arr = [5, 42, 17, 2018, -10, 60, -10010];
+    //a)
+    function backwards(_input) {
+        let arr = new Array;
+        for (let i = _input.length - 1; i >= 0; i--) {
+            arr.push(_input[i]);
+        }
+        return arr;
+    }
+    console.log(backwards(arr));
+    //b)
+    let gerade = [12, 14, 16, 18];
+    let ungerade = [11, 23, 35, 47];
+    function join(_array1, _array2) {
+        let zahlenZusammen = _array1.concat(_array2);
+        console.log(zahlenZusammen);
+    }
+    join(gerade, ungerade);
+    //c)
+    let index1 = 0;
+    let index2 = 4;
+    function split(_arr, _index1, _index2) {
+        return _arr.slice(_index1, _index2);
+    }
+    console.log(split(arr, index1, index2));
+    /* Aufgabe 3 - Endlich was visuelles!*/
 })(Praktikumsaufgabe_2_2 || (Praktikumsaufgabe_2_2 = {}));
-/* Aufgabe 2 - Arrays*/
 //# sourceMappingURL=script.js.map
