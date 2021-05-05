@@ -47,9 +47,9 @@ var Praktikumsaufgabe_2_2;
         console.log(s.name);
         console.log(s.matrikelnummer);
     }
-    showInfo(s1);
-    showInfo(s2);
-    showInfo(s3);
+    showInfo(studentArray[0]);
+    showInfo(studentArray[1]);
+    showInfo(studentArray[2]);
     showInfo(studentArray[3]);
     //c-5 (siehe Zeile 39)
     /* Aufgabe 2 - Arrays*/
