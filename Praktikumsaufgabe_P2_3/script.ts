@@ -5,7 +5,7 @@ namespace Praktikumsaufgabe_P2_3 {
     function rectangle(): void {
 
         let div: HTMLDivElement = document.createElement("div");
-        document.body.appendChild(div); /* Eltern - Kindbeziehung */
+        document.body.appendChild(div);                                             /* Eltern - Kindbeziehung */
         div.style.height = (Math.random() * 400).toString() + "px";
         div.style.width = (Math.random() * 200).toString() + "px";
         div.style.backgroundColor = "blue";
