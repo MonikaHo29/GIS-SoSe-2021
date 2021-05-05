@@ -32,7 +32,7 @@ namespace Praktikumsaufgabe_2_2 {
 
     /*  Die Funktion bricht bei -1 zusammen. Bei Negative Zahlen wird es nie 0 oder 1 werden, weil die Bedingung 
         in Zeile 29 immer ausgeführt wird.
-        Vielleicht kann man in die Funktion einen Exception einfügen.? 
+        Vielleicht kann man in die Funktion ein Exception einfügen.? 
     */
 
     //c)
@@ -93,9 +93,9 @@ namespace Praktikumsaufgabe_2_2 {
         console.log(s.name);
         console.log(s.matrikelnummer);
     }
-    showInfo(s1);
-    showInfo(s2);
-    showInfo(s3);
+    showInfo(studentArray[0]);
+    showInfo(studentArray[1]);
+    showInfo(studentArray[2]);
     showInfo(studentArray[3]);
 
     //c-5 (siehe Zeile 39)
