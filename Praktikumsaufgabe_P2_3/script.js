@@ -22,25 +22,34 @@ var Praktikumsaufgabe_P2_3;
     }
     document.querySelector("#loadButton").addEventListener("click", seiteZurücksetzen);
     document.querySelector("#addButton").addEventListener("click", rectangle);
-    /* Aufgabe 2 */
-    //a)
-    //Aufgabe 2
-    function chooseSize() {
-        let imageSmall = document.createElement("img");
-        imageSmall.src = Praktikumsaufgabe_P2_3.größen[0].image;
-        document.querySelector("#small").addEventListener("click", chooseSize);
-        let imageMedium = document.createElement("img");
-        imageMedium.src = Praktikumsaufgabe_P2_3.größen[1].image;
-        document.querySelector("#medium").addEventListener("click", chooseSize);
-        let imageLarge = document.createElement("img");
-        imageLarge.src = Praktikumsaufgabe_P2_3.größen[2].image;
-        document.querySelector("#large").addEventListener("click", chooseSize);
+    //Aufgabe 3
+    //b)
+    function generateSizeElement(_größe) {
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = _größe.image;
+        div.appendChild(image);
+        let button = document.createElement("button");
+        button.addEventListener("click", showDurchmesser);
+        button.dataset.durchmesser = _größe.durchmesser.toString();
+        button.innerText = "Durchmesser: " + _größe.durchmesser;
+        div.appendChild(button);
+        return div;
     }
-    console.log(Praktikumsaufgabe_P2_3.größen[0]);
-    console.log(Praktikumsaufgabe_P2_3.größen[1]);
-    console.log(Praktikumsaufgabe_P2_3.größen[2]);
     for (let i = 0; i < Praktikumsaufgabe_P2_3.größen.length; i++) {
-        chooseSize();
+        let x = generateSizeElement(Praktikumsaufgabe_P2_3.größen[i]);
+        document.body.appendChild(x);
+    }
+    //c)
+    function showDurchmesser(_event) {
+        console.log(_event.target);
+        let target = _event.target;
+        console.log(target.dataset.durchmesser);
+        for (let i = 0; i < Praktikumsaufgabe_P2_3.größen.length; i++) {
+            if (Praktikumsaufgabe_P2_3.größen[i].durchmesser.toString() == target.dataset.durchmesser) {
+                console.log(Praktikumsaufgabe_P2_3.größen[i]);
+            }
+        }
     }
 })(Praktikumsaufgabe_P2_3 || (Praktikumsaufgabe_P2_3 = {}));
 //# sourceMappingURL=script.js.map

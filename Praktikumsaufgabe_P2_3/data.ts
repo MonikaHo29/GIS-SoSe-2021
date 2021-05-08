@@ -1,5 +1,7 @@
 namespace Praktikumsaufgabe_P2_3 {
 
+    //Aufgabe 2c
+
     //Größen
     export let größen: Größe[] = [];
     größen.push({ durchmesser: 20, image: "pizza_groesse.png" });

@@ -1,5 +1,8 @@
 namespace Praktikumsaufgabe_P2_3 {
 
+
+    //Aufgabe 2a
+
     export interface Größe {
 
         durchmesser: number;

@@ -1,6 +1,7 @@
 "use strict";
 var Praktikumsaufgabe_P2_3;
 (function (Praktikumsaufgabe_P2_3) {
+    //Aufgabe 2c
     //Größen
     Praktikumsaufgabe_P2_3.größen = [];
     Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 20, image: "pizza_groesse.png" });
