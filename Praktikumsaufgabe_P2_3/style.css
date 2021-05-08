@@ -1,36 +1,44 @@
 /*Aufgabe 3a*/
 
-
-main {
-    font-family: 'Courier New', Courier, monospace;
-    width: auto;
+body{
+    margin:auto;
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: coral;
+    height: 300px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+main{
+    width: 80%;
+    font-size: 1.5em;
+    text-align: left;
+    margin:auto;
+}
+
+h2{
+    font-size: 2em;
 }
 
 h1 {
-    color: brown;
-    
+    font-size: 5em;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    margin: auto;
+    padding: 40px;
 }
 
-footer {
-    margin: auto;
-    
+div{
+    padding-inline: 50px;
 }
-img[alt=kleinpizza] {
-    margin: auto;
-    width: 10%;
-    display: inline-flex;
 
-}
-img[alt=mittlerepizza] {
-    margin: auto;
-    width: 20%;
-    display: inline-flex;
-
-}
-img[alt=großepizza] {
-    margin: auto;
-    width: 25%;
-    display: inline-flex;
-
+button{
+    background-color:darkred;
+    color: white;
+    border: none;
+    width: 100px;
 }
