@@ -1,7 +1,7 @@
 "use strict";
 var Praktikumsaufgabe_P2_3;
 (function (Praktikumsaufgabe_P2_3) {
-    /* Aufgabe 1 - Rechtecke */
+    /* Aufgabe 1 - Rechtecke (Buttons sind im Dokument aufgabe_rechteck.html) */
     function rechteckEinfügen() {
         let div = document.createElement("div");
         document.body.appendChild(div); /* Eltern - Kindbeziehung */
