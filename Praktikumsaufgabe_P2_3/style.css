@@ -1,0 +1,33 @@
+main {
+    font-family: 'Courier New', Courier, monospace;
+    width: auto;
+    text-align: center;
+}
+
+h1 {
+    color: brown;
+    
+}
+
+footer {
+    margin: auto;
+    
+}
+img[alt=kleinpizza] {
+    margin: auto;
+    width: 10%;
+    display: inline-flex;
+
+}
+img[alt=mittlerepizza] {
+    margin: auto;
+    width: 20%;
+    display: inline-flex;
+
+}
+img[alt=großepizza] {
+    margin: auto;
+    width: 25%;
+    display: inline-flex;
+
+}

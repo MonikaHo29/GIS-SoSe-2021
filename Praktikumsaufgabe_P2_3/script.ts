@@ -33,71 +33,30 @@ namespace Praktikumsaufgabe_P2_3 {
 
     //a)
 
-    function array(..._leerArray: string[]): void {   //string Rückgabe?
+    //Aufgabe 2
 
-        let allesZusammen: string[] = [];
-        let auswahl: string;
-        for (let i: number = 0; i < _leerArray.length; i++) {
-            allesZusammen.push(auswahl[i]);
-        }
+    function chooseSize(): void {
+        let imageSmall: HTMLImageElement = document.createElement("img");
+        imageSmall.src = größen[0].image;
+        document.querySelector("#small").addEventListener("click", chooseSize);
+
+        let imageMedium: HTMLImageElement = document.createElement("img");
+        imageMedium.src = größen[1].image;
+        document.querySelector("#medium").addEventListener("click", chooseSize);
+
+        let imageLarge: HTMLImageElement = document.createElement("img");
+        imageLarge.src = größen[2].image;
+        document.querySelector("#large").addEventListener("click", chooseSize);
+
+    } 
+    console.log(größen[0]);
+    console.log(größen[1]);
+    console.log(größen[2]);
+   
+
+    for (let i: number = 0; i < größen.length; i++) {
+        chooseSize();
     }
-    console.log(array);
-
-
-    interface Größe {
-
-        durchmesserKlein: number;
-        durchmesserMitte: number;
-        durchmesserGroß: number;
-    }
-
-    let klein: Größe = create(22, 0, 0);
-    let mitte: Größe = create(0, 24, 0);
-    let groß: Größe = create(0, 0, 30);
-
-    function create(_durchmesserKlein: number, _durchmesserMitte: number, _durchmesserGroß: number): Größe {
-        let durchmesserWählen: Größe = {durchmesserKlein: _durchmesserKlein, durchmesserMitte: _durchmesserMitte, durchmesserGroß: _durchmesserGroß};
-        return durchmesserWählen;
-    }
-
-
-    /*interface Größe {
-
-        klein: string;
-        mittel: string;
-        groß: string;
-
-    }
-    array();
-    document.getSelection();
-    document.querySelector("#saveKlein").addEventListener("click", getSelection);
-    */
-
-
-    interface Toppings {
-
-        mozzarella: string;
-        mais: string;
-        salami: string;
-        champignions: string;
-        ruccola: string;
-
-    }
-    document.getSelection();
-
-    interface Service {
-
-        lieferung: string;
-        abholung: string;
-        vorort: string;
-
-    }
-    document.getSelection();
-
-
-
-
-
 }
 
 

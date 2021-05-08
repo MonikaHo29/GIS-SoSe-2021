@@ -24,22 +24,23 @@ var Praktikumsaufgabe_P2_3;
     document.querySelector("#addButton").addEventListener("click", rectangle);
     /* Aufgabe 2 */
     //a)
-    function array(..._leerArray) {
-        let allesZusammen = [];
-        let auswahl;
-        for (let i = 0; i < _leerArray.length; i++) {
-            allesZusammen.push(auswahl[i]);
-        }
+    //Aufgabe 2
+    function chooseSize() {
+        let imageSmall = document.createElement("img");
+        imageSmall.src = Praktikumsaufgabe_P2_3.größen[0].image;
+        document.querySelector("#small").addEventListener("click", chooseSize);
+        let imageMedium = document.createElement("img");
+        imageMedium.src = Praktikumsaufgabe_P2_3.größen[1].image;
+        document.querySelector("#medium").addEventListener("click", chooseSize);
+        let imageLarge = document.createElement("img");
+        imageLarge.src = Praktikumsaufgabe_P2_3.größen[2].image;
+        document.querySelector("#large").addEventListener("click", chooseSize);
     }
-    console.log(array);
-    let klein = create(22, 0, 0);
-    let mitte = create(0, 24, 0);
-    let groß = create(0, 0, 30);
-    function create(_durchmesserKlein, _durchmesserMitte, _durchmesserGroß) {
-        let durchmesserWählen = { durchmesserKlein: _durchmesserKlein, durchmesserMitte: _durchmesserMitte, durchmesserGroß: _durchmesserGroß };
-        return durchmesserWählen;
+    console.log(Praktikumsaufgabe_P2_3.größen[0]);
+    console.log(Praktikumsaufgabe_P2_3.größen[1]);
+    console.log(Praktikumsaufgabe_P2_3.größen[2]);
+    for (let i = 0; i < Praktikumsaufgabe_P2_3.größen.length; i++) {
+        chooseSize();
     }
-    document.getSelection();
-    document.getSelection();
 })(Praktikumsaufgabe_P2_3 || (Praktikumsaufgabe_P2_3 = {}));
 //# sourceMappingURL=script.js.map
