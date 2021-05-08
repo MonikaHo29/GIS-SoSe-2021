@@ -5,8 +5,8 @@ namespace Praktikumsaufgabe_P2_3 {
     function rechteckEinfügen(): void {
 
         let div: HTMLDivElement = document.createElement("div");
-        document.body.appendChild(div);                                             /* Eltern - Kindbeziehung */
-        div.style.height = (Math.random() * 600).toString() + "px";                 /* Rechteck - Css */
+        document.body.appendChild(div);                                                     // Eltern - Kindbeziehung 
+        div.style.height = (Math.random() * 600).toString() + "px";                         // Rechteck - Css 
         div.style.width = (Math.random() * 500).toString() + "px";
         div.style.backgroundColor = "black";
         div.style.position = "relative";
@@ -20,7 +20,7 @@ namespace Praktikumsaufgabe_P2_3 {
         rechteckEinfügen();
     }
 
-    function seiteZurücksetzen(_load: Event): void {                                // Buttons
+    function seiteZurücksetzen(_load: Event): void {                                        // Buttons
         location.reload();
     }
     document.querySelector("#loadButton").addEventListener("click", seiteZurücksetzen);

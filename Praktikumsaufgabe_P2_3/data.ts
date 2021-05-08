@@ -4,32 +4,32 @@ namespace Praktikumsaufgabe_P2_3 {
     //Aufgabe 2c)
 
     //Größen
-    export let größen: Größe[] = [];
+    export let größen: Pizzagröße[] = [];
 
-    größen.push({ durchmesser: 20, image: "pizza_groesse.png" });
+    größen.push({ durchmesser: 20, bild: "pizza_groesse.png" });
 
-    größen.push({ durchmesser: 25, image: "pizza_groesse.png" });
+    größen.push({ durchmesser: 25, bild: "pizza_groesse.png" });
 
-    größen.push({ durchmesser: 30, image: "pizza_groesse.png" });
+    größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
 
 
     //Toppings
-    export let toppings: Toppings[] = [];
+    export let belag: Zutate[] = [];
 
-    toppings.push({ toppings: "salami", image: "bild.jpeg" });
+    belag.push({ zutate: "salami", bild: "bild.png" });
 
-    toppings.push({ toppings: "Mais", image: "bild.jpeg" });
+    belag.push({ zutate: "Mais", bild: "bild.png" });
 
-    toppings.push({ toppings: "Champignions", image: "bild.jpeg" });
+    belag.push({ zutate: "Champignions", bild: "bild.png" });
 
 
     //Bestelloption
-    export let service: Order[] = [];
+    export let service: Bestelloptionen[] = [];
 
-    service.push({ service: "Lieferung", image: "bild.jepg" });
+    service.push({ service: "Lieferung", bild: "bild.png" });
 
-    service.push({ service: "Abholung", image: "bild.jepg" });
+    service.push({ service: "Abholung", bild: "bild.png" });
 
-    service.push({ service: "Vorort", image: "bild.jepg" });
+    service.push({ service: "Vorort", bild: "bild.png" });
 
 }
