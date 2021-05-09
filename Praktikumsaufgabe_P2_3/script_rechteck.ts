@@ -16,9 +16,12 @@ namespace Praktikumsaufgabe_P2_3 {
         div.style.marginBottom = (Math.random() * 100).toString() + "px";
 
     }
+
     for (let i: number = 0; i < 0; i++) {
         rechteckEinfügen();
     }
+
+
 
     function seiteZurücksetzen(_load: Event): void {                                        // Buttons
         location.reload();
@@ -26,6 +29,6 @@ namespace Praktikumsaufgabe_P2_3 {
     document.querySelector("#loadButton").addEventListener("click", seiteZurücksetzen);
 
 
-    document.querySelector("#addButton").addEventListener("click", rechteckEinfügen);       
+    document.querySelector("#addButton").addEventListener("click", rechteckEinfügen);
 
 }

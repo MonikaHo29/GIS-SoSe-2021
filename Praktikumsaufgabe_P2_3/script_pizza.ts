@@ -3,7 +3,7 @@ namespace Praktikumsaufgabe_P2_3 {
     //Aufgabe 3
 
     //b)
-    function generateSizeElement(_größe: Pizzagröße): HTMLElement {              //allegemeine Funktion um die Pizzagröße zu bestimmen 
+    function generateSizeElement(_größe: Pizzagröße): HTMLElement {              //allgemeine Funktion um die Pizzagröße zu bestimmen 
         let div: HTMLDivElement = document.createElement("div");
 
         let image: HTMLImageElement = document.createElement("img");

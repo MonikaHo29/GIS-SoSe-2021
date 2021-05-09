@@ -13,7 +13,7 @@ namespace Praktikumsaufgabe_P2_3 {
     größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
 
 
-    //Toppings
+    //Toppings                                                      // die zwei Unterseiten soll erst nächste Woche erstellt werden 
     export let belag: Zutate[] = [];
 
     belag.push({ zutate: "salami", bild: "bild.png" });
@@ -23,7 +23,7 @@ namespace Praktikumsaufgabe_P2_3 {
     belag.push({ zutate: "Champignions", bild: "bild.png" });
 
 
-    //Bestelloption
+    //Bestelloptionen
     export let service: Bestelloptionen[] = [];
 
     service.push({ service: "Lieferung", bild: "bild.png" });
