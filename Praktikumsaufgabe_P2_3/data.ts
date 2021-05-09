@@ -13,7 +13,7 @@ namespace Praktikumsaufgabe_P2_3 {
     größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
 
 
-    //Toppings                                                      // die zwei Unterseiten soll erst nächste Woche erstellt werden 
+    //Toppings                                                      // die zwei Unterseiten sollen erst nächste Woche erstellt werden 
     export let belag: Zutate[] = [];
 
     belag.push({ zutate: "salami", bild: "bild.png" });
