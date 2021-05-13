@@ -6,7 +6,7 @@ var Praktikumsaufgabe_P2_3;
     function generateSizeElement(_größe) {
         let div = document.createElement("div");
         let image = document.createElement("img");
-        image.src = _größe.image;
+        image.src = _größe.bild;
         div.appendChild(image);
         let button = document.createElement("button");
         button.addEventListener("click", showDurchmesser);
@@ -19,7 +19,7 @@ var Praktikumsaufgabe_P2_3;
         let x = generateSizeElement(Praktikumsaufgabe_P2_3.größen[i]);
         document.body.appendChild(x);
     }
-    //c)
+    //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
     function showDurchmesser(_event) {
         console.log(_event.target);
         let target = _event.target;

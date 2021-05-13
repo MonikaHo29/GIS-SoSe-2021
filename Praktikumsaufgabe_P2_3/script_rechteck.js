@@ -4,8 +4,8 @@ var Praktikumsaufgabe_P2_3;
     /* Aufgabe 1 - Rechtecke (Buttons sind im Dokument aufgabe_rechteck.html) */
     function rechteckEinfügen() {
         let div = document.createElement("div");
-        document.body.appendChild(div); /* Eltern - Kindbeziehung */
-        div.style.height = (Math.random() * 600).toString() + "px"; /* Rechteck - Css */
+        document.body.appendChild(div); // Eltern - Kindbeziehung 
+        div.style.height = (Math.random() * 600).toString() + "px"; // Rechteck - Css 
         div.style.width = (Math.random() * 500).toString() + "px";
         div.style.backgroundColor = "black";
         div.style.position = "relative";
