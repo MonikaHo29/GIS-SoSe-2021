@@ -1,57 +1,22 @@
 "use strict";
-var Praktikumsaufgabe_P2_4;
-(function (Praktikumsaufgabe_P2_4) {
-    Praktikumsaufgabe_P2_4.partsJSON = `
-    {
-    "Größe": [
-    {
-      "durchmesser": "20", 
-      "image": "pizza_groesse.png"
-    },
-    {
-      "durchmesser": "25", 
-      "image": "pizza_groesse.png"
-    },
-    {
-      "durchmesser": "30", 
-      "image": "pizza_groesse.png"
-    }
-  ],
-
-  "Toppings": [
-    {
-    "toppings": "salami", 
-    "image": "bild.jpeg"
-    },
-    {
-      "toppings": "mais", 
-      "image": "bild.jpeg"
-      },
-
-    {
-        "toppings": "champignions",
-        "image": "bild.jpeg   
-    }
-  ],
-
-  "Bestelloptionen": [
-    {
-    "service": "Lieferung", 
-    "image": "bild.jpeg"
-    },
-    {
-      "service": "Abholung", 
-      "image": "bild.jpeg"
-      },
-
-    {
-        "service": "Vorort",
-        "image": "bild.jpeg   
-    }
-  ]
-
-
-}
-`;
-})(Praktikumsaufgabe_P2_4 || (Praktikumsaufgabe_P2_4 = {}));
+var Praktikumsaufgabe_P2_3;
+(function (Praktikumsaufgabe_P2_3) {
+    //Aufgabe 2c)
+    //Größen
+    Praktikumsaufgabe_P2_3.groessen = [];
+    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 20, bild: "pizza_groesse.png" });
+    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 25, bild: "pizza_groesse.png" });
+    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
+    //Toppings                                                      // die zwei Unterseiten sollen erst nächste Woche erstellt werden 
+    Praktikumsaufgabe_P2_3.zutate = [];
+    Praktikumsaufgabe_P2_3.belag.push({ zutate: "salami", bild: "bild.png" });
+    Praktikumsaufgabe_P2_3.belag.push({ zutate: "Mais", bild: "bild.png" });
+    Praktikumsaufgabe_P2_3.belag.push({ zutate: "Champignions", bild: "bild.png" });
+    //Bestelloptionen
+    Praktikumsaufgabe_P2_3.bestelloptionen = [];
+    Praktikumsaufgabe_P2_3.service.push({ service: "Lieferung", bild: "bild.png" });
+    Praktikumsaufgabe_P2_3.service.push({ service: "Abholung", bild: "bild.png" });
+    Praktikumsaufgabe_P2_3.service.push({ service: "Vorort", bild: "bild.png" });
+    Praktikumsaufgabe_P2_3.myJSON = JSON.stringify();
+})(Praktikumsaufgabe_P2_3 || (Praktikumsaufgabe_P2_3 = {}));
 //# sourceMappingURL=data.js.map

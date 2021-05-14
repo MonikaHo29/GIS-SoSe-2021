@@ -3,7 +3,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
     //Aufgabe 2a)
     
-    export interface Pizzagröße {
+    export interface Groesse {
 
         durchmesser: number;
         bild: string;
@@ -25,8 +25,8 @@ namespace Praktikumsaufgabe_P2_4 {
     
     export interface Pizza {     //2b) --> wird erst nächste Woche gebraucht
 
-        pizzagröße: Pizzagröße;
-        zutate: Zutate;
-        bestelloptionen: Bestelloptionen;
+        groesse: Groesse[];
+        zutate: Zutate[];
+        bestelloptionen: Bestelloptionen[];
     }
 }

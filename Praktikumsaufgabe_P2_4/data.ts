@@ -1,62 +1,37 @@
-namespace Praktikumsaufgabe_P2_4 {
+namespace Praktikumsaufgabe_P2_3 {
 
-  export let partsJSON: string =
-    `
-    {
-    "Größe": [
-    {
-      "durchmesser": "20", 
-      "bild": "pizza_groesse.png"
-    },
-    {
-      "durchmesser": "25", 
-      "bild": "pizza_groesse.png"
-    },
-    {
-      "durchmesser": "30", 
-      "bild": "pizza_groesse.png"
-    }
-  ],
+    
+  //Aufgabe 2c)
 
-  "Toppings": [
-    {
-    "toppings": "salami", 
-    "image": "bild.jpeg"
-    },
-    {
-      "toppings": "mais", 
-      "image": "bild.jpeg"
-      },
+  //Größen
+  export let groessen: Pizzagröße[] = [];
 
-    {
-        "toppings": "champignions",
-        "image": "bild.jpeg   
-    }
-  ],
+  größen.push({ durchmesser: 20, bild: "pizza_groesse.png" });
 
-  "Bestelloptionen": [
-    {
-    "service": "Lieferung", 
-    "image": "bild.jpeg"
-    },
-    {
-      "service": "Abholung", 
-      "image": "bild.jpeg"
-      },
+  größen.push({ durchmesser: 25, bild: "pizza_groesse.png" });
 
-    {
-        "service": "Vorort",
-        "image": "bild.jpeg   
-    }
-  ]
+  größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
 
+
+  //Toppings                                                      // die zwei Unterseiten sollen erst nächste Woche erstellt werden 
+  export let zutate: Zutate[] = [];
+
+  belag.push({ zutate: "salami", bild: "bild.png" });
+
+  belag.push({ zutate: "Mais", bild: "bild.png" });
+
+  belag.push({ zutate: "Champignions", bild: "bild.png" });
+
+
+  //Bestelloptionen
+  export let bestelloptionen: Bestelloptionen[] = [];
+
+  service.push({ service: "Lieferung", bild: "bild.png" });
+
+  service.push({ service: "Abholung", bild: "bild.png" });
+
+  service.push({ service: "Vorort", bild: "bild.png" });
+
+  export let myJSON: string = JSON.stringify();
 
 }
-`;
-  export let pizzaObject: string = JSON.parse(partsJSON);
-
-}
-
-
-
-

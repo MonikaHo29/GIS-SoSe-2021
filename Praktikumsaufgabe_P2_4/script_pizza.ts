@@ -4,15 +4,104 @@ namespace Praktikumsaufgabe_P2_4 {
 
     //a)
 
-    let pizzaObject = JSON.parse(partsJSON);
+    let pizzaObject: Pizza = JSON.parse(partsJSON);
 
+    function generateSizeElement(): HTMLElement {              //allgemeine Funktion um die Pizzagroesse zu bestimmen 
+        let div: HTMLDivElement = document.createElement("div");
+
+        let image: HTMLImageElement = document.createElement("img");
+        image.src = pizzaObject.Groesse.image;
+        div.appendChild(image);
+        let button: HTMLButtonElement = document.createElement("button");
+        button.addEventListener("click", showDurchmesser);
+        button.innerText = "Durchmesser: " + partsJSON.Groesse.durchmesser;
+        div.appendChild(button);
+
+        return div;
+    }
+    for (let i: number = 0; i < partsJSON.Groesse.length; i++) {
+        let x: HTMLElement = generateSizeElement();
+
+        document.body.appendChild(x);
+    }
+
+
+
+    //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
+    function showDurchmesser(_event: MouseEvent): void {
+
+
+        console.log(_event.target);
+
+        let target: HTMLElement = <HTMLElement>_event.target;
+        console.log(target.dataset.durchmesser);
+
+
+        for (let i: number = 0; i < partsJSON.Groesse.durchmesser.length; i++) {
+
+            if (partsJSON.Groesse.durchmesser.toString() == target.partsJSON.durchmesser) {
+                console.log(Groesse[i]);
+
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    //let myJSON: string = '{"durchmesser": 20, "image": "pizza_groesse.png"}';
+    //let myPizzaObject: groesse = JSON.parse("durchmesser": 20, "image": "pizza_groesse.png"); 
+    
+    export let pizzaObject: string = JSON.parse(partsJSON);
 
     function convertObject(): HTMLElement {
 
         let div: HTMLDivElement = document.createElement("div");
+        let button: HTMLButtonElement = document.createElement("button");
+        button.addEventListener("click", showDurchmesser);
+        button.innerText = "Durchmesser: " + pizzaObject.durchmesser;
+        div.appendChild(button);
+
+        return div;
+
+
+    }
+
+    for (let i: number = 0; i < "groesse".length; i++) {
+
+        document.getElementsByName("durchmesser");
+        document.getElementsByTagName("image");
+    }
+    convertObject();
+
+
+    /*    let div: HTMLDivElement = document.createElement("div");
 
         let image: HTMLImageElement = document.createElement("img");
-        image.src = pizzaObject.bild;
+        image.src = _pizzaObject.image;
         div.appendChild(image);
         let button: HTMLButtonElement = document.createElement("button");
         button.addEventListener("click", showDurchmesser);
@@ -23,7 +112,7 @@ namespace Praktikumsaufgabe_P2_4 {
         return div;
     }
     convertObject();
-
+   
 
     function showDurchmesser(_event: MouseEvent): void {
 
@@ -72,12 +161,12 @@ namespace Praktikumsaufgabe_P2_4 {
 
     // function datenKonvertieren(): HTMLDocument {
     //     let myJSON1: string = ``{"durchmesser": "20", "image": "pizza_groesse.png"};
-    //     let größe1: Größe = JSON.parse(myJSON1);
-    //     document.getElementById("small").innerHTML = größe1.durchmesser;
+    //     let groesse1: groesse = JSON.parse(myJSON1);
+    //     document.getElementById("small").innerHTML = groesse1.durchmesser;
 
     //     let myJSON2: string = {"durchmesser": "25", "image": "pizza_groesse.png"};
-    //     let größe2: Größe = JSON.parse(myJSON2);
-    //     document.getElementById("medium").innerHTML = größe2.durchmesser;
+    //     let groesse2: groesse = JSON.parse(myJSON2);
+    //     document.getElementById("medium").innerHTML = groesse2.durchmesser;
 
     //     return ; 
     // }
@@ -94,22 +183,22 @@ namespace Praktikumsaufgabe_P2_4 {
 
 
 
-    /*function generateSizeElement(_größe: Pizzagröße): HTMLElement {              //allgemeine Funktion um die Pizzagröße zu bestimmen 
+    /*function generateSizeElement(_groesse: Pizzagroesse): HTMLElement {              //allgemeine Funktion um die Pizzagroesse zu bestimmen 
         let div: HTMLDivElement = document.createElement("div");
 
         let image: HTMLImageElement = document.createElement("img");
-        image.src = _größe.bild;
+        image.src = _groesse.bild;
         div.appendChild(image);
         let button: HTMLButtonElement = document.createElement("button");
         button.addEventListener("click", showDurchmesser);
-        button.dataset.durchmesser = _größe.durchmesser.toString();
-        button.innerText = "Durchmesser: " + _größe.durchmesser;
+        button.dataset.durchmesser = _groesse.durchmesser.toString();
+        button.innerText = "Durchmesser: " + _groesse.durchmesser;
         div.appendChild(button);
 
         return div;
     }
-    for (let i: number = 0; i < größen.length; i++) {
-        let x: HTMLElement = generateSizeElement(größen[i]);
+    for (let i: number = 0; i < groessen.length; i++) {
+        let x: HTMLElement = generateSizeElement(groessen[i]);
 
         document.body.appendChild(x);
     }
@@ -118,4 +207,4 @@ namespace Praktikumsaufgabe_P2_4 {
 
 
 
-
+}
