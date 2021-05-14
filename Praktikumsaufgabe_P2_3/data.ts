@@ -1,7 +1,6 @@
 namespace Praktikumsaufgabe_P2_3 {
-
-    
-    //Aufgabe 2c)
+   
+//Aufgabe 2c)
 
     //Größen
     export let pizzagröße: Pizzagröße[] = [];
@@ -31,5 +30,5 @@ namespace Praktikumsaufgabe_P2_3 {
     service.push({ service: "Abholung", bild: "bild.png" });
 
     service.push({ service: "Vorort", bild: "bild.png" });
-
+    
 }
