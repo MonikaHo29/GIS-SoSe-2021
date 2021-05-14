@@ -3,10 +3,10 @@ var Praktikumsaufgabe_P2_3;
 (function (Praktikumsaufgabe_P2_3) {
     //Aufgabe 2c)
     //Größen
-    Praktikumsaufgabe_P2_3.größen = [];
-    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 20, bild: "pizza_groesse.png" });
-    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 25, bild: "pizza_groesse.png" });
-    Praktikumsaufgabe_P2_3.größen.push({ durchmesser: 30, bild: "pizza_groesse.png" });
+    Praktikumsaufgabe_P2_3.pizzagröße = [];
+    Praktikumsaufgabe_P2_3.pizzagröße.push({ durchmesser: 20, bild: "pizza_groesse.png" });
+    Praktikumsaufgabe_P2_3.pizzagröße.push({ durchmesser: 25, bild: "pizza_groesse.png" });
+    Praktikumsaufgabe_P2_3.pizzagröße.push({ durchmesser: 30, bild: "pizza_groesse.png" });
     //Toppings                                                      // die zwei Unterseiten sollen erst nächste Woche erstellt werden 
     Praktikumsaufgabe_P2_3.belag = [];
     Praktikumsaufgabe_P2_3.belag.push({ zutate: "salami", bild: "bild.png" });

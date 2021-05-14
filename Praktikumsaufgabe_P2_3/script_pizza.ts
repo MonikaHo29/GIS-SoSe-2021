@@ -17,8 +17,8 @@ namespace Praktikumsaufgabe_P2_3 {
 
         return div;
     }
-    for (let i: number = 0; i < größen.length; i++) {
-        let x: HTMLElement = generateSizeElement(größen[i]);
+    for (let i: number = 0; i < pizzagröße.length; i++) {
+        let x: HTMLElement = generateSizeElement(pizzagröße[i]);
 
         document.body.appendChild(x);
     }
@@ -35,10 +35,10 @@ namespace Praktikumsaufgabe_P2_3 {
         console.log(target.dataset.durchmesser);
 
 
-        for (let i: number = 0; i < größen.length; i++) {
+        for (let i: number = 0; i < pizzagröße.length; i++) {
 
-            if (größen[i].durchmesser.toString() == target.dataset.durchmesser) {
-                console.log(größen[i]);
+            if (pizzagröße[i].durchmesser.toString() == target.dataset.durchmesser) {
+                console.log(pizzagröße[i]);
 
             }
 

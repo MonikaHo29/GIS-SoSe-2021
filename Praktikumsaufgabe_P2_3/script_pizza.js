@@ -15,8 +15,8 @@ var Praktikumsaufgabe_P2_3;
         div.appendChild(button);
         return div;
     }
-    for (let i = 0; i < Praktikumsaufgabe_P2_3.größen.length; i++) {
-        let x = generateSizeElement(Praktikumsaufgabe_P2_3.größen[i]);
+    for (let i = 0; i < Praktikumsaufgabe_P2_3.pizzagröße.length; i++) {
+        let x = generateSizeElement(Praktikumsaufgabe_P2_3.pizzagröße[i]);
         document.body.appendChild(x);
     }
     //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
@@ -24,9 +24,9 @@ var Praktikumsaufgabe_P2_3;
         console.log(_event.target);
         let target = _event.target;
         console.log(target.dataset.durchmesser);
-        for (let i = 0; i < Praktikumsaufgabe_P2_3.größen.length; i++) {
-            if (Praktikumsaufgabe_P2_3.größen[i].durchmesser.toString() == target.dataset.durchmesser) {
-                console.log(Praktikumsaufgabe_P2_3.größen[i]);
+        for (let i = 0; i < Praktikumsaufgabe_P2_3.pizzagröße.length; i++) {
+            if (Praktikumsaufgabe_P2_3.pizzagröße[i].durchmesser.toString() == target.dataset.durchmesser) {
+                console.log(Praktikumsaufgabe_P2_3.pizzagröße[i]);
             }
         }
     }
