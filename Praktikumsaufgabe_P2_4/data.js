@@ -6,45 +6,45 @@ var Praktikumsaufgabe_P2_4;
     {
     "groesseArray":[
         {
-            "option":"20cm",
+            "option": "20cm",
             "image": "pizza_klein.png" 
         },
         {
-            "option":"25cm",
+            "option": "25cm",
             "image": "pizza_medium.png"
         },
         {
-            "option":"30cm",
+            "option": "30cm",
             "image": "pizza_gross.png"
         }
     ],
 
-    "toppingsArray":[
+    "toppingArray":[
         {
-            "option":"Salami",
-            "image": "salami.png"
-        },
-        {
-            "option":"Mais",
+            "option": "Mais",
             "image": "mais.png"
         },
         {
-            "option":"Champignions",
+            "option": "Salami",
+            "image": "salami.png"
+        },
+        {
+            "option": "Champignions",
             "image": "champignions.png"
         }
     ],
 
     "serviceArray":[
         {
-            "option":"Lieferung",
+            "option": "Lieferung",
             "image": "lieferung.png"
         },
         {
-            "option":"Abholung",
+            "option": "Abholung",
             "image": "abholung.png"
         },
         {
-            "option":"Vorort",
+            "option": "Vorort",
             "image": "vorort.png"
         }
     ]

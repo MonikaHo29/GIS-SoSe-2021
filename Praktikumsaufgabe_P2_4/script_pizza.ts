@@ -3,7 +3,7 @@ namespace Praktikumsaufgabe_P2_4 {
     //Aufgabe 3
 
     //b)
-    function generatePizzapart(_pPizzapart: Pizzapart): HTMLElement {              //allgemeine Funktion um die Pizzagröße zu bestimmen 
+    function generatePizza(_pPizzapart: Pizzapart): HTMLElement {              //allgemeine Funktion um die Pizzagröße zu bestimmen 
         let div: HTMLDivElement = document.createElement("div");
 
         let image: HTMLImageElement = document.createElement("img");
@@ -13,7 +13,7 @@ namespace Praktikumsaufgabe_P2_4 {
         let button: HTMLButtonElement = document.createElement("button");
         let buttonText: Text = document.createTextNode(_pPizzapart.option);
         button.appendChild(buttonText);
-        button.addEventListener("click", auswahlSpeichern);
+        button.addEventListener("click", saveLocalstorage);
         button.dataset.option = _pPizzapart.option;
         button.dataset.image = _pPizzapart.image;
         div.appendChild(button);
@@ -23,7 +23,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
     if (document.querySelector("title").getAttribute("id") == "seite1") {
         for (let i: number = 0; i < myObject.groesseArray.length; i++) {
-            let x: HTMLElement = generatePizzapart(myObject.groesseArray[i]);
+            let x: HTMLElement = generatePizza(myObject.groesseArray[i]);
 
             document.body.appendChild(x);
         }
@@ -31,7 +31,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         for (let i: number = 0; i < myObject.toppingArray.length; i++) {
-            let x: HTMLElement = generatePizzapart(myObject.toppingArray[i]);
+            let x: HTMLElement = generatePizza(myObject.toppingArray[i]);
 
             document.body.appendChild(x);
         }
@@ -39,14 +39,14 @@ namespace Praktikumsaufgabe_P2_4 {
 
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         for (let i: number = 0; i < myObject.serviceArray.length; i++) {
-            let x: HTMLElement = generatePizzapart(myObject.serviceArray[i]);
+            let x: HTMLElement = generatePizza(myObject.serviceArray[i]);
 
             document.body.appendChild(x);
         }
     }
 
     //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
-    function auswahlSpeichern(_pEvent: MouseEvent): void {
+    function saveLocalstorage(_pEvent: MouseEvent): void {
 
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
@@ -91,6 +91,10 @@ namespace Praktikumsaufgabe_P2_4 {
         let text: Text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
         div.appendChild(gewaehlteBeschreibung);
         gewaehlteBeschreibung.appendChild(text);
+
+        let gespeicherteGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
+        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
+        div.appendChild(gespeicherteGroesse);
 
         let gespeicherteTopping: HTMLImageElement = document.createElement("img"); //bild anlegen
         gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern

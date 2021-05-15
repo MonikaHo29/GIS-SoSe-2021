@@ -3,7 +3,7 @@ var Praktikumsaufgabe_P2_4;
 (function (Praktikumsaufgabe_P2_4) {
     //Aufgabe 3
     //b)
-    function generatePizzapart(_pPizzapart) {
+    function generatePizza(_pPizzapart) {
         let div = document.createElement("div");
         let image = document.createElement("img");
         image.src = _pPizzapart.image;
@@ -11,7 +11,7 @@ var Praktikumsaufgabe_P2_4;
         let button = document.createElement("button");
         let buttonText = document.createTextNode(_pPizzapart.option);
         button.appendChild(buttonText);
-        button.addEventListener("click", auswahlSpeichern);
+        button.addEventListener("click", saveLocalstorage);
         button.dataset.option = _pPizzapart.option;
         button.dataset.image = _pPizzapart.image;
         div.appendChild(button);
@@ -19,24 +19,24 @@ var Praktikumsaufgabe_P2_4;
     }
     if (document.querySelector("title").getAttribute("id") == "seite1") {
         for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.groesseArray.length; i++) {
-            let x = generatePizzapart(Praktikumsaufgabe_P2_4.myObject.groesseArray[i]);
+            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.groesseArray[i]);
             document.body.appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.toppingArray.length; i++) {
-            let x = generatePizzapart(Praktikumsaufgabe_P2_4.myObject.toppingArray[i]);
+            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.toppingArray[i]);
             document.body.appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.serviceArray.length; i++) {
-            let x = generatePizzapart(Praktikumsaufgabe_P2_4.myObject.serviceArray[i]);
+            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.serviceArray[i]);
             document.body.appendChild(x);
         }
     }
     //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
-    function auswahlSpeichern(_pEvent) {
+    function saveLocalstorage(_pEvent) {
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target = _pEvent.target;
             localStorage.setItem("gewaelteGroesse", target.dataset.option);
@@ -72,6 +72,9 @@ var Praktikumsaufgabe_P2_4;
         let text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
         div.appendChild(gewaehlteBeschreibung);
         gewaehlteBeschreibung.appendChild(text);
+        let gespeicherteGroesse = document.createElement("img"); //bild anlegen
+        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
+        div.appendChild(gespeicherteGroesse);
         let gespeicherteTopping = document.createElement("img"); //bild anlegen
         gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern
         div.appendChild(gespeicherteTopping);
