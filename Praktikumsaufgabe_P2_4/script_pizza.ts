@@ -24,6 +24,7 @@ namespace Praktikumsaufgabe_P2_4 {
         document.body.appendChild(x);
     }
     localStorage.setItem("image", "pizza_groesse.png");
+    
 
 
 
@@ -46,18 +47,20 @@ namespace Praktikumsaufgabe_P2_4 {
 
         }
     }
-    
+
     function serviceAufrufen(): void {
         location.assign("./pizza_service.html");
     }
     let serviceButton: HTMLElement = document.getElementById("serviceButton");
     serviceButton.addEventListener("click", serviceAufrufen);
 
+
     function toppingsAufrufen(): void {
         location.assign("./pizza_topping.html");
     }
     let toppingButton: HTMLElement = document.getElementById("toppingButton");
     toppingButton.addEventListener("click", toppingsAufrufen);
+    
 }
 
 
