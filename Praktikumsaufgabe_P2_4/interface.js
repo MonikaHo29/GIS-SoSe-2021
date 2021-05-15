@@ -3,14 +3,14 @@ var Praktikumsaufgabe_P2_4;
 (function (Praktikumsaufgabe_P2_4) {
     Praktikumsaufgabe_P2_4.allPizzapart = {
         groesseArray: [
-            { option: "20cm", image: "pizza_groesse.png" },
-            { option: "25cm", image: "pizza_groesse.png" },
-            { option: "30cm", image: "pizza_groesse.png" }
+            { option: "20cm", image: "pizza_klein.png" },
+            { option: "25cm", image: "pizza_medium.png" },
+            { option: "30cm", image: "pizza_gross.png" }
         ],
         toppingArray: [
-            { option: "Salami", image: "salami.png" },
-            { option: "Mais", image: "mais.png" },
-            { option: "Champignions", image: "champignions.png" }
+            { option: "Salami", image: "salami.jpg" },
+            { option: "Mais", image: "mais.jpg" },
+            { option: "Champignions", image: "champignions.jpg" }
         ],
         serviceArray: [
             { option: "Lieferung", image: "lieferung.png" },

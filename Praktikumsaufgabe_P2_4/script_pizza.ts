@@ -12,56 +12,74 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let button: HTMLButtonElement = document.createElement("button");
         button.addEventListener("click", showDurchmesser);
-        button.dataset.durchmesser = myObject.groesseArray.toString();
+        button.dataset.option = _pPizzapart.option;
+        button.dataset.image = _pPizzapart.image;
         button.innerText = "Option: " + _pPizzapart.option;
         div.appendChild(button);
 
         return div;
     }
-    for (let i: number = 0; i < myObject.groesseArray.length; i++) {
-        let x: HTMLElement = generatePizzapart(myObject.groesseArray[i]);
-
-        document.body.appendChild(x);
-    }
-    localStorage.setItem("image", "pizza_groesse.png");
-    
-
-
-
-    //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
-    function showDurchmesser(_pEvent: MouseEvent): void {
-
-
-        console.log(_pEvent.target);
-
-        let target: HTMLElement = <HTMLElement>_pEvent.target;
-        console.log(target.dataset.durchmesser);
-
-
+    if (document.querySelector("title").getAttribute("id") == "seite1") {
         for (let i: number = 0; i < myObject.groesseArray.length; i++) {
+            let x: HTMLElement = generatePizzapart(myObject.groesseArray[i]);
 
-            if (myObject.groesseArray[i].toString() == target.dataset.durchmesser) {
-                console.log(myObject.groesseArray[i]);
-
-            }
-
+            document.body.appendChild(x);
         }
     }
 
-    function serviceAufrufen(): void {
-        location.assign("./pizza_service.html");
+    if (document.querySelector("title").getAttribute("id") == "seite2") {
+        for (let i: number = 0; i < myObject.toppingArray.length; i++) {
+            let x: HTMLElement = generatePizzapart(myObject.toppingArray[i]);
+
+            document.body.appendChild(x);
+        }
     }
-    let serviceButton: HTMLElement = document.getElementById("serviceButton");
-    serviceButton.addEventListener("click", serviceAufrufen);
+
+    if (document.querySelector("title").getAttribute("id") == "seite3") {
+        for (let i: number = 0; i < myObject.serviceArray.length; i++) {
+            let x: HTMLElement = generatePizzapart(myObject.serviceArray[i]);
+
+            document.body.appendChild(x);
+        }
 
 
-    function toppingsAufrufen(): void {
-        location.assign("./pizza_topping.html");
+        //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
+        function showDurchmesser(_pEvent: MouseEvent): void {
+
+            if (document.querySelector("title").getAttribute("id") == "seite1") {
+                let target: HTMLElement = <HTMLElement>_pEvent.target;
+                localStorage.setItem("gewaelteGroesse", target.dataset.option);
+                localStorage.setItem("gewaelteGroesse", target.dataset.image);
+            }
+
+            if (document.querySelector("title").getAttribute("id") == "seite2") {
+                let target: HTMLElement = <HTMLElement>_pEvent.target;
+                localStorage.setItem("gewaelteTopping", target.dataset.option);
+                localStorage.setItem("gewaelteTopping", target.dataset.image);
+            }
+
+            if (document.querySelector("title").getAttribute("id") == "seite3") {
+                let target: HTMLElement = <HTMLElement>_pEvent.target;
+                localStorage.setItem("gewaelteService", target.dataset.option);
+                localStorage.setItem("gewaelteService", target.dataset.image);
+            }
+        }
+
+
+
+
+
+
+
+
+
+        function toppingsAufrufen(): void {
+            location.assign("./pizza_topping.html");
+        }
+        let toppingButton: HTMLElement = document.getElementById("toppingButton");
+        toppingButton.addEventListener("click", toppingsAufrufen);
     }
-    let toppingButton: HTMLElement = document.getElementById("toppingButton");
-    toppingButton.addEventListener("click", toppingsAufrufen);
-    
-}
+
 
 
 

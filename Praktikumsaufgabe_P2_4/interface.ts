@@ -16,18 +16,18 @@ namespace Praktikumsaufgabe_P2_4 {
     }
 
 
-    export let allPizzapart: Pizza = {
+    /*export let allPizzapart: Pizza = {
 
         groesseArray: [
-            { option: "20cm", image: "pizza_groesse.png" },
-            { option: "25cm", image: "pizza_groesse.png" },
-            { option: "30cm", image: "pizza_groesse.png" }
+            { option: "20cm", image: "pizza_klein.png" },
+            { option: "25cm", image: "pizza_medium.png" },
+            { option: "30cm", image: "pizza_gross.png" }
         ],
 
         toppingArray: [
-            { option: "Salami", image: "salami.png" },
-            { option: "Mais", image: "mais.png" },
-            { option: "Champignions", image: "champignions.png" }
+            { option: "Salami", image: "salami.jpg" },
+            { option: "Mais", image: "mais.jpg" },
+            { option: "Champignions", image: "champignions.jpg" }
         ],
 
         serviceArray: [

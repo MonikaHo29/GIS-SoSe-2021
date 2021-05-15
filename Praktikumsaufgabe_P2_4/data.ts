@@ -1,35 +1,37 @@
 namespace Praktikumsaufgabe_P2_4 {
 
+    //Aufgabe 1a)
+
     export let myJSON: string = 
     `
     {
     "groesseArray":[
         {
             "option":"20cm",
-            "image": "pizza_groesse.png" 
+            "image": "pizza_klein.png" 
         },
         {
             "option":"25cm",
-            "image": "pizza_groesse.png"
+            "image": "pizza_medium.png"
         },
         {
             "option":"30cm",
-            "image": "pizza_groesse.png"
+            "image": "pizza_gross.png"
         }
     ],
 
     "toppingsArray":[
         {
             "option":"Salami",
-            "image": "salami.png"
+            "image": "salami.jpg"
         },
         {
             "option":"Mais",
-            "image": "mais.png"
+            "image": "mais.jpg"
         },
         {
             "option":"Champignions",
-            "image": "champignions.png"
+            "image": "champignions.jpg"
         }
     ],
 
@@ -50,7 +52,6 @@ namespace Praktikumsaufgabe_P2_4 {
     }`;
 
     console.log(myJSON);
-
     export let myObject: Pizza = JSON.parse(myJSON);
 
 }
