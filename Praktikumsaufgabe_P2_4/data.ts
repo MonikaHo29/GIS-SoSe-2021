@@ -23,15 +23,15 @@ namespace Praktikumsaufgabe_P2_4 {
     "toppingsArray":[
         {
             "option":"Salami",
-            "image": "salami.jpg"
+            "image": "salami.png"
         },
         {
             "option":"Mais",
-            "image": "mais.jpg"
+            "image": "mais.png"
         },
         {
             "option":"Champignions",
-            "image": "champignions.jpg"
+            "image": "champignions.png"
         }
     ],
 
