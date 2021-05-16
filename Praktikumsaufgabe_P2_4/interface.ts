@@ -16,7 +16,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
     /*
     --> nicht mehr relevant da die Werte/Daten als JSON string gespeichert wurde.
-        Nur zu Sicherheit soll es drinne bleiben.
+        Nur für den Fall soll es als Kommentar bleiben.
 
     export let allPizzapart: Pizza = {                
 
