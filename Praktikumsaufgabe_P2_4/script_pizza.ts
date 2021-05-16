@@ -57,20 +57,21 @@ namespace Praktikumsaufgabe_P2_4 {
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
             localStorage.setItem("gewaelteGroesse", target.dataset.option);
-            localStorage.setItem("gewaelteGroessebild", target.dataset.image);
+            localStorage.setItem("gewaelteGroesseBild", target.dataset.image);
         }
 
         if (document.querySelector("title").getAttribute("id") == "seite2") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
             localStorage.setItem("gewaelteSorte", target.dataset.option);
-            localStorage.setItem("gewaelteSortebild", target.dataset.image);
+            localStorage.setItem("gewaelteSorteBild", target.dataset.image);
         }
 
         if (document.querySelector("title").getAttribute("id") == "seite3") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
             localStorage.setItem("gewaelteService", target.dataset.option);
-            localStorage.setItem("gewaelteServicebild", target.dataset.image);
+            localStorage.setItem("gewaelteServiceBild", target.dataset.image);
         }
+    
     }
 
     //d)
@@ -87,9 +88,9 @@ namespace Praktikumsaufgabe_P2_4 {
         beschreibung.appendChild(beschreibungText);
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
-        div.appendChild(bildGroesse);
+        div.appendChild(bildGroesse);    
     }
 
     if (document.querySelector("title").getAttribute("id") == "seite3") {
@@ -103,12 +104,12 @@ namespace Praktikumsaufgabe_P2_4 {
         beschreibung.appendChild(beschreibungText);
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
-        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.src = localStorage.getItem("gewaelteSorteBild");
         bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
     }
@@ -121,18 +122,18 @@ namespace Praktikumsaufgabe_P2_4 {
         document.body.appendChild(div);
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
 
 
         let bildSorte: HTMLImageElement = document.createElement("img");
-        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.src = localStorage.getItem("gewaelteSorteBild");
         bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
 
         let bildService: HTMLImageElement = document.createElement("img");
-        bildService.src = localStorage.getItem("gewaelteServicebild");
+        bildService.src = localStorage.getItem("gewaelteServiceBild");
         bildService.style.width = "30%";
         div.appendChild(bildService);
     }

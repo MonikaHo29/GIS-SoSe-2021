@@ -42,17 +42,17 @@ var Praktikumsaufgabe_P2_4;
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target = _pEvent.target;
             localStorage.setItem("gewaelteGroesse", target.dataset.option);
-            localStorage.setItem("gewaelteGroessebild", target.dataset.image);
+            localStorage.setItem("gewaelteGroesseBild", target.dataset.image);
         }
         if (document.querySelector("title").getAttribute("id") == "seite2") {
             let target = _pEvent.target;
             localStorage.setItem("gewaelteSorte", target.dataset.option);
-            localStorage.setItem("gewaelteSortebild", target.dataset.image);
+            localStorage.setItem("gewaelteSorteBild", target.dataset.image);
         }
         if (document.querySelector("title").getAttribute("id") == "seite3") {
             let target = _pEvent.target;
             localStorage.setItem("gewaelteService", target.dataset.option);
-            localStorage.setItem("gewaelteServicebild", target.dataset.image);
+            localStorage.setItem("gewaelteServiceBild", target.dataset.image);
         }
     }
     //d)
@@ -66,7 +66,7 @@ var Praktikumsaufgabe_P2_4;
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
         let bildGroesse = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
     }
@@ -79,11 +79,11 @@ var Praktikumsaufgabe_P2_4;
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
         let bildGroesse = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
         let bildSorte = document.createElement("img");
-        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.src = localStorage.getItem("gewaelteSorteBild");
         bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
     }
@@ -93,15 +93,15 @@ var Praktikumsaufgabe_P2_4;
         let div = document.createElement("div");
         document.body.appendChild(div);
         let bildGroesse = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.src = localStorage.getItem("gewaelteGroesseBild");
         bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
         let bildSorte = document.createElement("img");
-        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.src = localStorage.getItem("gewaelteSorteBild");
         bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
         let bildService = document.createElement("img");
-        bildService.src = localStorage.getItem("gewaelteServicebild");
+        bildService.src = localStorage.getItem("gewaelteServiceBild");
         bildService.style.width = "30%";
         div.appendChild(bildService);
     }

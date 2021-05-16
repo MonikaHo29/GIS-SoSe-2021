@@ -9,7 +9,7 @@ namespace Praktikumsaufgabe_P2_4 {
     "groesseArray":[
         {
             "option": "20 cm",
-            "image": "pizza_klein.png" 
+            "image": "pizza_klein.png"
         },
         {
             "option": "25 cm",
@@ -50,6 +50,9 @@ namespace Praktikumsaufgabe_P2_4 {
             "image": "vorort.png"
         }
     ]
+        {
+            "image":"fragezeichen.png"
+        }
     }`;
 
     console.log(myJSON);

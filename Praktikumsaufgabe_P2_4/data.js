@@ -7,7 +7,7 @@ var Praktikumsaufgabe_P2_4;
     "groesseArray":[
         {
             "option": "20 cm",
-            "image": "pizza_klein.png" 
+            "image": "pizza_klein.png"
         },
         {
             "option": "25 cm",
@@ -48,6 +48,9 @@ var Praktikumsaufgabe_P2_4;
             "image": "vorort.png"
         }
     ]
+        {
+            "image":"fragezeichen.png"
+        }
     }`;
     console.log(Praktikumsaufgabe_P2_4.myJSON);
     Praktikumsaufgabe_P2_4.myObject = JSON.parse(Praktikumsaufgabe_P2_4.myJSON);
