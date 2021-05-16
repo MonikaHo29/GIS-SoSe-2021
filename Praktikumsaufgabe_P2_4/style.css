@@ -36,13 +36,6 @@ div{
     padding-bottom: 50px;
 }
 
-button{
-    background-color:#52281e;
-    color: white; 
-    width: auto;
-    font-size: 1.5em;
-    padding: 15px;
-}
 
 #aufgabe1{
     text-align: left;
@@ -55,6 +48,14 @@ div{
     width: 100%;
     margin: auto;
     padding-bottom: 50px;
+}
+
+button{
+    background-color:#52281e;
+    color: white; 
+    width: auto;
+    font-size: 1.5em;
+    padding: 15px;
 }
 
 .weiterButton{

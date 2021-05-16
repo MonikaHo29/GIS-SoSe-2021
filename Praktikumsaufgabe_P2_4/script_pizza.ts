@@ -71,7 +71,7 @@ namespace Praktikumsaufgabe_P2_4 {
             localStorage.setItem("ausgewaelteService", target.dataset.option);
             localStorage.setItem("ausgewaelteServiceBild", target.dataset.image);
         }
-    
+
     }
 
     //d)
@@ -118,8 +118,8 @@ namespace Praktikumsaufgabe_P2_4 {
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
         bildGroesse.style.width = "20%";
-        div.appendChild(bildGroesse); 
-        
+        div.appendChild(bildGroesse);
+
         let defaultBild: HTMLImageElement = document.createElement("img");
         defaultBild.src = "fragezeichen.png";
         defaultBild.style.width = "20%";
@@ -162,7 +162,7 @@ namespace Praktikumsaufgabe_P2_4 {
     //Aufgabe 2
     //Vorschau Übersicht, alle vorherigen gewählten Optionen 
 
-     //Seite: Bestellübersicht
+    //Seite: Bestellübersicht
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div: HTMLDivElement = document.createElement("div");
         document.body.appendChild(div);
