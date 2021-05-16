@@ -56,7 +56,7 @@ var Praktikumsaufgabe_P2_4;
         }
     }
     //d)
-    //Vorschau für Auswahl aus den vorherigen Seiten/Schritte
+    //Vorschau für gewählte Optionen aus den vorherigen Seiten/Schritte
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div = document.createElement("div");
         document.body.appendChild(div);
