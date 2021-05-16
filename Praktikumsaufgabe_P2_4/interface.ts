@@ -8,14 +8,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
 
     export interface Pizza {
-
         groesseArray: Pizzapart[];
-        toppingArray: Pizzapart[];
+        sorteArray: Pizzapart[];
         serviceArray: Pizzapart[];
     }
 
 
-    /*export let allPizzapart: Pizza = {
+    /*
+    --> nicht mehr relevant da die Werte/Daten als JSON string gespeichert wurde.
+        Nur zu Sicherheit soll es drinne bleiben.
+
+    export let allPizzapart: Pizza = {                
 
         groesseArray: [
             { option: "20cm", image: "pizza_klein.png" },

@@ -1,5 +1,6 @@
 namespace Praktikumsaufgabe_P2_4 {
 
+    
     //Aufgabe 1a)
 
     export let myJSON: string = 
@@ -7,31 +8,31 @@ namespace Praktikumsaufgabe_P2_4 {
     {
     "groesseArray":[
         {
-            "option": "20cm",
+            "option": "20 cm",
             "image": "pizza_klein.png" 
         },
         {
-            "option": "25cm",
+            "option": "25 cm",
             "image": "pizza_medium.png"
         },
         {
-            "option": "30cm",
+            "option": "30 cm",
             "image": "pizza_gross.png"
         }
     ],
 
-    "toppingArray":[
+    "sorteArray":[
         {
-            "option": "Mais",
-            "image": "mais.png"
+            "option": "Pizza Vegetarisch",
+            "image": "vegetarisch.png"
         },
         {
-            "option": "Salami",
-            "image": "salami.png"
+            "option": "Pizza Hawaii-Chicken",
+            "image": "hawaii.png"
         },
         {
-            "option": "Champignions",
-            "image": "champignions.png"
+            "option": "Pizza Marokkan",
+            "image": "marokkan.png"
         }
     ],
 

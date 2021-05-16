@@ -1,19 +1,21 @@
 namespace Praktikumsaufgabe_P2_4 {
 
-    //Aufgabe 3
 
-    //b)
-    function generatePizza(_pPizzapart: Pizzapart): HTMLElement {              //allgemeine Funktion um die Pizzagröße zu bestimmen 
+    //Aufgabe 1
+    //allgemeine Funktion um eine Option zur generieren 
+
+    function generatePizzaOption(_pPizzapart: Pizzapart): HTMLElement {
         let div: HTMLDivElement = document.createElement("div");
 
         let image: HTMLImageElement = document.createElement("img");
         image.src = _pPizzapart.image;
+        image.style.width = "30%";
         div.appendChild(image);
 
         let button: HTMLButtonElement = document.createElement("button");
         let buttonText: Text = document.createTextNode(_pPizzapart.option);
         button.appendChild(buttonText);
-        button.addEventListener("click", saveLocalstorage);
+        button.addEventListener("click", saveInlocalStorage);
         button.dataset.option = _pPizzapart.option;
         button.dataset.image = _pPizzapart.image;
         div.appendChild(button);
@@ -21,17 +23,18 @@ namespace Praktikumsaufgabe_P2_4 {
         return div;
     }
 
-    if (document.querySelector("title").getAttribute("id") == "seite1") {
+
+    if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
         for (let i: number = 0; i < myObject.groesseArray.length; i++) {
-            let x: HTMLElement = generatePizza(myObject.groesseArray[i]);
+            let x: HTMLElement = generatePizzaOption(myObject.groesseArray[i]);
 
             document.body.appendChild(x);
         }
     }
 
     if (document.querySelector("title").getAttribute("id") == "seite2") {
-        for (let i: number = 0; i < myObject.toppingArray.length; i++) {
-            let x: HTMLElement = generatePizza(myObject.toppingArray[i]);
+        for (let i: number = 0; i < myObject.sorteArray.length; i++) {
+            let x: HTMLElement = generatePizzaOption(myObject.sorteArray[i]);
 
             document.body.appendChild(x);
         }
@@ -39,14 +42,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         for (let i: number = 0; i < myObject.serviceArray.length; i++) {
-            let x: HTMLElement = generatePizza(myObject.serviceArray[i]);
+            let x: HTMLElement = generatePizzaOption(myObject.serviceArray[i]);
 
             document.body.appendChild(x);
         }
     }
 
-    //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
-    function saveLocalstorage(_pEvent: MouseEvent): void {
+
+    //b)
+    //Funktion um Auswahl in localStorage zu speichern  
+
+    function saveInlocalStorage(_pEvent: MouseEvent): void {
 
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
@@ -56,8 +62,8 @@ namespace Praktikumsaufgabe_P2_4 {
 
         if (document.querySelector("title").getAttribute("id") == "seite2") {
             let target: HTMLElement = <HTMLElement>_pEvent.target;
-            localStorage.setItem("gewaelteTopping", target.dataset.option);
-            localStorage.setItem("gewaelteToppingbild", target.dataset.image);
+            localStorage.setItem("gewaelteSorte", target.dataset.option);
+            localStorage.setItem("gewaelteSortebild", target.dataset.image);
         }
 
         if (document.querySelector("title").getAttribute("id") == "seite3") {
@@ -67,64 +73,71 @@ namespace Praktikumsaufgabe_P2_4 {
         }
     }
 
-    // Vorschau
+    //d)
+    //Vorschau für Auswahl aus den vorherigen Seiten/Schritte
 
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div: HTMLDivElement = document.createElement("div");
         document.body.appendChild(div);
 
-        let gewaehlteBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
-        let text: Text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
-        div.appendChild(gewaehlteBeschreibung);
-        gewaehlteBeschreibung.appendChild(text);
+        let beschreibung: HTMLElement = document.createElement("p");
+        let beschreibungText: Text = document.createTextNode("Deine Auswahl bis jetzt:");
+        beschreibung.style.fontSize = "1.5em";
+        div.appendChild(beschreibung);
+        beschreibung.appendChild(beschreibungText);
 
-        let gespeicherteGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
+        let bildGroesse: HTMLImageElement = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
     }
 
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div: HTMLDivElement = document.createElement("div");
         document.body.appendChild(div);
 
-        let gewaehlteBeschreibung: HTMLElement = document.createElement("p"); // p-Element anlegen
-        let text: Text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
-        div.appendChild(gewaehlteBeschreibung);
-        gewaehlteBeschreibung.appendChild(text);
+        let beschreibung: HTMLElement = document.createElement("p");
+        let beschreibungText: Text = document.createTextNode("Deine Auswahl bis jetzt:");
+        beschreibung.style.fontSize = "1.5em";
+        div.appendChild(beschreibung);
+        beschreibung.appendChild(beschreibungText);
 
-        let gespeicherteGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
+        let bildGroesse: HTMLImageElement = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
 
-        let gespeicherteTopping: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern
-        div.appendChild(gespeicherteTopping);
+        let bildSorte: HTMLImageElement = document.createElement("img");
+        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.style.width = "30%";
+        div.appendChild(bildSorte);
     }
 
+    //Aufgabe 2
+    //Vorschau Übersicht, alle vorherigen gewählte Optionen 
 
-
-
-    
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div: HTMLDivElement = document.createElement("div");
         document.body.appendChild(div);
 
-        let gespeicherteService: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteService.src = localStorage.getItem("gewaelteServicebild"); //bild speichern
-        div.appendChild(gespeicherteService);
+        let bildGroesse: HTMLImageElement = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
 
 
-        let gespeicherteTopping: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern
-        div.appendChild(gespeicherteTopping);
+        let bildSorte: HTMLImageElement = document.createElement("img");
+        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.style.width = "30%";
+        div.appendChild(bildSorte);
 
-
-        let gespeicherteGroesse: HTMLImageElement = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
+        let bildService: HTMLImageElement = document.createElement("img");
+        bildService.src = localStorage.getItem("gewaelteServicebild");
+        bildService.style.width = "30%";
+        div.appendChild(bildService);
     }
 
-
+    
 }
 
 

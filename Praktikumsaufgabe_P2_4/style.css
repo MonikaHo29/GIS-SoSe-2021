@@ -13,12 +13,6 @@ header{
     margin-bottom: 100px;
 }
 
-main{
-    font-size: 1.5em;
-    margin:auto;
-    width: 80%;
-}
-
 h1 {
     font-size: 5em;
     font-weight: bold;
@@ -29,6 +23,10 @@ h1 {
 
 h2{
     font-size: 2em;
+}
+
+aside{
+    font-size: 1.5em;
 }
 
 aside{
@@ -43,9 +41,8 @@ div{
 
 button{
     background-color:#52281e;
-    color: white;
-    border: none;
-    margin-left: 100px;
+    color: white; 
+    width: auto;
     font-size: 1.5em;
     padding: 15px;
 }

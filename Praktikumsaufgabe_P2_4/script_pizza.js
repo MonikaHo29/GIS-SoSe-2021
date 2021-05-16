@@ -1,42 +1,44 @@
 "use strict";
 var Praktikumsaufgabe_P2_4;
 (function (Praktikumsaufgabe_P2_4) {
-    //Aufgabe 3
-    //b)
-    function generatePizza(_pPizzapart) {
+    //Aufgabe 1
+    //allgemeine Funktion um eine Option zur generieren 
+    function generatePizzaOption(_pPizzapart) {
         let div = document.createElement("div");
         let image = document.createElement("img");
         image.src = _pPizzapart.image;
+        image.style.width = "30%";
         div.appendChild(image);
         let button = document.createElement("button");
         let buttonText = document.createTextNode(_pPizzapart.option);
         button.appendChild(buttonText);
-        button.addEventListener("click", saveLocalstorage);
+        button.addEventListener("click", saveInlocalStorage);
         button.dataset.option = _pPizzapart.option;
         button.dataset.image = _pPizzapart.image;
         div.appendChild(button);
         return div;
     }
-    if (document.querySelector("title").getAttribute("id") == "seite1") {
+    if (document.querySelector("title").getAttribute("id") == "seite1") { //Welche Seite?
         for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.groesseArray.length; i++) {
-            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.groesseArray[i]);
+            let x = generatePizzaOption(Praktikumsaufgabe_P2_4.myObject.groesseArray[i]);
             document.body.appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite2") {
-        for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.toppingArray.length; i++) {
-            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.toppingArray[i]);
+        for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.sorteArray.length; i++) {
+            let x = generatePizzaOption(Praktikumsaufgabe_P2_4.myObject.sorteArray[i]);
             document.body.appendChild(x);
         }
     }
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         for (let i = 0; i < Praktikumsaufgabe_P2_4.myObject.serviceArray.length; i++) {
-            let x = generatePizza(Praktikumsaufgabe_P2_4.myObject.serviceArray[i]);
+            let x = generatePizzaOption(Praktikumsaufgabe_P2_4.myObject.serviceArray[i]);
             document.body.appendChild(x);
         }
     }
-    //c)                                                                    //Funktion um gespeicherte Auswahl in Konsole auszugeben 
-    function saveLocalstorage(_pEvent) {
+    //b)
+    //Funktion um Auswahl in localStorage zu speichern  
+    function saveInlocalStorage(_pEvent) {
         if (document.querySelector("title").getAttribute("id") == "seite1") {
             let target = _pEvent.target;
             localStorage.setItem("gewaelteGroesse", target.dataset.option);
@@ -44,8 +46,8 @@ var Praktikumsaufgabe_P2_4;
         }
         if (document.querySelector("title").getAttribute("id") == "seite2") {
             let target = _pEvent.target;
-            localStorage.setItem("gewaelteTopping", target.dataset.option);
-            localStorage.setItem("gewaelteToppingbild", target.dataset.image);
+            localStorage.setItem("gewaelteSorte", target.dataset.option);
+            localStorage.setItem("gewaelteSortebild", target.dataset.image);
         }
         if (document.querySelector("title").getAttribute("id") == "seite3") {
             let target = _pEvent.target;
@@ -53,44 +55,55 @@ var Praktikumsaufgabe_P2_4;
             localStorage.setItem("gewaelteServicebild", target.dataset.image);
         }
     }
-    // Vorschau
+    //d)
+    //Vorschau für Auswahl aus den vorherigen Seiten/Schritte
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div = document.createElement("div");
         document.body.appendChild(div);
-        let gewaehlteBeschreibung = document.createElement("p"); // p-Element anlegen
-        let text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
-        div.appendChild(gewaehlteBeschreibung);
-        gewaehlteBeschreibung.appendChild(text);
-        let gespeicherteGroesse = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
+        let beschreibung = document.createElement("p");
+        let beschreibungText = document.createTextNode("Deine Auswahl bis jetzt:");
+        beschreibung.style.fontSize = "1.5em";
+        div.appendChild(beschreibung);
+        beschreibung.appendChild(beschreibungText);
+        let bildGroesse = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
     }
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div = document.createElement("div");
         document.body.appendChild(div);
-        let gewaehlteBeschreibung = document.createElement("p"); // p-Element anlegen
-        let text = document.createTextNode("Deine Auswahl bis jetzt:"); // p-Element befüllen
-        div.appendChild(gewaehlteBeschreibung);
-        gewaehlteBeschreibung.appendChild(text);
-        let gespeicherteGroesse = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
-        let gespeicherteTopping = document.createElement("img"); //bild anlegen
-        gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern
-        div.appendChild(gespeicherteTopping);
+        let beschreibung = document.createElement("p");
+        let beschreibungText = document.createTextNode("Deine Auswahl bis jetzt:");
+        beschreibung.style.fontSize = "1.5em";
+        div.appendChild(beschreibung);
+        beschreibung.appendChild(beschreibungText);
+        let bildGroesse = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
+        let bildSorte = document.createElement("img");
+        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.style.width = "30%";
+        div.appendChild(bildSorte);
     }
+    //Aufgabe 2
+    //Vorschau Übersicht, alle vorherigen gewählte Optionen 
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div = document.createElement("div");
         document.body.appendChild(div);
-        let gespeicherteService = document.createElement("img"); //bild anlegen
-        gespeicherteService.src = localStorage.getItem("gewaelteServicebild"); //bild speichern
-        div.appendChild(gespeicherteService);
-        let gespeicherteTopping = document.createElement("img"); //bild anlegen
-        gespeicherteTopping.src = localStorage.getItem("gewaelteToppingbild"); //bild speichern
-        div.appendChild(gespeicherteTopping);
-        let gespeicherteGroesse = document.createElement("img"); //bild anlegen
-        gespeicherteGroesse.src = localStorage.getItem("gewaelteGroessebild"); //bild aufrufen
-        div.appendChild(gespeicherteGroesse);
+        let bildGroesse = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("gewaelteGroessebild");
+        bildGroesse.style.width = "30%";
+        div.appendChild(bildGroesse);
+        let bildSorte = document.createElement("img");
+        bildSorte.src = localStorage.getItem("gewaelteSortebild");
+        bildSorte.style.width = "30%";
+        div.appendChild(bildSorte);
+        let bildService = document.createElement("img");
+        bildService.src = localStorage.getItem("gewaelteServicebild");
+        bildService.style.width = "30%";
+        div.appendChild(bildService);
     }
 })(Praktikumsaufgabe_P2_4 || (Praktikumsaufgabe_P2_4 = {}));
 //# sourceMappingURL=script_pizza.js.map
