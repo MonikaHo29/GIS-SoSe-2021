@@ -57,11 +57,34 @@ var Praktikumsaufgabe_P2_4;
     }
     //d)
     //Vorschau für gewählte Optionen aus den vorherigen Seiten/Schritte
+    //Seite: Pizzagröße
+    if (document.querySelector("title").getAttribute("id") == "seite1") {
+        let div = document.createElement("div");
+        document.body.appendChild(div);
+        let beschreibung = document.createElement("p");
+        let beschreibungText = document.createTextNode("Bisher wurde gewählt:");
+        beschreibung.style.fontSize = "1.5em";
+        div.appendChild(beschreibung);
+        beschreibung.appendChild(beschreibungText);
+        let defaultBild = document.createElement("img"); //noch keine Option gewählt
+        defaultBild.src = "fragezeichen.png";
+        defaultBild.style.width = "20%";
+        div.appendChild(defaultBild);
+        let defaultBild2 = document.createElement("img");
+        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.style.width = "20%";
+        div.appendChild(defaultBild2);
+        let defaultBild3 = document.createElement("img");
+        defaultBild3.src = "fragezeichen.png";
+        defaultBild3.style.width = "20%";
+        div.appendChild(defaultBild3);
+    }
+    //Seite: Pizzasorte
     if (document.querySelector("title").getAttribute("id") == "seite2") {
         let div = document.createElement("div");
         document.body.appendChild(div);
         let beschreibung = document.createElement("p");
-        let beschreibungText = document.createTextNode("Deine Auswahl bis jetzt:");
+        let beschreibungText = document.createTextNode("Bisher wurde gewählt:");
         beschreibung.style.fontSize = "1.5em";
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
@@ -69,12 +92,21 @@ var Praktikumsaufgabe_P2_4;
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
         bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
+        let defaultBild = document.createElement("img");
+        defaultBild.src = "fragezeichen.png";
+        defaultBild.style.width = "20%";
+        div.appendChild(defaultBild);
+        let defaultBild2 = document.createElement("img");
+        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.style.width = "20%";
+        div.appendChild(defaultBild2);
     }
+    //Seite: Service
     if (document.querySelector("title").getAttribute("id") == "seite3") {
         let div = document.createElement("div");
         document.body.appendChild(div);
         let beschreibung = document.createElement("p");
-        let beschreibungText = document.createTextNode("Deine Auswahl bis jetzt:");
+        let beschreibungText = document.createTextNode("Bisher wurde gewählt:");
         beschreibung.style.fontSize = "1.5em";
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
@@ -86,9 +118,14 @@ var Praktikumsaufgabe_P2_4;
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
         bildSorte.style.width = "20%";
         div.appendChild(bildSorte);
+        let defaultBild = document.createElement("img");
+        defaultBild.src = "fragezeichen.png";
+        defaultBild.style.width = "20%";
+        div.appendChild(defaultBild);
     }
     //Aufgabe 2
     //Vorschau Übersicht, alle vorherigen gewählten Optionen 
+    //Seite: Bestellübersicht
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div = document.createElement("div");
         document.body.appendChild(div);
