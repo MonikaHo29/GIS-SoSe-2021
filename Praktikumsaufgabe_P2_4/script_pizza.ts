@@ -49,7 +49,7 @@ namespace Praktikumsaufgabe_P2_4 {
     }
 
 
-    //e)
+    //b)
     //Funktion um Auswahl in localStorage zu speichern  
 
     function saveInlocalStorage(_pEvent: MouseEvent): void {
