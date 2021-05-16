@@ -89,7 +89,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "30%";
+        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);    
     }
 
@@ -105,12 +105,12 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "30%";
+        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "30%";
+        bildSorte.style.width = "20%";
         div.appendChild(bildSorte);
     }
 
@@ -123,17 +123,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "10%";
+        bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "10%";
+        bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
 
         let bildService: HTMLImageElement = document.createElement("img");
         bildService.src = localStorage.getItem("ausgewaelteServiceBild");
-        bildService.style.width = "10%";
+        bildService.style.width = "30%";
         div.appendChild(bildService);
     }
 

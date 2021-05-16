@@ -67,7 +67,7 @@ var Praktikumsaufgabe_P2_4;
         beschreibung.appendChild(beschreibungText);
         let bildGroesse = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "30%";
+        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
     }
     if (document.querySelector("title").getAttribute("id") == "seite3") {
@@ -80,11 +80,11 @@ var Praktikumsaufgabe_P2_4;
         beschreibung.appendChild(beschreibungText);
         let bildGroesse = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "30%";
+        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
         let bildSorte = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "30%";
+        bildSorte.style.width = "20%";
         div.appendChild(bildSorte);
     }
     //Aufgabe 2
@@ -94,15 +94,15 @@ var Praktikumsaufgabe_P2_4;
         document.body.appendChild(div);
         let bildGroesse = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "10%";
+        bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
         let bildSorte = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "10%";
+        bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
         let bildService = document.createElement("img");
         bildService.src = localStorage.getItem("ausgewaelteServiceBild");
-        bildService.style.width = "10%";
+        bildService.style.width = "30%";
         div.appendChild(bildService);
     }
 })(Praktikumsaufgabe_P2_4 || (Praktikumsaufgabe_P2_4 = {}));
