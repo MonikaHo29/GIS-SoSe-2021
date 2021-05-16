@@ -89,7 +89,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "20%";
+        bildGroesse.style.width = "15%";
         div.appendChild(bildGroesse);    
     }
 
@@ -105,12 +105,12 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "20%";
+        bildGroesse.style.width = "15%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "20%";
+        bildSorte.style.width = "15%";
         div.appendChild(bildSorte);
     }
 

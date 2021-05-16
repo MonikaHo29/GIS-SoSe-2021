@@ -33,7 +33,7 @@ namespace Praktikumsaufgabe_P2_4 {
         {
             "option": "Pizza Marokkan",
             "image": "marokkan.png"
-        }
+        },
     ],
 
     "serviceArray":[
