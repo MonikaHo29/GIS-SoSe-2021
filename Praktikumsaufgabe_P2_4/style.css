@@ -26,11 +26,8 @@ h2{
 }
 
 aside{
-    font-size: 1.5em;
-}
-
-aside{
     margin-bottom: 50px;
+    font-size: 1.5em;
 }
 
 div{
@@ -45,6 +42,7 @@ button{
     width: auto;
     font-size: 1.5em;
     padding: 15px;
+    
 }
 
 #aufgabe1{

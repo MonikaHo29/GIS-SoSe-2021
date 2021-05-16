@@ -114,7 +114,7 @@ namespace Praktikumsaufgabe_P2_4 {
     }
 
     //Aufgabe 2
-    //Vorschau Übersicht, alle vorherigen gewählte Optionen 
+    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
 
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div: HTMLDivElement = document.createElement("div");

@@ -88,7 +88,7 @@ var Praktikumsaufgabe_P2_4;
         div.appendChild(bildSorte);
     }
     //Aufgabe 2
-    //Vorschau Übersicht, alle vorherigen gewählte Optionen 
+    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div = document.createElement("div");
         document.body.appendChild(div);
