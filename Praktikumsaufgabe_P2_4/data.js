@@ -48,9 +48,6 @@ var Praktikumsaufgabe_P2_4;
             "image": "vorort.png"
         }
     ]
-        {
-            "image":"fragezeichen.png"
-        }
     }`;
     console.log(Praktikumsaufgabe_P2_4.myJSON);
     Praktikumsaufgabe_P2_4.myObject = JSON.parse(Praktikumsaufgabe_P2_4.myJSON);

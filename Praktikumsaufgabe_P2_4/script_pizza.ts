@@ -137,7 +137,6 @@ namespace Praktikumsaufgabe_P2_4 {
         bildService.style.width = "30%";
         div.appendChild(bildService);
     }
-
     
 }
 

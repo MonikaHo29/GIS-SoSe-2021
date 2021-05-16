@@ -50,9 +50,6 @@ namespace Praktikumsaufgabe_P2_4 {
             "image": "vorort.png"
         }
     ]
-        {
-            "image":"fragezeichen.png"
-        }
     }`;
 
     console.log(myJSON);
