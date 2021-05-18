@@ -1,4 +1,4 @@
-namespace Praktikumsaufgabe_P2_4 {
+ namespace Praktikumsaufgabe_P2_4 {
 
 
     //Aufgabe 1
@@ -9,7 +9,6 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let image: HTMLImageElement = document.createElement("img");
         image.src = _pPizzapart.image;
-        image.style.width = "30%";
         div.appendChild(image);
 
         let button: HTMLButtonElement = document.createElement("button");
@@ -84,23 +83,19 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let beschreibung: HTMLElement = document.createElement("p");
         let beschreibungText: Text = document.createTextNode("Bisher wurde gewählt:");
-        beschreibung.style.fontSize = "1.5em";
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
 
         let defaultBild: HTMLImageElement = document.createElement("img");    //noch keine Option gewählt
         defaultBild.src = "fragezeichen.png";
-        defaultBild.style.width = "20%";
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
         defaultBild2.src = "fragezeichen.png";
-        defaultBild2.style.width = "20%";
         div.appendChild(defaultBild2);
 
         let defaultBild3: HTMLImageElement = document.createElement("img");
         defaultBild3.src = "fragezeichen.png";
-        defaultBild3.style.width = "20%";
         div.appendChild(defaultBild3);
     }
 
@@ -111,23 +106,19 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let beschreibung: HTMLElement = document.createElement("p");
         let beschreibungText: Text = document.createTextNode("Bisher wurde gewählt:");
-        beschreibung.style.fontSize = "1.5em";
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
         defaultBild.src = "fragezeichen.png";
-        defaultBild.style.width = "20%";
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
         defaultBild2.src = "fragezeichen.png";
-        defaultBild2.style.width = "20%";
         div.appendChild(defaultBild2);
 
     }
@@ -139,23 +130,19 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let beschreibung: HTMLElement = document.createElement("p");
         let beschreibungText: Text = document.createTextNode("Bisher wurde gewählt:");
-        beschreibung.style.fontSize = "1.5em";
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "20%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "20%";
         div.appendChild(bildSorte);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
         defaultBild.src = "fragezeichen.png";
-        defaultBild.style.width = "20%";
         div.appendChild(defaultBild);
     }
 
@@ -169,17 +156,14 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        bildGroesse.style.width = "30%";
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        bildSorte.style.width = "30%";
         div.appendChild(bildSorte);
 
         let bildService: HTMLImageElement = document.createElement("img");
         bildService.src = localStorage.getItem("ausgewaelteServiceBild");
-        bildService.style.width = "30%";
         div.appendChild(bildService);
     }
 
