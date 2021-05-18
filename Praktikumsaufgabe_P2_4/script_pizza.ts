@@ -4,6 +4,7 @@ namespace Praktikumsaufgabe_P2_4 {
     //Aufgabe 1
     //allgemeine Funktion um eine Option zur generieren 
 
+    
     function generatePizzaOption(_pPizzapart: Pizzapart): HTMLElement {
         let div: HTMLDivElement = document.createElement("div");
 
@@ -21,6 +22,7 @@ namespace Praktikumsaufgabe_P2_4 {
 
         return div;
     }
+
 
 
     if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
@@ -88,14 +90,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let defaultBild: HTMLImageElement = document.createElement("img");    //noch keine Option gewählt
         defaultBild.src = "fragezeichen.png";
+        defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
         defaultBild2.src = "fragezeichen.png";
+        defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
 
         let defaultBild3: HTMLImageElement = document.createElement("img");
         defaultBild3.src = "fragezeichen.png";
+        defaultBild3.classList.add("vorschau");
         div.appendChild(defaultBild3);
     }
 
@@ -111,14 +116,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
+        bildGroesse.classList.add("vorschau");
         div.appendChild(bildGroesse);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
         defaultBild.src = "fragezeichen.png";
+        defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
         defaultBild2.src = "fragezeichen.png";
+        defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
 
     }
@@ -135,14 +143,17 @@ namespace Praktikumsaufgabe_P2_4 {
 
         let bildGroesse: HTMLImageElement = document.createElement("img");
         bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
+        bildGroesse.classList.add("vorschau");
         div.appendChild(bildGroesse);
 
         let bildSorte: HTMLImageElement = document.createElement("img");
         bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
+        bildSorte.classList.add("vorschau");
         div.appendChild(bildSorte);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
         defaultBild.src = "fragezeichen.png";
+        defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
     }
 

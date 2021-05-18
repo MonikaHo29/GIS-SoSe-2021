@@ -25,6 +25,10 @@ h2{
     font-size: 2em;
 }
 
+p{
+    font-size: 1.5em;
+}
+
 aside{
     margin-bottom: 50px;
     font-size: 1.5em;
@@ -62,3 +66,11 @@ button{
     margin-bottom: 50px;
 }
 
+img{
+    width:30%;
+}
+
+
+.vorschau{
+    width: 20%;
+}
