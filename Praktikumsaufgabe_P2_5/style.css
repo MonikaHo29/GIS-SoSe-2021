@@ -1,0 +1,75 @@
+
+body{
+    margin:auto;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(hintergrund_schwarz.jpg);
+    color: white;
+}
+
+header{
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    margin: auto;
+    padding: 40px;
+}
+
+h2{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+aside{
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+
+div{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+
+#aufgabe1{
+    text-align: left;
+    display:table;
+    font-size: 1.5em;
+    color: white;
+}
+
+div{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+button{
+    background-color:#52281e;
+    color: white; 
+    width: auto;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.weiterButton{
+    margin-bottom: 50px;
+}
+
+img{
+    width:30%;
+}
+
+
+.vorschau{
+    width: 20%;
+}
