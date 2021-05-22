@@ -11,6 +11,7 @@ namespace Praktikumsaufgabe_P2_4 {
         let image: HTMLImageElement = document.createElement("img");
         image.src = _pPizzapart.image;
         div.appendChild(image);
+        
 
         let button: HTMLButtonElement = document.createElement("button");
         let buttonText: Text = document.createTextNode(_pPizzapart.option);
@@ -22,8 +23,6 @@ namespace Praktikumsaufgabe_P2_4 {
 
         return div;
     }
-
-
 
     if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
         for (let i: number = 0; i < myObject.groesseArray.length; i++) {

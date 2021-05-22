@@ -1,10 +1,5 @@
-"use strict";
-var Praktikumsaufgabe_P2_5;
-(function (Praktikumsaufgabe_P2_5) {
-    //Aufgabe 1a)
-    Praktikumsaufgabe_P2_5.myJSON = `
-    {
-    "groesseArray":[
+{
+    "groesseArray": [
         {
             "option": "20 cm",
             "image": "pizza_klein.png"
@@ -18,8 +13,7 @@ var Praktikumsaufgabe_P2_5;
             "image": "pizza_gross.png"
         }
     ],
-
-    "sorteArray":[
+    "sorteArray": [
         {
             "option": "Pizza Vegetarisch",
             "image": "vegetarisch.png"
@@ -33,8 +27,7 @@ var Praktikumsaufgabe_P2_5;
             "image": "marokkan.png"
         }
     ],
-
-    "serviceArray":[
+    "serviceArray": [
         {
             "option": "Lieferung",
             "image": "lieferung.png"
@@ -48,8 +41,4 @@ var Praktikumsaufgabe_P2_5;
             "image": "vorort.png"
         }
     ]
-    }`;
-    console.log(Praktikumsaufgabe_P2_5.myJSON);
-    Praktikumsaufgabe_P2_5.myObject = JSON.parse(Praktikumsaufgabe_P2_5.myJSON);
-})(Praktikumsaufgabe_P2_5 || (Praktikumsaufgabe_P2_5 = {}));
-//# sourceMappingURL=data.js.map
+}

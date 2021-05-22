@@ -1,53 +1,44 @@
-namespace Praktikumsaufgabe_P2_5 {
-
+ namespace Praktikumsaufgabe_P2_5 {
 
     //Aufgabe 1
     //allgemeine Funktion um eine Option zur generieren 
 
-    
-    function generatePizzaOption(_pPizzapart: Pizzapart): HTMLElement {
-        let div: HTMLDivElement = document.createElement("div");
+    async function generatePizzaOption(_url: RequestInfo): Promise<void> {
 
-        let image: HTMLImageElement = document.createElement("img");
-        image.src = _pPizzapart.image;
-        div.appendChild(image);
+        let response: Response = await fetch(_url);
+        console.log("Response:", response);
+        let myObject: Pizza = await response.json();
+        console.log(myObject);
 
-        let button: HTMLButtonElement = document.createElement("button");
-        let buttonText: Text = document.createTextNode(_pPizzapart.option);
-        button.appendChild(buttonText);
-        button.addEventListener("click", saveInlocalStorage);
-        button.dataset.option = _pPizzapart.option;
-        button.dataset.image = _pPizzapart.image;
-        div.appendChild(button);
+        if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
+            for (let i: number = 0; i < myObject.groesseArray.length; i++) {
+                let x: Pizzapart = myObject.groesseArray[i];
 
-        return div;
-    }
-
-
-
-    if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
-        for (let i: number = 0; i < myObject.groesseArray.length; i++) {
-            let x: HTMLElement = generatePizzaOption(myObject.groesseArray[i]);
-
-            document.body.appendChild(x);
+                console.log(x);
+            }
         }
-    }
 
-    if (document.querySelector("title").getAttribute("id") == "seite2") {
-        for (let i: number = 0; i < myObject.sorteArray.length; i++) {
-            let x: HTMLElement = generatePizzaOption(myObject.sorteArray[i]);
+        if (document.querySelector("title").getAttribute("id") == "seite2") {
+            for (let i: number = 0; i < myObject.sorteArray.length; i++) {
+                let x: Pizzapart = myObject.sorteArray[i];
 
-            document.body.appendChild(x);
+                console.log(x);
+            }
         }
-    }
 
-    if (document.querySelector("title").getAttribute("id") == "seite3") {
-        for (let i: number = 0; i < myObject.serviceArray.length; i++) {
-            let x: HTMLElement = generatePizzaOption(myObject.serviceArray[i]);
+        if (document.querySelector("title").getAttribute("id") == "seite3") {
+            for (let i: number = 0; i < myObject.serviceArray.length; i++) {
+                let x: Pizzapart = myObject.serviceArray[i];
 
-            document.body.appendChild(x);
+                console.log(x);
+            }
         }
+
     }
+    generatePizzaOption("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
+
+
+
 
 
     //b)
@@ -74,7 +65,7 @@ namespace Praktikumsaufgabe_P2_5 {
         }
 
     }
-
+    
     //d)
     //Vorschau für gewählte Optionen aus den vorherigen Seiten/Schritte
 
@@ -157,30 +148,41 @@ namespace Praktikumsaufgabe_P2_5 {
         div.appendChild(defaultBild);
     }
 
-    //Aufgabe 2
-    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
+    async function displaySeite(_url: RequestInfo): Promise<void> {
+        let query: URLSearchParams = new URLSearchParams(<any>saveInlocalStorage);
+        _url = _url + "?" + query.toString();
+        let response: Response = await fetch(_url);
+        console.log(response);
 
-    //Seite: Bestellübersicht
-    if (document.querySelector("title").getAttribute("id") == "seite4") {
-        let div: HTMLDivElement = document.createElement("div");
-        document.body.appendChild(div);
-
-        let bildGroesse: HTMLImageElement = document.createElement("img");
-        bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
-        div.appendChild(bildGroesse);
-
-        let bildSorte: HTMLImageElement = document.createElement("img");
-        bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
-        div.appendChild(bildSorte);
-
-        let bildService: HTMLImageElement = document.createElement("img");
-        bildService.src = localStorage.getItem("ausgewaelteServiceBild");
-        div.appendChild(bildService);
+         // Komplette Auswahl anzeigen 
+        if (document.querySelector("title").getAttribute("id") == "seite4") {
+            let div: HTMLDivElement = document.createElement("div");
+            document.body.appendChild(div);
+    
+            let saveGroesse: HTMLImageElement = document.createElement("img");
+            saveGroesse.src = localStorage.getItem("chooseGroessebild");
+            saveGroesse.style.margin = "15px";
+            saveGroesse.style.width = "30%";
+    
+            div.appendChild(saveGroesse);
+    
+            let saveTopping: HTMLImageElement = document.createElement("img");
+            saveTopping.src = localStorage.getItem("chooseToppingbild");
+            saveTopping.style.margin = "15px";
+            saveTopping.style.width = "30%";
+    
+            div.appendChild(saveTopping);
+    
+            let saveService: HTMLImageElement = document.createElement("img"); // leeres bild anlegen
+            saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
+            saveService.style.margin = "15px";
+            saveService.style.width = "30%";
+    
+            div.appendChild(saveService);
+        }
     }
-
+    displaySeite("https://gis-communication.herokuapp.com");
 }
-
-
 
 
 
