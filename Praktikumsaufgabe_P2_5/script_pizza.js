@@ -2,12 +2,32 @@
 var Praktikumsaufgabe_P2_5;
 (function (Praktikumsaufgabe_P2_5) {
     //Aufgabe b)
-    //Funktion 
+    //Funktion um Daten über fetch (im Internet) zu laden
     async function communicate(_pURL) {
         let response = await fetch(_pURL);
         console.log("Response:", response);
         let myObject = await response.json();
         aktuelleSeite(myObject);
+    }
+    function aktuelleSeite(_partArray) {
+        if (document.querySelector("title").getAttribute("id") == "seite1") { //Welche Seite?
+            for (let i = 0; i < _partArray.groesseArray.length; i++) {
+                let x = generatePizzaOption(_partArray.groesseArray[i]);
+                document.body.appendChild(x);
+            }
+        }
+        if (document.querySelector("title").getAttribute("id") == "seite2") {
+            for (let i = 0; i < _partArray.sorteArray.length; i++) {
+                let x = generatePizzaOption(_partArray.sorteArray[i]);
+                document.body.appendChild(x);
+            }
+        }
+        if (document.querySelector("title").getAttribute("id") == "seite3") {
+            for (let i = 0; i < _partArray.serviceArray.length; i++) {
+                let x = generatePizzaOption(_partArray.serviceArray[i]);
+                document.body.appendChild(x);
+            }
+        }
     }
     communicate("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
     //allgemeine Funktion um eine Option zur generieren 
@@ -24,27 +44,6 @@ var Praktikumsaufgabe_P2_5;
         button.dataset.image = _pPizzapart.image;
         div.appendChild(button);
         return div;
-    }
-    //Funktion um auf welche Seite wir uns gerade befinden anzuzeigen + die jeweiligen Optionen
-    function aktuelleSeite(_pPizzapart) {
-        if (document.querySelector("title").getAttribute("id") == "seite1") { //Welche Seite?
-            for (let i = 0; i < _pPizzapart.groesseArray.length; i++) {
-                let x = generatePizzaOption(_pPizzapart.groesseArray[i]);
-                document.body.appendChild(x);
-            }
-        }
-        if (document.querySelector("title").getAttribute("id") == "seite2") {
-            for (let i = 0; i < _pPizzapart.sorteArray.length; i++) {
-                let x = generatePizzaOption(_pPizzapart.sorteArray[i]);
-                document.body.appendChild(x);
-            }
-        }
-        if (document.querySelector("title").getAttribute("id") == "seite3") {
-            for (let i = 0; i < _pPizzapart.serviceArray.length; i++) {
-                let x = generatePizzaOption(_pPizzapart.serviceArray[i]);
-                document.body.appendChild(x);
-            }
-        }
     }
     //Funktion um Auswahl in localStorage zu speichern  
     function saveInlocalStorage(_pEvent) {
@@ -128,7 +127,7 @@ var Praktikumsaufgabe_P2_5;
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
     }
-    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
+    //Vorschau Übersicht, alle vorherigen gewählten Optionen (Display Seite)
     //Seite: Bestellübersicht
     if (document.querySelector("title").getAttribute("id") == "seite4") {
         let div = document.createElement("div");
@@ -144,21 +143,22 @@ var Praktikumsaufgabe_P2_5;
         div.appendChild(bildService);
     }
     //Aufgabe c)
+    //Funktion um zwischen Daten die im Browsercache gespeichert sind, an einer URL zu verschicken + Rückantwort
     async function sendData(_url) {
         let query = new URLSearchParams(localStorage);
         _url = _url + "?" + query.toString();
         let response = await fetch(_url);
-        let result = await response.json();
-        let display = document.getElementById("serverResponse");
-        if (result.error) {
+        let antwort = await response.json();
+        let display = document.getElementById("display");
+        if (antwort.error) {
             display.className = "Error";
-            display.innerText = result.error;
-            display.style.color = "green";
+            display.innerText = antwort.error;
+            display.classList.add("error");
         }
         else {
             display.className = "Message";
-            display.innerText = result.message;
-            display.style.color = "red";
+            display.innerText = antwort.message;
+            display.classList.add("message");
         }
     }
     sendData("https://gis-communication.herokuapp.com");

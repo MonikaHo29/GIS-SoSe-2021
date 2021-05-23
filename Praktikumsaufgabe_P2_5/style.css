@@ -73,3 +73,11 @@ img{
 .vorschau{
     width: 20%;
 }
+
+.message {
+    color: lightgreen;
+}
+
+.error {
+    color: coral;
+}
