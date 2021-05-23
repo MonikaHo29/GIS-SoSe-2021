@@ -11,7 +11,11 @@ namespace Praktikumsaufgabe_P2_5 {
         let myObject: Pizza = await response.json();
         aktuelleSeite(myObject);
     }
+    communicate("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
 
+
+    //Funktion um die Optionen der Seite, auf welcher man sich aktuell befindet anzuzeigen  
+    
     function aktuelleSeite (_partArray: Pizza): void {
 
         if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
@@ -38,9 +42,8 @@ namespace Praktikumsaufgabe_P2_5 {
             }
         }
     }
-    communicate("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
 
-
+    
     //allgemeine Funktion um eine Option zur generieren 
 
     function generatePizzaOption(_pPizzapart: Pizzapart): HTMLElement {
