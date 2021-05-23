@@ -1,5 +1,6 @@
 namespace Praktikumsaufgabe_P2_5 {
 
+    //Aufgabe b)
 
     //Funktion 
     async function communicate(_pURL: RequestInfo): Promise<void> {
@@ -191,9 +192,10 @@ namespace Praktikumsaufgabe_P2_5 {
         div.appendChild(bildService);
     }
 
+    //Aufgabe c)
+
     async function sendData(_url: RequestInfo): Promise<void> {
         let query: URLSearchParams = new URLSearchParams(localStorage);
-        console.log(query.toString());
 
         _url = _url + "?" + query.toString();
         let response: Response = await fetch(_url);
@@ -202,11 +204,13 @@ namespace Praktikumsaufgabe_P2_5 {
         if (result.error) {
             display.className = "Error";
             display.innerText = result.error;
+            display.style.color = "green";
           
         }
         else {
             display.className = "Message";
             display.innerText = result.message;
+            display.style.color = "red";
     
         }
     }

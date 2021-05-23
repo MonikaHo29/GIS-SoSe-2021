@@ -1,6 +1,7 @@
 "use strict";
 var Praktikumsaufgabe_P2_5;
 (function (Praktikumsaufgabe_P2_5) {
+    //Aufgabe b)
     //Funktion 
     async function communicate(_pURL) {
         let response = await fetch(_pURL);
@@ -142,9 +143,9 @@ var Praktikumsaufgabe_P2_5;
         bildService.src = localStorage.getItem("ausgewaelteServiceBild");
         div.appendChild(bildService);
     }
+    //Aufgabe c)
     async function sendData(_url) {
         let query = new URLSearchParams(localStorage);
-        console.log(query.toString());
         _url = _url + "?" + query.toString();
         let response = await fetch(_url);
         let result = await response.json();
@@ -152,10 +153,12 @@ var Praktikumsaufgabe_P2_5;
         if (result.error) {
             display.className = "Error";
             display.innerText = result.error;
+            display.style.color = "green";
         }
         else {
             display.className = "Message";
             display.innerText = result.message;
+            display.style.color = "red";
         }
     }
     sendData("https://gis-communication.herokuapp.com");
