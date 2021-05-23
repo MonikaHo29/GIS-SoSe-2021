@@ -1,44 +1,44 @@
-{
+{                                                      
     "groesseArray": [
         {
             "option": "20 cm",
-            "image": "pizza_klein.png"
+            "image": "Bilder/pizza_klein.png"
         },
         {
             "option": "25 cm",
-            "image": "pizza_medium.png"
+            "image": "Bilder/pizza_medium.png"
         },
         {
             "option": "30 cm",
-            "image": "pizza_gross.png"
+            "image": "Bilder/pizza_gross.png"
         }
     ],
     "sorteArray": [
         {
             "option": "Pizza Vegetarisch",
-            "image": "vegetarisch.png"
+            "image": "Bilder/vegetarisch.png"
         },
         {
             "option": "Pizza Hawaii-Chicken",
-            "image": "hawaii.png"
+            "image": "Bilder/hawaii.png"
         },
         {
             "option": "Pizza Marokkan",
-            "image": "marokkan.png"
+            "image": "Bilder/marokkan.png"
         }
     ],
     "serviceArray": [
         {
             "option": "Lieferung",
-            "image": "lieferung.png"
+            "image": "Bilder/lieferung.png"
         },
         {
             "option": "Abholung",
-            "image": "abholung.png"
+            "image": "Bilder/abholung.png"
         },
         {
             "option": "Vorort",
-            "image": "vorort.png"
+            "image": "Bilder/vorort.png"
         }
     ]
 }

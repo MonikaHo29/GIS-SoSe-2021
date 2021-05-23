@@ -1,34 +1,50 @@
 "use strict";
 var Praktikumsaufgabe_P2_5;
 (function (Praktikumsaufgabe_P2_5) {
-    //Aufgabe 1
-    //allgemeine Funktion um eine Option zur generieren 
-    async function generatePizzaOption(_url) {
-        let response = await fetch(_url);
+    //Funktion 
+    async function communicate(_pURL) {
+        let response = await fetch(_pURL);
         console.log("Response:", response);
         let myObject = await response.json();
-        console.log(myObject);
+        aktuelleSeite(myObject);
+    }
+    communicate("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
+    //allgemeine Funktion um eine Option zur generieren 
+    function generatePizzaOption(_pPizzapart) {
+        let div = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = _pPizzapart.image;
+        div.appendChild(image);
+        let button = document.createElement("button");
+        let buttonText = document.createTextNode(_pPizzapart.option);
+        button.appendChild(buttonText);
+        button.addEventListener("click", saveInlocalStorage);
+        button.dataset.option = _pPizzapart.option;
+        button.dataset.image = _pPizzapart.image;
+        div.appendChild(button);
+        return div;
+    }
+    //Funktion um auf welche Seite wir uns gerade befinden anzuzeigen + die jeweiligen Optionen
+    function aktuelleSeite(_pPizzapart) {
         if (document.querySelector("title").getAttribute("id") == "seite1") { //Welche Seite?
-            for (let i = 0; i < myObject.groesseArray.length; i++) {
-                let x = myObject.groesseArray[i];
-                console.log(x);
+            for (let i = 0; i < _pPizzapart.groesseArray.length; i++) {
+                let x = generatePizzaOption(_pPizzapart.groesseArray[i]);
+                document.body.appendChild(x);
             }
         }
         if (document.querySelector("title").getAttribute("id") == "seite2") {
-            for (let i = 0; i < myObject.sorteArray.length; i++) {
-                let x = myObject.sorteArray[i];
-                console.log(x);
+            for (let i = 0; i < _pPizzapart.sorteArray.length; i++) {
+                let x = generatePizzaOption(_pPizzapart.sorteArray[i]);
+                document.body.appendChild(x);
             }
         }
         if (document.querySelector("title").getAttribute("id") == "seite3") {
-            for (let i = 0; i < myObject.serviceArray.length; i++) {
-                let x = myObject.serviceArray[i];
-                console.log(x);
+            for (let i = 0; i < _pPizzapart.serviceArray.length; i++) {
+                let x = generatePizzaOption(_pPizzapart.serviceArray[i]);
+                document.body.appendChild(x);
             }
         }
     }
-    generatePizzaOption("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
-    //b)
     //Funktion um Auswahl in localStorage zu speichern  
     function saveInlocalStorage(_pEvent) {
         if (document.querySelector("title").getAttribute("id") == "seite1") {
@@ -47,7 +63,6 @@ var Praktikumsaufgabe_P2_5;
             localStorage.setItem("ausgewaelteServiceBild", target.dataset.image);
         }
     }
-    //d)
     //Vorschau für gewählte Optionen aus den vorherigen Seiten/Schritte
     //Seite: Pizzagröße
     if (document.querySelector("title").getAttribute("id") == "seite1") {
@@ -58,15 +73,15 @@ var Praktikumsaufgabe_P2_5;
         div.appendChild(beschreibung);
         beschreibung.appendChild(beschreibungText);
         let defaultBild = document.createElement("img"); //noch keine Option gewählt
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
         let defaultBild2 = document.createElement("img");
-        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.src = "Bilder/fragezeichen.png";
         defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
         let defaultBild3 = document.createElement("img");
-        defaultBild3.src = "fragezeichen.png";
+        defaultBild3.src = "Bilder/fragezeichen.png";
         defaultBild3.classList.add("vorschau");
         div.appendChild(defaultBild3);
     }
@@ -83,11 +98,11 @@ var Praktikumsaufgabe_P2_5;
         bildGroesse.classList.add("vorschau");
         div.appendChild(bildGroesse);
         let defaultBild = document.createElement("img");
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
         let defaultBild2 = document.createElement("img");
-        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.src = "Bilder/fragezeichen.png";
         defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
     }
@@ -108,36 +123,41 @@ var Praktikumsaufgabe_P2_5;
         bildSorte.classList.add("vorschau");
         div.appendChild(bildSorte);
         let defaultBild = document.createElement("img");
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
     }
-    async function displaySeite(_url) {
-        let query = new URLSearchParams(saveInlocalStorage);
+    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
+    //Seite: Bestellübersicht
+    if (document.querySelector("title").getAttribute("id") == "seite4") {
+        let div = document.createElement("div");
+        document.body.appendChild(div);
+        let bildGroesse = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
+        div.appendChild(bildGroesse);
+        let bildSorte = document.createElement("img");
+        bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
+        div.appendChild(bildSorte);
+        let bildService = document.createElement("img");
+        bildService.src = localStorage.getItem("ausgewaelteServiceBild");
+        div.appendChild(bildService);
+    }
+    async function sendData(_url) {
+        let query = new URLSearchParams(localStorage);
+        console.log(query.toString());
         _url = _url + "?" + query.toString();
         let response = await fetch(_url);
-        console.log(response);
-        // Komplette Auswahl anzeigen 
-        if (document.querySelector("title").getAttribute("id") == "seite4") {
-            let div = document.createElement("div");
-            document.body.appendChild(div);
-            let saveGroesse = document.createElement("img");
-            saveGroesse.src = localStorage.getItem("chooseGroessebild");
-            saveGroesse.style.margin = "15px";
-            saveGroesse.style.width = "30%";
-            div.appendChild(saveGroesse);
-            let saveTopping = document.createElement("img");
-            saveTopping.src = localStorage.getItem("chooseToppingbild");
-            saveTopping.style.margin = "15px";
-            saveTopping.style.width = "30%";
-            div.appendChild(saveTopping);
-            let saveService = document.createElement("img"); // leeres bild anlegen
-            saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
-            saveService.style.margin = "15px";
-            saveService.style.width = "30%";
-            div.appendChild(saveService);
+        let result = await response.json();
+        let display = document.getElementById("serverResponse");
+        if (result.error) {
+            display.className = "Error";
+            display.innerText = result.error;
+        }
+        else {
+            display.className = "Message";
+            display.innerText = result.message;
         }
     }
-    displaySeite("https://gis-communication.herokuapp.com");
+    sendData("https://gis-communication.herokuapp.com");
 })(Praktikumsaufgabe_P2_5 || (Praktikumsaufgabe_P2_5 = {}));
 //# sourceMappingURL=script_pizza.js.map

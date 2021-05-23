@@ -1,47 +1,69 @@
- namespace Praktikumsaufgabe_P2_5 {
+namespace Praktikumsaufgabe_P2_5 {
 
-    //Aufgabe 1
-    //allgemeine Funktion um eine Option zur generieren 
 
-    async function generatePizzaOption(_url: RequestInfo): Promise<void> {
+    //Funktion 
+    async function communicate(_pURL: RequestInfo): Promise<void> {
 
-        let response: Response = await fetch(_url);
+        let response: Response = await fetch(_pURL);
         console.log("Response:", response);
         let myObject: Pizza = await response.json();
-        console.log(myObject);
+        aktuelleSeite(myObject);
+    }
+    communicate("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
+
+
+    //allgemeine Funktion um eine Option zur generieren 
+
+    function generatePizzaOption(_pPizzapart: Pizzapart): HTMLElement {
+        let div: HTMLDivElement = document.createElement("div");
+
+        let image: HTMLImageElement = document.createElement("img");
+        image.src = _pPizzapart.image;
+        div.appendChild(image);
+
+
+        let button: HTMLButtonElement = document.createElement("button");
+        let buttonText: Text = document.createTextNode(_pPizzapart.option);
+        button.appendChild(buttonText);
+        button.addEventListener("click", saveInlocalStorage);
+        button.dataset.option = _pPizzapart.option;
+        button.dataset.image = _pPizzapart.image;
+        div.appendChild(button);
+
+        return div;
+    }
+
+
+    //Funktion um auf welche Seite wir uns gerade befinden anzuzeigen + die jeweiligen Optionen
+
+    function aktuelleSeite(_pPizzapart: Pizza): void {
 
         if (document.querySelector("title").getAttribute("id") == "seite1") {               //Welche Seite?
-            for (let i: number = 0; i < myObject.groesseArray.length; i++) {
-                let x: Pizzapart = myObject.groesseArray[i];
+            for (let i: number = 0; i < _pPizzapart.groesseArray.length; i++) {
+                let x: HTMLElement = generatePizzaOption(_pPizzapart.groesseArray[i]);
 
-                console.log(x);
+                document.body.appendChild(x);
             }
         }
 
         if (document.querySelector("title").getAttribute("id") == "seite2") {
-            for (let i: number = 0; i < myObject.sorteArray.length; i++) {
-                let x: Pizzapart = myObject.sorteArray[i];
+            for (let i: number = 0; i < _pPizzapart.sorteArray.length; i++) {
+                let x: HTMLElement = generatePizzaOption(_pPizzapart.sorteArray[i]);
 
-                console.log(x);
+                document.body.appendChild(x);
             }
         }
 
         if (document.querySelector("title").getAttribute("id") == "seite3") {
-            for (let i: number = 0; i < myObject.serviceArray.length; i++) {
-                let x: Pizzapart = myObject.serviceArray[i];
+            for (let i: number = 0; i < _pPizzapart.serviceArray.length; i++) {
+                let x: HTMLElement = generatePizzaOption(_pPizzapart.serviceArray[i]);
 
-                console.log(x);
+                document.body.appendChild(x);
             }
         }
-
     }
-    generatePizzaOption("https://monikaho29.github.io/GIS-SoSe-2021/Praktikumsaufgabe_P2_5/data.json");
 
 
-
-
-
-    //b)
     //Funktion um Auswahl in localStorage zu speichern  
 
     function saveInlocalStorage(_pEvent: MouseEvent): void {
@@ -65,8 +87,8 @@
         }
 
     }
-    
-    //d)
+
+
     //Vorschau für gewählte Optionen aus den vorherigen Seiten/Schritte
 
     //Seite: Pizzagröße
@@ -80,17 +102,17 @@
         beschreibung.appendChild(beschreibungText);
 
         let defaultBild: HTMLImageElement = document.createElement("img");    //noch keine Option gewählt
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
-        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.src = "Bilder/fragezeichen.png";
         defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
 
         let defaultBild3: HTMLImageElement = document.createElement("img");
-        defaultBild3.src = "fragezeichen.png";
+        defaultBild3.src = "Bilder/fragezeichen.png";
         defaultBild3.classList.add("vorschau");
         div.appendChild(defaultBild3);
     }
@@ -111,12 +133,12 @@
         div.appendChild(bildGroesse);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
 
         let defaultBild2: HTMLImageElement = document.createElement("img");
-        defaultBild2.src = "fragezeichen.png";
+        defaultBild2.src = "Bilder/fragezeichen.png";
         defaultBild2.classList.add("vorschau");
         div.appendChild(defaultBild2);
 
@@ -143,45 +165,53 @@
         div.appendChild(bildSorte);
 
         let defaultBild: HTMLImageElement = document.createElement("img");
-        defaultBild.src = "fragezeichen.png";
+        defaultBild.src = "Bilder/fragezeichen.png";
         defaultBild.classList.add("vorschau");
         div.appendChild(defaultBild);
     }
 
-    async function displaySeite(_url: RequestInfo): Promise<void> {
-        let query: URLSearchParams = new URLSearchParams(<any>saveInlocalStorage);
+
+    //Vorschau Übersicht, alle vorherigen gewählten Optionen 
+
+    //Seite: Bestellübersicht
+    if (document.querySelector("title").getAttribute("id") == "seite4") {
+        let div: HTMLDivElement = document.createElement("div");
+        document.body.appendChild(div);
+
+        let bildGroesse: HTMLImageElement = document.createElement("img");
+        bildGroesse.src = localStorage.getItem("ausgewaelteGroesseBild");
+        div.appendChild(bildGroesse);
+
+        let bildSorte: HTMLImageElement = document.createElement("img");
+        bildSorte.src = localStorage.getItem("ausgewaelteSorteBild");
+        div.appendChild(bildSorte);
+
+        let bildService: HTMLImageElement = document.createElement("img");
+        bildService.src = localStorage.getItem("ausgewaelteServiceBild");
+        div.appendChild(bildService);
+    }
+
+    async function sendData(_url: RequestInfo): Promise<void> {
+        let query: URLSearchParams = new URLSearchParams(localStorage);
+        console.log(query.toString());
+
         _url = _url + "?" + query.toString();
         let response: Response = await fetch(_url);
-        console.log(response);
-
-         // Komplette Auswahl anzeigen 
-        if (document.querySelector("title").getAttribute("id") == "seite4") {
-            let div: HTMLDivElement = document.createElement("div");
-            document.body.appendChild(div);
+        let result: ServerAntwort = await response.json();
+        let display: HTMLDivElement = <HTMLParagraphElement>document.getElementById("serverResponse");
+        if (result.error) {
+            display.className = "Error";
+            display.innerText = result.error;
+          
+        }
+        else {
+            display.className = "Message";
+            display.innerText = result.message;
     
-            let saveGroesse: HTMLImageElement = document.createElement("img");
-            saveGroesse.src = localStorage.getItem("chooseGroessebild");
-            saveGroesse.style.margin = "15px";
-            saveGroesse.style.width = "30%";
-    
-            div.appendChild(saveGroesse);
-    
-            let saveTopping: HTMLImageElement = document.createElement("img");
-            saveTopping.src = localStorage.getItem("chooseToppingbild");
-            saveTopping.style.margin = "15px";
-            saveTopping.style.width = "30%";
-    
-            div.appendChild(saveTopping);
-    
-            let saveService: HTMLImageElement = document.createElement("img"); // leeres bild anlegen
-            saveService.src = localStorage.getItem("chooseServicebild"); // ausgewähltes bild speichern
-            saveService.style.margin = "15px";
-            saveService.style.width = "30%";
-    
-            div.appendChild(saveService);
         }
     }
-    displaySeite("https://gis-communication.herokuapp.com");
+    sendData("https://gis-communication.herokuapp.com");
+
 }
 
 
