@@ -1,28 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.P_3_1Server = void 0;
+exports.Praktikumsaufgabe_P3_1 = void 0;
 const Http = require("http");
-var P_3_1Server;
-(function (P_3_1Server) {
+var Praktikumsaufgabe_P3_1;
+(function (Praktikumsaufgabe_P3_1) {
     console.log("Starting server");
-    let port = Number(process.env.PORT);
-    if (!port)
+    let port = Number(process.env.PORT); // Port erstellen, um eine Verbindung zum Server zu erstellen -> "Hafen"                            
+    if (!port) // If-Bedingung,    
         port = 8100;
     let server = Http.createServer(); // Server erstellen
-    server.addListener("request", handleRequest); // wie ein Eventlistener, die Funktion handleRequest soll aufgerrufen werden wenn eine Anfrage gestellt wird  
-    server.addListener("listening", handleListen); // wie ein Eventlistener, die FUnktion handleListen soll aufgberufen werden wenn was gehört wird 
+    server.addListener("request", handleRequest); // Listner für Abfrage und Listen + Funktionaufruf 
+    server.addListener("listening", handleListen);
     server.listen(port);
+    // Funktion, Konsoleausgabe wird gemacht 
     function handleListen() {
         console.log("Listening");
     }
-    //Funktion um mit dem Server zu kommunizieren mit den Parmeter für ANfrage schicken und Rückantwort vom Server erhalten
+    //Funktion um Anfrage über die Eingabeleiste im Browser zu verschicken + Rückantwort bzw Nachricht in der Konsole (in VS) 
     function handleRequest(_request, _response) {
-        console.log("I hear voices!"); //
-        _response.setHeader("content-type", "text/html; charset=utf-8"); // damit kann man in der .... eine ANfrage an dem Server schicken 
+        console.log("I hear voices!");
+        _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url);
         _response.end();
-        console.log(_request.url); //Antwort des Server wird in der KOnsole ausgegeben
+        console.log(_request.url); // Antwort (query/path string) wird in der Konsole ausgegeben
     }
-})(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
+})(Praktikumsaufgabe_P3_1 = exports.Praktikumsaufgabe_P3_1 || (exports.Praktikumsaufgabe_P3_1 = {}));
 //# sourceMappingURL=server.js.map

@@ -1,7 +1,9 @@
 "use strict";
 var Praktikumsaufgabe_P3_1;
 (function (Praktikumsaufgabe_P3_1) {
-    async function formData(_pURL) {
+    //Teilaufgabe 2
+    //FUnktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
+    async function sendDatatoServer(_pURL) {
         let response = await fetch(_pURL);
         console.log("Response", response);
         let formData = await response.formData();
@@ -12,6 +14,7 @@ var Praktikumsaufgabe_P3_1;
         console.log(formData.get("ftextfeld"));
         console.log(formData.get("fdokument"));
     }
-    formData("https://testgissose2021.herokuapp.com"); //Link App und Github
+    sendDatatoServer("https://testgissose2021.herokuapp.com");
+    //Link um Daten an Server zu schicken (Heroku Deploy -> Deploy a GitHub branch
 })(Praktikumsaufgabe_P3_1 || (Praktikumsaufgabe_P3_1 = {}));
 //# sourceMappingURL=script.js.map
