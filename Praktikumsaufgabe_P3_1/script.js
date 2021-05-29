@@ -8,7 +8,7 @@ var Praktikumsaufgabe_P3_1;
         console.log(formData.get("fname"));
         console.log(formData.get("fwohnort"));
     }
-    formData(""); //Link App und Github
+    formData("https://testgissose2021.herokuapp.com"); //Link App und Github
     function handleSubmit(_pSubmit) {
         console.log(_pSubmit.target);
     }
