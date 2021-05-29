@@ -1,4 +1,4 @@
-namespace Praktikumsaufgabe_P2_5 {
+ namespace Praktikumsaufgabe_P2_5 {
 
     //Aufgabe b)
 
