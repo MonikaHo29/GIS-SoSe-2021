@@ -6,12 +6,12 @@ var Praktikumsaufgabe_P3_1;
         console.log("Response", response);
         let formData = await response.formData();
         console.log(formData.get("fname"));
-        console.log(formData.get("fwohnort"));
+        console.log(formData.get("femail"));
+        console.log(formData.get("fbetreff"));
+        console.log(formData.get("fdatum"));
+        console.log(formData.get("ftextfeld"));
+        console.log(formData.get("fdokument"));
     }
     formData("https://testgissose2021.herokuapp.com"); //Link App und Github
-    function handleSubmit(_pSubmit) {
-        console.log(_pSubmit.target);
-    }
-    document.querySelector("#submitButton").addEventListener("click", handleSubmit);
 })(Praktikumsaufgabe_P3_1 || (Praktikumsaufgabe_P3_1 = {}));
 //# sourceMappingURL=script.js.map
