@@ -2,12 +2,12 @@ import * as Http from "http";
 
 export namespace P_3_1Server {
     console.log("Starting server");
-    let port: number = Number(process.env.PORT);
+    let port: number = Number(process.env.PORT);                 
     if (!port)
         port = 8100;
 
-    let server: Http.Server = Http.createServer();
-    server.addListener("request", handleRequest);
+    let server: Http.Server = Http.createServer();               
+    server.addListener("request", handleRequest);                 
     server.addListener("listening", handleListen);
     server.listen(port);
 
@@ -23,7 +23,7 @@ export namespace P_3_1Server {
         _response.write(_request.url);
         _response.end();
 
-        console.log(_request.url);
+        console.log(_request.url);                                                                      //Antwort des Server wird in der KOnsole angezeigt 
     }
 
 }

@@ -21,7 +21,7 @@ var P_3_1Server;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url);
         _response.end();
-        console.log(_request.url);
+        console.log(_request.url); //Antwort des Server wird in der KOnsole angezeigt 
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=server.js.map
