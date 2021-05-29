@@ -12,7 +12,7 @@ var Praktikumsaufgabe_P3_1;
     server.addListener("request", handleRequest); // Listener, bei einer Anfrage wird die Funktion handleRequest aufgerufen
     server.addListener("listening", handleListen); // Listener, Bei Listen(zuhören) wird die FUnktion hnadleListen aufgerufen   
     server.listen(port);
-    // Funktion, wenn die Funktion aufgerufen wird (Zeile 11), wird "Listening" in der KOnsole ausgegeben 
+    // Funktion, wenn die Funktion aufgerufen wird (Zeile 11), wird "Listening" in der Konsole ausgegeben 
     function handleListen() {
         console.log("Listening");
     }

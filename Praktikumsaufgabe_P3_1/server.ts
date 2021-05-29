@@ -12,7 +12,7 @@ export namespace Praktikumsaufgabe_P3_1 {
     server.listen(port);
 
 
-    // Funktion, wenn die Funktion aufgerufen wird (Zeile 11), wird "Listening" in der KOnsole ausgegeben 
+    // Funktion, wenn die Funktion aufgerufen wird (Zeile 11), wird "Listening" in der Konsole ausgegeben 
 
     function handleListen(): void {                              
         console.log("Listening");

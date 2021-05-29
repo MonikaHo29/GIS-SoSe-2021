@@ -1,6 +1,5 @@
 namespace Praktikumsaufgabe_P3_1 {
 
-    //Teilaufgabe 2
     //FUnktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
 
     async function sendDatatoServer(_pURL: RequestInfo): Promise<void> {
@@ -14,9 +13,16 @@ namespace Praktikumsaufgabe_P3_1 {
         console.log(formData.get("ftextfeld"));
         console.log(formData.get("fdokument"));
 
+
+
     }
-    sendDatatoServer("https://testgissose2021.herokuapp.com"); 
+    sendDatatoServer("https://testgissose2021.herokuapp.com");
     //Link um Daten an Server zu schicken (Heroku Deploy -> Deploy a GitHub branch
+
+    function submitButton(_load: Event): void {                                       
+    location.reload();
+    }
+    document.querySelector("#button").addEventListener("click", submitButton);
 
 }
 
