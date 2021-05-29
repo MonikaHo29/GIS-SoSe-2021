@@ -8,20 +8,21 @@ var P_3_1Server;
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-    let server = Http.createServer();
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
+    let server = Http.createServer(); // Server erstellen
+    server.addListener("request", handleRequest); // wie ein Eventlistener, die Funktion handleRequest soll aufgerrufen werden wenn eine Anfrage gestellt wird  
+    server.addListener("listening", handleListen); // wie ein Eventlistener, die FUnktion handleListen soll aufgberufen werden wenn was gehört wird 
     server.listen(port);
     function handleListen() {
         console.log("Listening");
     }
+    //Funktion um mit dem Server zu kommunizieren mit den Parmeter für ANfrage schicken und Rückantwort vom Server erhalten
     function handleRequest(_request, _response) {
-        console.log("I hear voices!");
-        _response.setHeader("content-type", "text/html; charset=utf-8");
+        console.log("I hear voices!"); //
+        _response.setHeader("content-type", "text/html; charset=utf-8"); // damit kann man in der .... eine ANfrage an dem Server schicken 
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url);
         _response.end();
-        console.log(_request.url); //Antwort des Server wird in der KOnsole angezeigt 
+        console.log(_request.url); //Antwort des Server wird in der KOnsole ausgegeben
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=server.js.map
