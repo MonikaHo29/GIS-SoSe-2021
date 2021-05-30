@@ -10,7 +10,7 @@ namespace Praktikumsaufgabe_P3_1 {
         }
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let _url: RequestInfo = "https://dbgissose2021.herokuapp.com/";
+        let _url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
         _url = _url + "?" + query.toString();
         let answer: Response = await fetch(_url);
         let output: string = await answer.text();

@@ -11,7 +11,7 @@ var Praktikumsaufgabe_P3_1;
         }
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        let _url = "https://dbgissose2021.herokuapp.com/";
+        let _url = "https://monikagissose2021.herokuapp.com/";
         _url = _url + "?" + query.toString();
         let answer = await fetch(_url);
         let output = await answer.text();
