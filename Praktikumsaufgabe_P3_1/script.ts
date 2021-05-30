@@ -1,56 +1,8 @@
 namespace Praktikumsaufgabe_P3_1 {
 
-    async function sendData(): Promise<void> {
-        let formData: FormData = new FormData(document.forms[0]);
-        console.log(":" + formData.get("name"));
-        for (let entry of formData) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let _url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
-        _url = _url + "?" + query.toString();
-        let answer: Response = await fetch(_url);
-        let output: string = await answer.text();
-        let displayResponse: HTMLParagraphElement = <HTMLDivElement>document.getElementById("answer");
-        displayResponse.innerText = output;
-    }
-    let sendButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    sendButton.addEventListener("click", sendData);
-}
 
+    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
 
-
-
-
-
-    /*
-
-    async function sendDatatoServer(): Promise<void> {
-        let formData: FormData = new FormData(document.forms[0]);
-        for (let entry of formData) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
-
-        let url: string = "https://monikagissose2021.herokuapp.com";
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url = url + "?" + query.toString();
-        await fetch(url);
-    }
-    document.querySelector("#button").addEventListener("click", sendDatatoServer);
-    
-
-*/
-
-
-
-
-    //FUnktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
-    /*
         async function sendDatatoServer(_pURL: RequestInfo): Promise<void> {
             let response: Response = await fetch(_pURL);
             console.log("Response", response);
@@ -70,7 +22,5 @@ namespace Praktikumsaufgabe_P3_1 {
         location.reload();
         }
         document.querySelector("#button").addEventListener("click", submitButton);
-    */
-
-
-
+ 
+    }
