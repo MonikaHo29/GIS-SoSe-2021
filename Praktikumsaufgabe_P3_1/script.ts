@@ -1,7 +1,7 @@
  namespace Praktikumsaufgabe_3_1 {
      
     //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole
-    // !Anmerkung: Funktion funktioniert nicht, ich weiß nicht wo der Fehler ist 
+    // !Anmerkung: Funktion funktioniert nicht, ich weißt nicht wo der Fehler ist 
 
     async function sendDatatoServer(_pURL: RequestInfo): Promise<void> {
         let response: Response = await fetch(_pURL);
