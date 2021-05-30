@@ -1,37 +1,22 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Praktikumsaufgabe_P3_1 = void 0;
-var Praktikumsaufgabe_P3_1;
-(function (Praktikumsaufgabe_P3_1) {
-    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
+var Praktikumsaufgabe_3_1;
+(function (Praktikumsaufgabe_3_1) {
+    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole
+    // !Anmerkung: Funktion funktioniert nicht, ich weiß nicht wo der Fehler ist 
     async function sendDatatoServer(_pURL) {
         let response = await fetch(_pURL);
-        let request;
         console.log("Response", response);
-        //let formData: FormData = await response.formData();
-        let formData = new FormData(document.forms[0]);
-        formData.get("fname");
-        formData.get("femail");
-        formData.get("fbetreff");
-        formData.get("fdatum");
-        formData.get("ftextfeld");
-        console.log(request.url);
-        /*let formData: FormData = await fetch(_pURL);
-        formData.get("fname");
-        formData.get("femail");
-        formData.get("fbetreff");
-        formData.get("fdatum");
-        formData.get("ftextfeld");
-
-        let url: string = "node Praktikumsaufgabe_P3_1/server.js";
-        let query: URLSearchParams = new URLSearchParams(formData);
-        url = url + "?" + query.toString();
-        await fetch(url);*/
+        let formData = await response.formData();
+        console.log(formData.get("fname"));
+        console.log(formData.get("femail"));
+        console.log(formData.get("fbetreff"));
+        console.log(formData.get("fdatum"));
+        console.log(formData.get("ftextfeld"));
     }
-    Praktikumsaufgabe_P3_1.sendDatatoServer = sendDatatoServer;
-    sendDatatoServer("node Praktikumsaufgabe_P3_1/server.js");
-    //Link um Daten an Server zu schicken (Heroku Deploy -> Deploy a GitHub branch
-    /*let sendButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    sendButton.addEventListener("click", sendDatatoServer);*/
-})(Praktikumsaufgabe_P3_1 = exports.Praktikumsaufgabe_P3_1 || (exports.Praktikumsaufgabe_P3_1 = {}));
+    sendDatatoServer("https://monikagissose2021.herokuapp.com");
+    function submitButton(_load) {
+        location.reload();
+    }
+    document.querySelector("button").addEventListener("click", submitButton);
+})(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=script.js.map

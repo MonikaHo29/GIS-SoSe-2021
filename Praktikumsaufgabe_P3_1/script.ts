@@ -1,46 +1,24 @@
-import * as Http from "http";
-
-export namespace Praktikumsaufgabe_P3_1 {
-
-
-    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
+ namespace Praktikumsaufgabe_3_1 {
+     
+    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole
+    // !Anmerkung: Funktion funktioniert nicht, ich weiß nicht wo der Fehler ist 
 
     async function sendDatatoServer(_pURL: RequestInfo): Promise<void> {
-        let response: Http.ServerResponse;
-        let request: Http.IncomingMessage;
+        let response: Response = await fetch(_pURL);
         console.log("Response", response);
-        //let formData: FormData = await response.formData();
-        let formData: FormData = new FormData(document.forms[0]);
-        formData.get("fname");
-        formData.get("femail");
-        formData.get("fbetreff");
-        formData.get("fdatum");
-        formData.get("ftextfeld");
-        response.write(request.url);
-        response.end();
-        console.log(request.url);
-        
-
-        /*let formData: FormData = await fetch(_pURL);
-        formData.get("fname");
-        formData.get("femail");
-        formData.get("fbetreff");
-        formData.get("fdatum");
-        formData.get("ftextfeld");
-
-        let url: string = "node Praktikumsaufgabe_P3_1/server.js";
-        let query: URLSearchParams = new URLSearchParams(formData);
-        url = url + "?" + query.toString();
-        await fetch(url);*/
-
-
+        let formData: FormData = await response.formData();
+        console.log(formData.get("fname"));
+        console.log(formData.get("femail"));
+        console.log(formData.get("fbetreff"));
+        console.log(formData.get("fdatum"));
+        console.log(formData.get("ftextfeld"));
     }
-    sendDatatoServer("node Praktikumsaufgabe_P3_1/server.js");
-    //Link um Daten an Server zu schicken (Heroku Deploy -> Deploy a GitHub branch
+    sendDatatoServer("https://monikagissose2021.herokuapp.com");
 
-    /*let sendButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    sendButton.addEventListener("click", sendDatatoServer);*/
-
-}
+    function submitButton(_load: Event): void{
+        location.reload();
+    }
+    document.querySelector("button").addEventListener("click", submitButton);
+ }
 
 
