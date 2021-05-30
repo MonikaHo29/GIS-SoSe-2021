@@ -29,6 +29,7 @@ export namespace Praktikumsaufgabe_P3_1 {
         _response.end();                                                // Ende, Anfrage wurde erhalten, Antwort wird versendet 
 
         console.log(_request.url);                                      // Antwort (query/path string) wird in der Konsole ausgegeben
+
     }
 
 }

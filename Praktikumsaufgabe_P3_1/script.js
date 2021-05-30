@@ -8,7 +8,8 @@ var Praktikumsaufgabe_P3_1;
         let response = await fetch(_pURL);
         let request;
         console.log("Response", response);
-        let formData = await response.formData();
+        //let formData: FormData = await response.formData();
+        let formData = new FormData(document.forms[0]);
         formData.get("fname");
         formData.get("femail");
         formData.get("fbetreff");
@@ -27,6 +28,7 @@ var Praktikumsaufgabe_P3_1;
         url = url + "?" + query.toString();
         await fetch(url);*/
     }
+    Praktikumsaufgabe_P3_1.sendDatatoServer = sendDatatoServer;
     sendDatatoServer("node Praktikumsaufgabe_P3_1/server.js");
     //Link um Daten an Server zu schicken (Heroku Deploy -> Deploy a GitHub branch
     /*let sendButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");

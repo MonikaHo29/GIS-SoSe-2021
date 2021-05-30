@@ -6,16 +6,18 @@ export namespace Praktikumsaufgabe_P3_1 {
     //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole 
 
     async function sendDatatoServer(_pURL: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_pURL);
+        let response: Http.ServerResponse;
         let request: Http.IncomingMessage;
         console.log("Response", response);
-        let formData: FormData = await response.formData();
+        //let formData: FormData = await response.formData();
+        let formData: FormData = new FormData(document.forms[0]);
         formData.get("fname");
         formData.get("femail");
         formData.get("fbetreff");
         formData.get("fdatum");
         formData.get("ftextfeld");
-
+        response.write(request.url);
+        response.end();
         console.log(request.url);
         
 
