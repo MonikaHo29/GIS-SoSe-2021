@@ -15,7 +15,7 @@
     }
     sendDatatoServer("https://monikagissose2021.herokuapp.com");
 
-    function submitButton(_load: Event): void{
+    function submitButton(_load: Event): void {
         location.reload();
     }
     document.querySelector("button").addEventListener("click", submitButton);
