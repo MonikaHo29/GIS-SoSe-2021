@@ -13,7 +13,7 @@ var Praktikumsaufgabe_3_1;
             console.log("value: " + entry[1]);
         }
         let query = new URLSearchParams(formData); //
-        let url = "https://salinasapp.herokuapp.com";
+        let url = "https://monikagissose2021.herokuapp.com/";
         url = url + "?" + query.toString();
         console.log(url);
         let response = await fetch(url);

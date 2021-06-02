@@ -18,7 +18,7 @@ namespace Praktikumsaufgabe_3_1 {
             console.log("value: " + entry[1]);
         }
         let query: URLSearchParams = new URLSearchParams(<any>formData);                            //
-        let url: RequestInfo = "https://salinasapp.herokuapp.com";
+        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
 
         url = url + "?" + query.toString();
         console.log(url);
