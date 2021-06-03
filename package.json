@@ -4,7 +4,9 @@
   "description": "Hallo, ich bin Monika",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^15.9.0"
+  },
   "scripts": {
     "start": "node Praktikumsaufgabe_P3_1/server.js"
   },
