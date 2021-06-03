@@ -12,7 +12,7 @@ var Praktikumsaufgabe_3_1;
             console.log("value: " + entry[1]);
         }
         // tslint:disable-next-line: no-any                                                         // asnycron an Server versenden 
-        let query = new URLSearchParams(formData);
+        let query = new URLSearchParams(formData); // Form Data Objekt generieren                     
         let url = "https://monikagissose2021.herokuapp.com/";
         url = url + "?" + query.toString();
         console.log(url);

@@ -1,7 +1,7 @@
 namespace Praktikumsaufgabe_3_1 {
  
 
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");          //Button um die Daten an den Server zu schicken  
+    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");           //Button um die Daten an den Server zu schicken  
     button.addEventListener("click", dataSenden);
 
 
@@ -17,7 +17,7 @@ namespace Praktikumsaufgabe_3_1 {
             console.log("value: " + entry[1]);
         }
         // tslint:disable-next-line: no-any                                                         // asnycron an Server versenden 
-        let query: URLSearchParams = new URLSearchParams(<any>formData);                                                
+        let query: URLSearchParams = new URLSearchParams(<any>formData);                            // Form Data Objekt generieren                     
         let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";                          
 
         url = url + "?" + query.toString();
