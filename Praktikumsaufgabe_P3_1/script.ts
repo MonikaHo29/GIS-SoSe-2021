@@ -1,31 +1,30 @@
 namespace Praktikumsaufgabe_3_1 {
+ 
 
-    //Funktion um Anfragen an Server zu schicken + Antwort (vom Server) in der Konsole
-    // !Anmerkung: Funktion funktioniert nicht, ich weißt nicht wo der Fehler oder ob die Funktion so richtig ist. 
-
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");          //Button erstellen und mit der Funktion dataSenden 
+    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");          //Button um die Daten an den Server zu schicken  
     button.addEventListener("click", dataSenden);
 
 
+    //Funktion um Daten aus der formData asnycron an Server zu schicken 
     async function dataSenden(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);                                   // FormData anlegen + Formular im index 
-        console.log(":" + formData.get("fname"));
+        let formData: FormData = new FormData(document.forms[0]);                                   // FormData anlegen (Formular im index) 
+        console.log(":" + formData.get("fname"));                                                   // Daten auslesen 
 
-        for (let entry of formData) {                                                               // 
+        for (let entry of formData) {                                                        
 
             console.log("name: " + entry[0]);
             console.log("value: " + entry[1]);
         }
-        let query: URLSearchParams = new URLSearchParams(<any>formData);                            //
-        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
+        // tslint:disable-next-line: no-any                                                         // asnycron an Server versenden 
+        let query: URLSearchParams = new URLSearchParams(<any>formData);                                                
+        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";                          
 
         url = url + "?" + query.toString();
         console.log(url);
 
-
         let response: Response = await fetch(url);
-        let answer: string = await response.text();
+        let answer: string = await response.text();                     
 
         console.log(answer);
     }
