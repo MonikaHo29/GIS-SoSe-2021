@@ -5,7 +5,7 @@ namespace Praktikumsaufgabe_3_1 {
     button.addEventListener("click", dataSenden);
 
 
-    //Funktion um Daten aus der formData asnycron an Server zu schicken 
+    //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
     async function dataSenden(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);                                   // FormData anlegen (Formular im index) 
