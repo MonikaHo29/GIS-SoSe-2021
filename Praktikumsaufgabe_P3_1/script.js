@@ -3,7 +3,7 @@ var Praktikumsaufgabe_3_1;
 (function (Praktikumsaufgabe_3_1) {
     let button = document.getElementById("button"); //Button um die Daten an den Server zu schicken  
     button.addEventListener("click", dataSenden);
-    //Funktion um Daten aus der formData asnycron an Server zu schicken 
+    //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
     async function dataSenden() {
         let formData = new FormData(document.forms[0]); // FormData anlegen (Formular im index) 
         console.log(":" + formData.get("fname")); // Daten auslesen 
