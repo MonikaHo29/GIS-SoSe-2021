@@ -1,14 +1,13 @@
 namespace Praktikumsaufgabe_3_2 {
  
-
     interface Person {
         [key: string]: string;
     }
 
 
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
+    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");
     button.addEventListener("click", DataHTML);
-    let buttonJSON: HTMLButtonElement = <HTMLButtonElement>document.getElementById("JSbutton");
+    let buttonJSON: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
     buttonJSON.addEventListener("click", DataJSON);
 
     async function DataHTML(): Promise<void> {

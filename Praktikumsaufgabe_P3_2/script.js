@@ -1,9 +1,9 @@
 "use strict";
 var Praktikumsaufgabe_3_2;
 (function (Praktikumsaufgabe_3_2) {
-    let button = document.getElementById("button");
+    let button = document.getElementById("buttonHTML");
     button.addEventListener("click", DataHTML);
-    let buttonJSON = document.getElementById("JSbutton");
+    let buttonJSON = document.getElementById("buttonJSON");
     buttonJSON.addEventListener("click", DataJSON);
     async function DataHTML() {
         let formData = new FormData(document.forms[0]);
