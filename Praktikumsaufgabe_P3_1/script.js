@@ -17,8 +17,10 @@ var Praktikumsaufgabe_3_1;
         url = url + "?" + query.toString();
         console.log(url);
         let response = await fetch(url);
-        let answer = await response.text();
-        console.log(answer);
+        let antwort = await response.text();
+        console.log(antwort);
+        let displayRueckgabe = document.getElementById("serverantwort");
+        displayRueckgabe.innerText = antwort;
     }
 })(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=script.js.map

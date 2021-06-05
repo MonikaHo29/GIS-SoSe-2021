@@ -24,8 +24,10 @@ namespace Praktikumsaufgabe_3_1 {
         console.log(url);
 
         let response: Response = await fetch(url);
-        let answer: string = await response.text();                     
+        let antwort: string = await response.text();                     
 
-        console.log(answer);
+        console.log(antwort);
+        let displayRueckgabe: HTMLParagraphElement = <HTMLParagraphElement> document.getElementById("serverantwort");
+        displayRueckgabe.innerText = antwort;
     }
 }
