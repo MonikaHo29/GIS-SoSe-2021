@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Praktikumsaufgabe_P3_1 = void 0;
+exports.Praktikumsaufgabe_3_1 = void 0;
 const Http = require("http");
-var Praktikumsaufgabe_P3_1;
-(function (Praktikumsaufgabe_P3_1) {
+var Praktikumsaufgabe_3_1;
+(function (Praktikumsaufgabe_3_1) {
     console.log("Starting server");
     let port = Number(process.env.PORT); // Port erstellen, um Anfrage zu versenden und zu erhalten -> "Hafen"                            
     if (!port) // If-Bedingung, wenn port nicht existiert, wird es auf 8100 gestellt    
@@ -25,5 +25,5 @@ var Praktikumsaufgabe_P3_1;
         _response.end(); // Ende, Anfrage wurde erhalten, Antwort wird versendet 
         console.log(_request.url); // Antwort (query/path string) wird in der Konsole ausgegeben
     }
-})(Praktikumsaufgabe_P3_1 = exports.Praktikumsaufgabe_P3_1 || (exports.Praktikumsaufgabe_P3_1 = {}));
+})(Praktikumsaufgabe_3_1 = exports.Praktikumsaufgabe_3_1 || (exports.Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=server.js.map

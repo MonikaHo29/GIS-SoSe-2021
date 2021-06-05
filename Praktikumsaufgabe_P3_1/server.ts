@@ -1,6 +1,6 @@
 import * as Http from "http";
 
-export namespace Praktikumsaufgabe_P3_1 {                              
+export namespace Praktikumsaufgabe_3_1 {                              
     console.log("Starting server");                     
     let port: number = Number(process.env.PORT);                        // Port erstellen, um Anfrage zu versenden und zu erhalten -> "Hafen"                            
     if (!port)                                                          // If-Bedingung, wenn port nicht existiert, wird es auf 8100 gestellt    
