@@ -1,34 +1,26 @@
 "use strict";
-var Praktikumsaufgabe_3_2;
-(function (Praktikumsaufgabe_3_2) {
-    let button = document.getElementById("buttonHTML");
-    button.addEventListener("click", DataHTML);
-    let buttonJSON = document.getElementById("buttonJSON");
-    buttonJSON.addEventListener("click", DataJSON);
-    async function DataHTML() {
-        let formData = new FormData(document.forms[0]);
-        // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
-        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
-        let url = "http://localhost:8100/";
-        url += "/html";
+var Praktikumsaufgabe_P3_2;
+(function (Praktikumsaufgabe_P3_2) {
+    let button = document.getElementById("button"); //Button um die Daten an den Server zu schicken  
+    button.addEventListener("click", dataSenden);
+    //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
+    async function dataSenden() {
+        let formData = new FormData(document.forms[0]); // FormData anlegen (Formular im index) 
+        console.log(":" + formData.get("fname")); // Daten auslesen 
+        for (let entry of formData) {
+            console.log("name: " + entry[0]);
+            console.log("value: " + entry[1]);
+        }
+        // tslint:disable-next-line: no-any                                                         // asnycron an Server versenden 
+        let query = new URLSearchParams(formData); // Form Data Objekt generieren                     
+        let url = "https://monikagissose2021.herokuapp.com/";
         url = url + "?" + query.toString();
+        console.log(url);
         let response = await fetch(url);
-        let answer = await response.text();
-        let display = document.getElementById("serverantwort");
-        display.innerText = answer;
+        let antwort = await response.text();
+        console.log(antwort);
+        let displayRueckgabe = document.getElementById("serverantwort");
+        displayRueckgabe.innerText = antwort;
     }
-    async function DataJSON() {
-        let formData = new FormData(document.forms[0]);
-        // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
-        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
-        let url = "http://localhost:8100/";
-        url += "/json";
-        url = url + "?" + query.toString();
-        let response = await fetch(url);
-        let myJSON = await response.json();
-        console.log(myJSON);
-    }
-})(Praktikumsaufgabe_3_2 || (Praktikumsaufgabe_3_2 = {}));
+})(Praktikumsaufgabe_P3_2 || (Praktikumsaufgabe_P3_2 = {}));
 //# sourceMappingURL=script.js.map
