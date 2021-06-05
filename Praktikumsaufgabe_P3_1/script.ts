@@ -27,7 +27,7 @@ namespace Praktikumsaufgabe_3_1 {
         let antwort: string = await response.text();                     
 
         console.log(antwort);
-        let displayRueckgabe: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("antwort");
-        displayRueckgabe.innerText = antwort;
+        let displayResponse: HTMLParagraphElement = <HTMLDivElement>document.getElementById("antwort");
+        displayResponse.innerText = antwort;
     }
 }

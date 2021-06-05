@@ -19,8 +19,8 @@ var Praktikumsaufgabe_3_1;
         let response = await fetch(url);
         let antwort = await response.text();
         console.log(antwort);
-        let displayRueckgabe = document.getElementById("antwort");
-        displayRueckgabe.innerText = antwort;
+        let displayResponse = document.getElementById("antwort");
+        displayResponse.innerText = antwort;
     }
 })(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=script.js.map
