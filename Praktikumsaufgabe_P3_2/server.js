@@ -22,16 +22,17 @@ var Praktikumsaufgabe_P3_2;
         console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        if (_request.url) {
-            let url = URL.parse(_request.url, true);
+        let url = URL.parse(_request.url, true);
+        if (url.pathname == "/html") {
             for (let key in url.query) {
-                _response.write(key + ":" + url.query[key] + "<br/>");
+                _response.write(key + ":" + url.query[key]);
             }
-            let jsonString = JSON.stringify(url.query);
-            _response.write(jsonString);
         }
-        _response.write(_request.url);
-        _response.end();
+        if (url.pathname == "/json") {
+            _response.setHeader("content-type", "application/json");
+            let jsonString = JSON.stringify(url.pathname);
+            console.log(jsonString);
+        }
     }
 })(Praktikumsaufgabe_P3_2 = exports.Praktikumsaufgabe_P3_2 || (exports.Praktikumsaufgabe_P3_2 = {}));
 //# sourceMappingURL=server.js.map

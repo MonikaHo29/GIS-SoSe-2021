@@ -1,8 +1,8 @@
 import * as Http from "http";
 import * as URL from "url";
 
-export namespace Praktikumsaufgabe_P3_2 {                              
-    console.log("Starting server");                     
+export namespace Praktikumsaufgabe_P3_2 {
+    console.log("Starting server");
     let port: number = Number(process.env.PORT);                        // Port erstellen, um Anfrage zu versenden und zu erhalten -> "Hafen"                            
     if (!port)                                                          // If-Bedingung, wenn port nicht existiert, wird es auf 8100 gestellt    
         port = 8100;
@@ -15,29 +15,34 @@ export namespace Praktikumsaufgabe_P3_2 {
 
     // Funktion, wenn die Funktion aufgerufen wird (Zeile 11), wird "Listening" in der Konsole ausgegeben 
 
-    function handleListen(): void {                              
+    function handleListen(): void {
         console.log("Listening");
     }
 
 
     //Funktion um Anfrage über die Eingabeleiste im Browser zu verschicken + Rückantwort bzw Nachricht in der Konsole (in VS) 
-    
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        console.log("I hear voices!"); 
-        
-        _response.setHeader("content-type", "text/html; charset=utf-8");    
-        _response.setHeader("Access-Control-Allow-Origin", "*");        
-        if (_request.url) {
-            let url: URL.UrlWithParsedQuery = URL.parse(_request.url, true);
-            for (let key in url.query) {
-                _response.write (key + ":" + url.query[key] + "<br/>");
-            }
 
-            let jsonString: string = JSON.stringify(url.query);
-            _response.write(jsonString);
+    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+        console.log("I hear voices!");
+
+        _response.setHeader("content-type", "text/html; charset=utf-8");
+        _response.setHeader("Access-Control-Allow-Origin", "*");
+
+        let url: URL.UrlWithParsedQuery = URL.parse(_request.url, true);
+
+        if (url.pathname == "/html") {
+            for (let key in url.query) {
+                _response.write(key + ":" + url.query[key]);
+            }
         }
-        _response.write(_request.url);                                      
-        _response.end();                                                
+
+        if (url.pathname == "/json") {
+            _response.setHeader("content-type", "application/json");
+
+            let jsonString: string = JSON.stringify(url.pathname);
+            console.log(jsonString);
+        }
     }
+
 
 }

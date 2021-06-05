@@ -20,9 +20,9 @@ var Praktikumsaufgabe_3_2;
         console.log(url);
         let response = await fetch(url);
         let antwort = await response.text();
-        console.log(antwort);
-        let displayRueckgabe = document.getElementById("antwort");
+        let displayRueckgabe = document.getElementById("serverantwort");
         displayRueckgabe.innerText = antwort;
+        console.log(antwort);
     }
 })(Praktikumsaufgabe_3_2 || (Praktikumsaufgabe_3_2 = {}));
 //# sourceMappingURL=script.js.map

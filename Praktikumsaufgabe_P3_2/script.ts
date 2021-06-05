@@ -27,10 +27,10 @@ namespace Praktikumsaufgabe_3_2 {
 
         let response: Response = await fetch(url);
         let antwort: string = await response.text();                     
+        let displayRueckgabe: HTMLParagraphElement = <HTMLDivElement>document.getElementById("serverantwort");
+        displayRueckgabe.innerText = antwort;
 
         console.log(antwort);
-        let displayRueckgabe: HTMLParagraphElement = <HTMLDivElement>document.getElementById("antwort");
-        displayRueckgabe.innerText = antwort;
     }
 }
 
