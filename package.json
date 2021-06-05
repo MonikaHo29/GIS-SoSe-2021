@@ -8,7 +8,7 @@
     "@types/node": "^15.9.0"
   },
   "scripts": {
-    "start": "node Praktikumsaufgabe_P3_2/server.js"
+    "start": "node Praktikumsaufgabe_P3_1/server.js"
   },
   "repository": {
     "type": "git",
