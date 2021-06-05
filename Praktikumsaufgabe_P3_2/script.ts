@@ -1,6 +1,6 @@
 namespace Praktikumsaufgabe_3_2 {
 
-    interface Person {
+    interface Data {
         [key: string]: string;
     }
 
@@ -15,13 +15,7 @@ namespace Praktikumsaufgabe_3_2 {
     //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
     async function dataHTML(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);                               
-        console.log(":" + formData.get("fname"));                                               
-
-        for (let entry of formData) {
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
+        let formData: FormData = new FormData(document.forms[0]);                                                                            
 
         // tslint:disable-next-line: no-any                                                     
         let query: URLSearchParams = new URLSearchParams(<any>formData);                        
@@ -30,11 +24,9 @@ namespace Praktikumsaufgabe_3_2 {
         url += "/html";
 
         url = url + "?" + query.toString();
-        console.log(url);
 
         let response: Response = await fetch(url);
         let answer: string = await response.text();
-        console.log(answer);
         let displayResponse: HTMLParagraphElement = <HTMLDivElement>document.getElementById("answer");
         displayResponse.innerText = answer;
     }
@@ -45,11 +37,6 @@ namespace Praktikumsaufgabe_3_2 {
 
         let formData: FormData = new FormData(document.forms[0]);
 
-        for (let entry of formData) {
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
-
         // tslint:disable-next-line: no-any                                                     
         let query: URLSearchParams = new URLSearchParams(<any>formData);                        
         //let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
@@ -57,10 +44,9 @@ namespace Praktikumsaufgabe_3_2 {
         url = "/json";
 
         url = url + "?" + query.toString();
-        console.log(url);
 
         let response: Response = await fetch(url);
-        let myJSON: Person = await response.json();
+        let myJSON: Data = await response.json();
         console.log(myJSON);
     }
 }
