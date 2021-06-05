@@ -2,7 +2,7 @@ import * as Http from "http";
 import * as Url from "url";
 
 
-export namespace Aufgabe_3_2 {
+export namespace Praktikumsaufgabe_3_2 {
     console.log("Starting server");
     let port: number = Number(process.env.PORT);
     if (!port)
@@ -39,6 +39,7 @@ export namespace Aufgabe_3_2 {
             let jsonString: string = JSON.stringify(url.query);
             console.log(url.query);
             _response.write(jsonString);
+
         }
 
         _response.end();

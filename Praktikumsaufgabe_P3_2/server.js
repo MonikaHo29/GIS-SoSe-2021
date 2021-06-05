@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Aufgabe_3_2 = void 0;
+exports.Praktikumsaufgabe_3_2 = void 0;
 const Http = require("http");
 const Url = require("url");
-var Aufgabe_3_2;
-(function (Aufgabe_3_2) {
+var Praktikumsaufgabe_3_2;
+(function (Praktikumsaufgabe_3_2) {
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -33,5 +33,5 @@ var Aufgabe_3_2;
         }
         _response.end();
     }
-})(Aufgabe_3_2 = exports.Aufgabe_3_2 || (exports.Aufgabe_3_2 = {}));
+})(Praktikumsaufgabe_3_2 = exports.Praktikumsaufgabe_3_2 || (exports.Praktikumsaufgabe_3_2 = {}));
 //# sourceMappingURL=server.js.map
