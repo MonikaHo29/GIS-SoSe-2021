@@ -19,7 +19,7 @@ var Praktikumsaufgabe_3_1;
         let response = await fetch(url);
         let antwort = await response.text();
         console.log(antwort);
-        let displayRueckgabe = document.getElementById("serverantwort");
+        let displayRueckgabe = document.getElementById("antwort");
         displayRueckgabe.innerText = antwort;
     }
 })(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
