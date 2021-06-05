@@ -4,22 +4,22 @@ namespace Praktikumsaufgabe_3_2 {
         [key: string]: string;
     }
 
-    let buttonHTML: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");       
-    buttonHTML.addEventListener("click", dataHTML);
+
+    let buttonHTML: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");
+    buttonHTML.addEventListener("click", dataHTMLsenden);
 
     let buttonJSON: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
-    buttonJSON.addEventListener("click", dataJSON);
+    buttonJSON.addEventListener("click", dataJSONsenden);
 
 
 
-    //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
-    async function dataHTML(): Promise<void> {
+    async function dataHTMLsenden(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);                                                                            
-
-        // tslint:disable-next-line: no-any                                                     
-        let query: URLSearchParams = new URLSearchParams(<any>formData);                        
-        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
+        let formData: FormData = new FormData(document.forms[0]);
+        
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        //let url: RequestInfo = "https://salinasapp.herokuapp.com";
         let url: RequestInfo = "http://localhost:8100";
         url += "/html";
 
@@ -27,21 +27,20 @@ namespace Praktikumsaufgabe_3_2 {
 
         let response: Response = await fetch(url);
         let answer: string = await response.text();
-        let displayResponse: HTMLParagraphElement = <HTMLDivElement>document.getElementById("answer");
-        displayResponse.innerText = answer;
+        let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("antwortServer");
+        display.innerText = answer;
     }
 
 
 
-    async function dataJSON(): Promise<void> {
-
+    async function dataJSONsenden(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
 
-        // tslint:disable-next-line: no-any                                                     
-        let query: URLSearchParams = new URLSearchParams(<any>formData);                        
-        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        //let url: RequestInfo = "https://salinasapp.herokuapp.com";
         let url: RequestInfo = "http://localhost:8100";
-        url = "/json";
+        url += "/json";
 
         url = url + "?" + query.toString();
 
@@ -49,4 +48,5 @@ namespace Praktikumsaufgabe_3_2 {
         let myJSON: Data = await response.json();
         console.log(myJSON);
     }
+
 }
