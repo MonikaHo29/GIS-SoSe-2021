@@ -1,8 +1,10 @@
 "use strict";
 var Praktikumsaufgabe_3_2;
 (function (Praktikumsaufgabe_3_2) {
-    let button = document.getElementById("button"); //Button um die Daten an den Server zu schicken  
-    button.addEventListener("click", dataSenden);
+    let buttonHTML = document.getElementById("buttonHTML"); //Button um die Daten an den Server zu schicken  
+    buttonHTML.addEventListener("click", dataSenden);
+    let buttonJSON = document.getElementById("buttonJSON"); //Button um die Daten an den Server zu schicken  
+    buttonJSON.addEventListener("click", dataSenden);
     //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
     async function dataSenden() {
         let formData = new FormData(document.forms[0]); // FormData anlegen (Formular im index) 

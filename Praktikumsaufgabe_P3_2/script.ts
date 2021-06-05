@@ -1,8 +1,10 @@
 namespace Praktikumsaufgabe_3_2 {
  
 
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");           //Button um die Daten an den Server zu schicken  
-    button.addEventListener("click", dataSenden);
+    let buttonHTML: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");           //Button um die Daten an den Server zu schicken  
+    buttonHTML.addEventListener("click", dataSenden);
+    let buttonJSON: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");           //Button um die Daten an den Server zu schicken  
+    buttonJSON.addEventListener("click", dataSenden);
 
 
     //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 

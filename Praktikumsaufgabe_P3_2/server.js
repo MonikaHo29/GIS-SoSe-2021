@@ -25,12 +25,13 @@ var Praktikumsaufgabe_P3_2;
         if (_request.url) {
             let url = URL.parse(_request.url, true);
             for (let key in url.query) {
-                _response.write(key + ":" + url.query[key]);
+                _response.write(key + ":" + url.query[key] + "<br/>");
             }
+            let jsonString = JSON.stringify(url.query);
+            _response.write(jsonString);
         }
-        _response.write("This is my Response");
+        _response.write(_request.url);
         _response.end();
-        console.log(_request.url);
     }
 })(Praktikumsaufgabe_P3_2 = exports.Praktikumsaufgabe_P3_2 || (exports.Praktikumsaufgabe_P3_2 = {}));
 //# sourceMappingURL=server.js.map
