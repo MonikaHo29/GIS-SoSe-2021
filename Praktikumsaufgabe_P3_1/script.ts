@@ -15,7 +15,7 @@ namespace Praktikumsaufgabe_3_1 {
 
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: RequestInfo = "";
+        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
 
         url = url + "?" + query.toString();
         console.log(url);
@@ -23,7 +23,8 @@ namespace Praktikumsaufgabe_3_1 {
         let response: Response = await fetch(url);
         let answer: string = await response.text();
         console.log(answer);
-        let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("answer");
-        display.innerText = answer;
+        let displayResponse: HTMLParagraphElement = <HTMLDivElement>document.getElementById("answer");
+        displayResponse.innerText = answer;
+     
     }
 }

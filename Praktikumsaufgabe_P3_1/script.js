@@ -12,14 +12,14 @@ var Praktikumsaufgabe_3_1;
         }
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        let url = "";
+        let url = "https://monikagissose2021.herokuapp.com/";
         url = url + "?" + query.toString();
         console.log(url);
         let response = await fetch(url);
         let answer = await response.text();
         console.log(answer);
-        let display = document.getElementById("answer");
-        display.innerText = answer;
+        let displayResponse = document.getElementById("answer");
+        displayResponse.innerText = answer;
     }
 })(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=script.js.map
