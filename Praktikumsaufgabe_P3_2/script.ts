@@ -4,7 +4,7 @@ namespace Praktikumsaufgabe_3_2 {
         [key: string]: string;
     }
 
-
+    
     let buttonHTML: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");   // Buttons um die Daten zu versenden
     buttonHTML.addEventListener("click", dataHTMLsenden);
 
