@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Praktikumsaufgabe_3_1 = void 0;
+exports.P_3_1Server = void 0;
 const Http = require("http");
-var Praktikumsaufgabe_3_1;
-(function (Praktikumsaufgabe_3_1) {
+var P_3_1Server;
+(function (P_3_1Server) {
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
     let server = Http.createServer();
-    server.addListener("reqeust", handleRequest);
+    server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
     function handleListen() {
@@ -23,5 +23,5 @@ var Praktikumsaufgabe_3_1;
         _response.end();
         console.log(_request.url);
     }
-})(Praktikumsaufgabe_3_1 = exports.Praktikumsaufgabe_3_1 || (exports.Praktikumsaufgabe_3_1 = {}));
+})(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=server.js.map

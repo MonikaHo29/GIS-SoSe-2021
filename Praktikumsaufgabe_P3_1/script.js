@@ -18,6 +18,8 @@ var Praktikumsaufgabe_3_1;
         let response = await fetch(url);
         let answer = await response.text();
         console.log(answer);
+        let display = document.getElementById("answer");
+        display.innerText = answer;
     }
 })(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
 //# sourceMappingURL=script.js.map

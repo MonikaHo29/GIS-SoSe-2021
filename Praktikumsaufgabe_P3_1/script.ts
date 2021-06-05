@@ -23,6 +23,7 @@ namespace Praktikumsaufgabe_3_1 {
         let response: Response = await fetch(url);
         let answer: string = await response.text();
         console.log(answer);
-
+        let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("answer");
+        display.innerText = answer;
     }
 }
