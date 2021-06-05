@@ -16,6 +16,7 @@ var Praktikumsaufgabe_3_2;
     function handleListen() {
         console.log("Listening");
     }
+    // Funktion, die Daten aus der URL ausliest und auf zwei verschiedene Weise zurückgibt (/html oder /json)
     function handleRequest(_request, _response) {
         console.log("I hear voices!");
         _response.setHeader("Access-Control-Allow-Origin", "*");

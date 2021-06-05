@@ -14,13 +14,12 @@ export namespace Praktikumsaufgabe_3_2 {
     server.listen(port); 
 
 
-
     function handleListen(): void {
         console.log("Listening"); 
     }
 
 
-
+    // Funktion, die Daten aus der URL ausliest und auf zwei verschiedene Weise zurückgibt (/html oder /json)
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log("I hear voices!"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
