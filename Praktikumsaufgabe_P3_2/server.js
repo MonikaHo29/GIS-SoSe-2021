@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Praktikumsaufgabe_P3_2 = void 0;
 const Http = require("http");
+const URL = require("url");
 var Praktikumsaufgabe_P3_2;
 (function (Praktikumsaufgabe_P3_2) {
     console.log("Starting server");
@@ -20,10 +21,16 @@ var Praktikumsaufgabe_P3_2;
     function handleRequest(_request, _response) {
         console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*"); // Wer darf auf dem Server zugreifen
-        _response.write(_request.url);
-        _response.end(); // Ende, Anfrage wurde erhalten, Antwort wird versendet 
-        console.log(_request.url); // Antwort (query/path string) wird in der Konsole ausgegeben
+        _response.setHeader("Access-Control-Allow-Origin", "*");
+        if (_request.url) {
+            let url = URL.parse(_request.url, true);
+            for (let key in url.query) {
+                _response.write(key + ":" + url.query[key]);
+            }
+        }
+        _response.write("This is my Response");
+        _response.end();
+        console.log(_request.url);
     }
 })(Praktikumsaufgabe_P3_2 = exports.Praktikumsaufgabe_P3_2 || (exports.Praktikumsaufgabe_P3_2 = {}));
 //# sourceMappingURL=server.js.map

@@ -1,4 +1,5 @@
 import * as Http from "http";
+import * as URL from "url";
 
 export namespace Praktikumsaufgabe_P3_2 {                              
     console.log("Starting server");                     
@@ -22,13 +23,20 @@ export namespace Praktikumsaufgabe_P3_2 {
     //Funktion um Anfrage über die Eingabeleiste im Browser zu verschicken + Rückantwort bzw Nachricht in der Konsole (in VS) 
     
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        console.log("I hear voices!");                                                                
+        console.log("I hear voices!"); 
+        
         _response.setHeader("content-type", "text/html; charset=utf-8");    
-        _response.setHeader("Access-Control-Allow-Origin", "*");        // Wer darf auf dem Server zugreifen
-        _response.write(_request.url);                                      
-        _response.end();                                                // Ende, Anfrage wurde erhalten, Antwort wird versendet 
+        _response.setHeader("Access-Control-Allow-Origin", "*");        
+        if (_request.url) {
+            let url: URL.UrlWithParsedQuery = URL.parse(_request.url, true);
+            for (let key in url.query) {
+                _response.write (key + ":" + url.query[key]);
+            }
+        }
+        _response.write("This is my Response");                                      
+        _response.end();                                                
 
-        console.log(_request.url);                                      // Antwort (query/path string) wird in der Konsole ausgegeben
+        console.log(_request.url);                                      
 
     }
 
