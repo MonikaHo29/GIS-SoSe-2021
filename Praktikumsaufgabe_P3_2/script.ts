@@ -1,50 +1,33 @@
-namespace Praktikumsaufgabe_3_2 {
+namespace Praktikumsaufgabe_P3_2 {
  
-    interface Person {
-        [key: string]: string;
-    }
+
+    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");           //Button um die Daten an den Server zu schicken  
+    button.addEventListener("click", dataSenden);
 
 
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");
-    button.addEventListener("click", DataHTML);
-    let buttonJSON: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
-    buttonJSON.addEventListener("click", DataJSON);
+    //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
+    async function dataSenden(): Promise<void> {
 
-    async function DataHTML(): Promise<void> {
+        let formData: FormData = new FormData(document.forms[0]);                                   // FormData anlegen (Formular im index) 
+        console.log(":" + formData.get("fname"));                                                   // Daten auslesen 
 
+        for (let entry of formData) {                                                        
 
-        let formData: FormData = new FormData(document.forms[0]);
-        
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
-        //let url: RequestInfo = "http://localhost:8100";
-        url += "/html";
-
-        url = url + "?" + query.toString();
-
-        let response: Response = await fetch(url);
-        let answer: string = await response.text();
-        let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("serverantwort");
-        display.innerText = answer;
-    }
-
-    async function DataJSON(): Promise<void> {
-        let formData: FormData = new FormData(document.forms[0]);
-
-        // tslint:disable-next-line: no-any
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";
-        //let url: RequestInfo = "http://localhost:8100";
-        url += "/json";
+            console.log("name: " + entry[0]);
+            console.log("value: " + entry[1]);
+        }
+        // tslint:disable-next-line: no-any                                                         // asnycron an Server versenden 
+        let query: URLSearchParams = new URLSearchParams(<any>formData);                            // Form Data Objekt generieren                     
+        let url: RequestInfo = "https://monikagissose2021.herokuapp.com/";                          
 
         url = url + "?" + query.toString();
-
+        console.log(url);
 
         let response: Response = await fetch(url);
-        
-        let myJSON: Person = await response.json();
-        console.log(myJSON);
-        
+        let antwort: string = await response.text();                     
+
+        console.log(antwort);
+        let displayRueckgabe: HTMLParagraphElement = <HTMLDivElement>document.getElementById("antwort");
+        displayRueckgabe.innerText = antwort;
     }
 }
