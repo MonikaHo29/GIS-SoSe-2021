@@ -7,7 +7,7 @@ export namespace Praktikumsaufgabe_3_1 {
     port = 8100;
 
     let server: Http.Server = Http.createServer();
-    server.addListener("reqeust", handleRequest);
+    server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
 
