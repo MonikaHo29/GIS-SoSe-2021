@@ -1,6 +1,6 @@
 "use strict";
-var Praktikumsaufgabe_3_1;
-(function (Praktikumsaufgabe_3_1) {
+var Praktikumsaufgabe_3_2;
+(function (Praktikumsaufgabe_3_2) {
     let button = document.getElementById("button"); //Button um die Daten an den Server zu schicken  
     button.addEventListener("click", dataSenden);
     //Funktion um Daten auslesen zu können + asnycron an Server zu schicken 
@@ -17,8 +17,10 @@ var Praktikumsaufgabe_3_1;
         url = url + "?" + query.toString();
         console.log(url);
         let response = await fetch(url);
-        let answer = await response.text();
-        console.log(answer);
+        let antwort = await response.text();
+        console.log(antwort);
+        let displayRueckgabe = document.getElementById("antwort");
+        displayRueckgabe.innerText = antwort;
     }
-})(Praktikumsaufgabe_3_1 || (Praktikumsaufgabe_3_1 = {}));
+})(Praktikumsaufgabe_3_2 || (Praktikumsaufgabe_3_2 = {}));
 //# sourceMappingURL=script.js.map

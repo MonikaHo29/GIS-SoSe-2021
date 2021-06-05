@@ -1,4 +1,4 @@
-namespace Praktikumsaufgabe_3_1 {
+namespace Praktikumsaufgabe_3_2 {
  
 
     let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");           //Button um die Daten an den Server zu schicken  
@@ -24,8 +24,11 @@ namespace Praktikumsaufgabe_3_1 {
         console.log(url);
 
         let response: Response = await fetch(url);
-        let answer: string = await response.text();                     
+        let antwort: string = await response.text();                     
 
-        console.log(answer);
+        console.log(antwort);
+        let displayRueckgabe: HTMLParagraphElement = <HTMLDivElement>document.getElementById("antwort");
+        displayRueckgabe.innerText = antwort;
     }
 }
+
