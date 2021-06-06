@@ -1,4 +1,4 @@
-namespace Praktikumsaufgabe_3_2 {
+ namespace Praktikumsaufgabe_3_2 {
 
     interface Data {                                                                                // Um die Daten als JSON Objekt auszugeben 
         [key: string]: string;

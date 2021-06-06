@@ -26,7 +26,7 @@ export namespace Praktikumsaufgabe_3_2 {
         _response.setHeader("content-type", "text/html; charset=utf-8");
        
 
-        let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+        let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);                                //Daten werden aus der URL ausgelesen (mit Zeile 2)
 
         if (url.pathname == "/html") {
             for (let key in url.query) {
