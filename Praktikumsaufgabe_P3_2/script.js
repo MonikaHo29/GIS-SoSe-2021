@@ -16,7 +16,7 @@ var Praktikumsaufgabe_3_2;
         let response = await fetch(url);
         let answer = await response.text();
         let display = document.getElementById("antwortServer");
-        display.innerText = answer;
+        display.innerHTML = answer;
     }
     // Funktion um die eingegebene Daten (im Formular) in der Konsole als JSON Objekt ausgeben zu können 
     async function dataJSONsenden() {

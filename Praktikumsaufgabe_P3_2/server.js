@@ -24,7 +24,7 @@ var Praktikumsaufgabe_3_2;
         let url = Url.parse(_request.url, true); //Daten werden aus der URL ausgelesen (mit Zeile 2)
         if (url.pathname == "/html") {
             for (let key in url.query) {
-                _response.write(key + ":" + url.query[key] + ",");
+                _response.write(key + ":" + "<p>" + url.query[key] + "</p>");
             }
         }
         if (url.pathname == "/json") {

@@ -1,4 +1,4 @@
- namespace Praktikumsaufgabe_3_2 {
+namespace Praktikumsaufgabe_3_2 {
 
     interface Data {                                                                                // Um die Daten als JSON Objekt auszugeben 
         [key: string]: string;
@@ -27,7 +27,7 @@
         let response: Response = await fetch(url);
         let answer: string = await response.text();
         let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("antwortServer");
-        display.innerText = answer;
+        display.innerHTML = answer;
     }
 
 
