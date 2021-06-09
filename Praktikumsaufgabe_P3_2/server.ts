@@ -30,8 +30,8 @@ export namespace Praktikumsaufgabe_3_2 {
 
         if (url.pathname == "/html") {
             for (let key in url.query) {
-                //_response.write("<p>" + key + ":" + url.query[key] + "</p>");
-                _response.write("<ul>" + key + ":" + "<li>" + url.query[key] + "</li>" + "</ul>");
+                _response.write("<p>" + key + ":" + url.query[key] + "</p>");
+                //_response.write("<ul>" + key + ":" + "<li>" + url.query[key] + "</li>" + "</ul>");
             }
         }
 
