@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>3.4 Daten und Server</title>
+</head>
+
+<body>
+
+    <h1> Terminkalender </h1>
+
+    <form>
+        <label for="name"> Name: </label>
+        <aside><input type="text" id="name" name="name" value=" "></aside>
+        <label for="email">E-Mail:</label>
+        <aside><input type="text" id="email" name="email" value=" "></aside>
+        <label for="betreff">Betreff:</label>
+        <aside><input type="text" id="betreff" name="betreff" value=" "></aside>
+        <label for="textfeld"> Nachricht </label>
+        <aside><textarea id="textfeld" placeholder="schreibe hier deine Nachricht..." name="nachricht" value=" "></textarea></aside>
+        
+        <button type="button" id="buttonAbsenden">Absenden</button>
+        <button type="button" id="buttonAnzeigen">Termin anzeigen</button>
+    </form>
+
+
+    <h2> Serverantwort </h2>
+    <div id="serverantwort">
+        <button type="button" id="buttonLöschen"> Löschen </button>
+    </div>
+
+
+</body>
+
+</html>
