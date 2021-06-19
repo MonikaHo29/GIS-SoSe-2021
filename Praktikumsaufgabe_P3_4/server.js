@@ -49,7 +49,6 @@ var Praktikumsaufgabe_3_4;
         }
         if (url.pathname == "/json") {
             let jsonString = JSON.stringify(url.query);
-            //console.log(url.query);
             _response.write(jsonString);
         }
         if (url.pathname == "/delete") {

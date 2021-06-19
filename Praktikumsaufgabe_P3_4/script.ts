@@ -44,10 +44,12 @@ namespace Praktikumsaufgabe_3_4 {
         url = url + "?" + query.toString();
         
         let response: Response = await fetch(url);                                                     
-        let myJSON: Data = await response.json();                                                      
-        console.log(myJSON);
+        let JSON: Data = await response.json();                                                      
+        console.log(JSON);
+
         let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("serverantwort");
-        display.innerHTML = myJSON.toString();
+        display.innerHTML = JSON.stringify;
+
     }
     
 }

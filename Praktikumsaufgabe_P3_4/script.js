@@ -28,10 +28,10 @@ var Praktikumsaufgabe_3_4;
         url += "/json";
         url = url + "?" + query.toString();
         let response = await fetch(url);
-        let myJSON = await response.json();
-        console.log(myJSON);
+        let JSON = await response.json();
+        console.log(JSON);
         let display = document.getElementById("serverantwort");
-        display.innerHTML = myJSON.toString();
+        display.innerHTML = JSON.stringify;
     }
 })(Praktikumsaufgabe_3_4 || (Praktikumsaufgabe_3_4 = {}));
 //# sourceMappingURL=script.js.map
