@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Praktikumsaufgabe_3_4 = void 0;
 const Http = require("http");
 const Url = require("url");
+const Mongo = require("mongodb");
 var Praktikumsaufgabe_3_4;
 (function (Praktikumsaufgabe_3_4) {
     console.log("Starting server");
@@ -13,6 +14,16 @@ var Praktikumsaufgabe_3_4;
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
+    async function connectToDBMongo(_url) {
+        let options = { useNewUrlParser: true, useUnifiedTopology: true };
+        let mongoClient = new Mongo.MongoClient(_url, options);
+        await mongoClient.connect();
+        let students = mongoClient.db("Test").collection("Students");
+        let cursor = students.find({ name: "Andreas Reich hallo" });
+        let result = await cursor.toArray();
+        console.log(result);
+    }
+    connectToDBMongo("");
     function handleListen() {
         console.log("Listening");
     }
