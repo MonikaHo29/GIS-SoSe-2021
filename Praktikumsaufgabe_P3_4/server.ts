@@ -18,7 +18,7 @@ export namespace Praktikumsaufgabe_3_4 {
     if (!port)
         port = 8100;
 
-    let databaseURL: string = "mongodb://localhost:27017";
+    let databaseURL: string = "mongodb+srv://monika_ho:<password>@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
 
