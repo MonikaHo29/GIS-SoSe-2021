@@ -23,8 +23,8 @@ namespace Praktikumsaufgabe_3_4 {
 
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; 
-        //let url: RequestInfo = "http://localhost:8100";
+        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; 
+        let url: RequestInfo = "http://localhost:8100";
         //url += "/html";
 
         url = url + "?" + query.toString();
@@ -41,8 +41,8 @@ namespace Praktikumsaufgabe_3_4 {
 
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: RequestInfo = "https://monikagissose2021.herokuapp.com";
-        //let url: RequestInfo = "http://localhost:8100";
+        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com";
+        let url: RequestInfo = "http://localhost:8100";
         url += "/json";
 
         url = url + "?" + query.toString();

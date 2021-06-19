@@ -18,8 +18,8 @@ export namespace Praktikumsaufgabe_3_4 {
     if (!port)
         port = 8100;
 
-    let databaseURL: string = "mongodb+srv://monika_ho:<zgHxU74hnaeWkiEy>@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
+    //let databaseURL: string = "mongodb+srv://monika_ho:<zgHxU74hnaeWkiEy>@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    let databaseURL: string = "mongodb://localhost:27017";
 
 
     function startServer(_port: number | string): void {                                                // Funktion um Server zu starten 
