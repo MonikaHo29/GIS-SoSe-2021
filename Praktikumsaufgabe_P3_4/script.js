@@ -12,7 +12,7 @@ var Praktikumsaufgabe_3_4;
         let query = new URLSearchParams(formData);
         //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; 
         let url = "http://localhost:8100";
-        url += "/html";
+        //url += "/html";
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let answer = await response.text();
@@ -28,10 +28,10 @@ var Praktikumsaufgabe_3_4;
         url += "/json";
         url = url + "?" + query.toString();
         let response = await fetch(url);
-        let JSON = await response.json();
-        console.log(JSON);
+        let answer = await response.json();
+        console.log(answer);
         let display = document.getElementById("serverantwort");
-        display.innerHTML = JSON.stringify;
+        display.innerHTML = JSON.stringify(answer);
     }
 })(Praktikumsaufgabe_3_4 || (Praktikumsaufgabe_3_4 = {}));
 //# sourceMappingURL=script.js.map

@@ -6,6 +6,13 @@ const Url = require("url");
 const Mongo = require("mongodb");
 var Praktikumsaufgabe_3_4;
 (function (Praktikumsaufgabe_3_4) {
+    /*interface Students {
+        name: string;
+        matrikel: number;
+        studiengang: string;
+        semester: number;
+        beginn: number;
+    }*/
     let students; // Collection anlegen 
     let port = Number(process.env.PORT);
     if (!port)
@@ -40,13 +47,12 @@ var Praktikumsaufgabe_3_4;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         let url = Url.parse(_request.url, true); //Daten werden aus der URL ausgelesen (mit Zeile 2)
-        if (url.pathname == "/html") { //??
+        /*if (url.pathname == "/html") { //??
             for (let key in url.query) {
                 _response.write("<p>" + key + ":" + url.query[key] + "</p>");
                 //_response.write("<ul>" + "<li>" + key + ":" + url.query[key] + "</li>" + "</ul>");
-                storeStudent({ name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1 });
             }
-        }
+        }*/
         if (url.pathname == "/json") {
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
@@ -57,8 +63,9 @@ var Praktikumsaufgabe_3_4;
         }
         _response.end();
     }
-    function storeStudent(_student) {
+    /*function storeStudent(_student: Students): void {
         students.insertOne(_student);
     }
+    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});*/
 })(Praktikumsaufgabe_3_4 = exports.Praktikumsaufgabe_3_4 || (exports.Praktikumsaufgabe_3_4 = {}));
 //# sourceMappingURL=server.js.map
