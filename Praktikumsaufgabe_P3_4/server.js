@@ -40,7 +40,7 @@ var Praktikumsaufgabe_3_4;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         let url = Url.parse(_request.url, true); //Daten werden aus der URL ausgelesen (mit Zeile 2)
-        if (url.pathname == "/html") { //???
+        if (url.pathname == "/html") { //??
             for (let key in url.query) {
                 _response.write("<p>" + key + ":" + url.query[key] + "</p>");
                 //_response.write("<ul>" + "<li>" + key + ":" + url.query[key] + "</li>" + "</ul>");
