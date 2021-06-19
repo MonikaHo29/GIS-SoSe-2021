@@ -12,7 +12,7 @@ var Praktikumsaufgabe_3_4;
         let query = new URLSearchParams(formData);
         //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; 
         let url = "http://localhost:8100";
-        url += "/html";
+        //url += "/html";
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let answer = await response.text();

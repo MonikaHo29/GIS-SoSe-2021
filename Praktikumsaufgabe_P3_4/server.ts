@@ -4,13 +4,13 @@ import * as Mongo from "mongodb";
 
 export namespace Praktikumsaufgabe_3_4 {
 
-    interface Students {
+    /*interface Students {
         name: string;
         matrikel: number;
         studiengang: string;
         semester: number;
         beginn: number;
-    }
+    }*/
 
     let students: Mongo.Collection;                                                                        // Collection anlegen 
 
@@ -65,12 +65,12 @@ export namespace Praktikumsaufgabe_3_4 {
 
         let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);                                //Daten werden aus der URL ausgelesen (mit Zeile 2)
 
-        /*if (url.pathname == "/html") { //??
+        if (url.pathname == "/html") { //??
             for (let key in url.query) {
                 _response.write("<p>" + key + ":" + url.query[key] + "</p>");
                 //_response.write("<ul>" + "<li>" + key + ":" + url.query[key] + "</li>" + "</ul>");
             }
-        }*/
+        }
 
         if (url.pathname == "/json") {
             let jsonString: string = JSON.stringify(url.query);
@@ -85,10 +85,10 @@ export namespace Praktikumsaufgabe_3_4 {
     }
 
 
-    function storeStudent(_student: Students): void {
+    /*function storeStudent(_student: Students): void {
         students.insertOne(_student);
     }
-    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});
+    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});*/
 
 }
 
