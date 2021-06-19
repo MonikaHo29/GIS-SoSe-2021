@@ -8,11 +8,11 @@ var Praktikumsaufgabe_3_4;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        let students = mongoClient.db("Test").collection("Students");
+        let students = mongoClient.db("test").collection("student");
         let cursor = students.find();
         let result = await cursor.toArray();
         console.log(result);
     }
-    connectToDB("mongodb://localhost27017");
+    connectToDB("mongodb://localhost:27017");
 })(Praktikumsaufgabe_3_4 = exports.Praktikumsaufgabe_3_4 || (exports.Praktikumsaufgabe_3_4 = {}));
 //# sourceMappingURL=dbtest.js.map

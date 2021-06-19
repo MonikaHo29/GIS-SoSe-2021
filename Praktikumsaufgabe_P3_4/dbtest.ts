@@ -8,18 +8,16 @@ export namespace Praktikumsaufgabe_3_4 {
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
 
-        let students: Mongo.Collection = mongoClient.db("Test").collection("Students");
+        let students: Mongo.Collection = mongoClient.db("test").collection("student");
         let cursor: Mongo.Cursor = students.find();
         let result: Data[] = await cursor.toArray();
         console.log(result);
     }
-    connectToDB("mongodb://localhost27017");
+    connectToDB("mongodb://localhost:27017");
 
     interface Data {
         name: string;
-        betreff: string;
-        email: string;
-        textfeld: string;
-
+        firstname: string;
+        id: number;
     }
 }
