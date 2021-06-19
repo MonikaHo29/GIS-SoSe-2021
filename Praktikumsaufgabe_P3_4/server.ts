@@ -4,13 +4,13 @@ import * as Mongo from "mongodb";
 
 export namespace Praktikumsaufgabe_3_4 {
 
-    /*interface Students {
+    interface Students {
         name: string;
         matrikel: number;
         studiengang: string;
         semester: number;
         beginn: number;
-    }*/
+    }
 
     let students: Mongo.Collection;                                                                        // Collection anlegen 
 
@@ -85,10 +85,10 @@ export namespace Praktikumsaufgabe_3_4 {
     }
 
 
-    /*function storeStudent(_student: Students): void {
+    function storeStudent(_student: Students): void {
         students.insertOne(_student);
     }
-    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});*/
+    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});
 
 }
 

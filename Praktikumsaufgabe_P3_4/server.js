@@ -6,13 +6,6 @@ const Url = require("url");
 const Mongo = require("mongodb");
 var Praktikumsaufgabe_3_4;
 (function (Praktikumsaufgabe_3_4) {
-    /*interface Students {
-        name: string;
-        matrikel: number;
-        studiengang: string;
-        semester: number;
-        beginn: number;
-    }*/
     let students; // Collection anlegen 
     let port = Number(process.env.PORT);
     if (!port)
@@ -64,9 +57,9 @@ var Praktikumsaufgabe_3_4;
         }
         _response.end();
     }
-    /*function storeStudent(_student: Students): void {
+    function storeStudent(_student) {
         students.insertOne(_student);
     }
-    storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});*/
+    storeStudent({ name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1 });
 })(Praktikumsaufgabe_3_4 = exports.Praktikumsaufgabe_3_4 || (exports.Praktikumsaufgabe_3_4 = {}));
 //# sourceMappingURL=server.js.map
