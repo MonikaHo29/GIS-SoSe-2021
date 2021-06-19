@@ -49,7 +49,6 @@ namespace Praktikumsaufgabe_3_4 {
 
         let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("serverantwort");
         display.innerHTML = JSON.stringify;
-
     }
     
 }
