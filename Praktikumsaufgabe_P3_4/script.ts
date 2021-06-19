@@ -25,7 +25,7 @@ namespace Praktikumsaufgabe_3_4 {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; 
         let url: RequestInfo = "http://localhost:8100";
-        //url += "/html";
+        url += "/html";
 
         url = url + "?" + query.toString();
 
