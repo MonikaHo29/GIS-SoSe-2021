@@ -15,17 +15,20 @@ export namespace Praktikumsaufgabe_3_4 {
     server.addListener("listening", handleListen);
     server.listen(port);
 
-    async function connectToDBMongo(_url: string): Promise<void> {
+    
+    let databaseURL: string = "mongodb://localhost:27017"; 
+    
+    export async function connectToDBMongo(_url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
 
         let students: Mongo.Collection = mongoClient.db("Test").collection("Students");
-        let cursor: Mongo.Cursor = students.find({name: "Andreas Reich hallo"});
+        let cursor: Mongo.Cursor = students.find();
         let result: Students[] = await cursor.toArray();
         console.log(result);
     }
-    connectToDBMongo("");
+    connectToDBMongo(databaseURL);
 
     interface Students {
         name: string;
@@ -33,12 +36,7 @@ export namespace Praktikumsaufgabe_3_4 {
         studiengang: string;
         semester: number;
         beginn: number; 
-        farbe: string; 
     }
-
-
-
-
 
     function handleListen(): void {
         console.log("Listening");

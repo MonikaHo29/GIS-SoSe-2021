@@ -2,16 +2,16 @@
 var Praktikumsaufgabe_3_4;
 (function (Praktikumsaufgabe_3_4) {
     let buttonHTML = document.getElementById("buttonHTML"); // Buttons um die Daten zu versenden
-    buttonHTML.addEventListener("click", dataHTMLsenden);
+    buttonHTML.addEventListener("click", dataSenden);
     let buttonJSON = document.getElementById("buttonJSON");
     buttonJSON.addEventListener("click", dataJSONsenden);
     // Funktion um die eingegebene Daten (im Formular) auf der HTML-Seite ausgeben zu können 
-    async function dataHTMLsenden() {
+    async function dataSenden() {
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; >> mongo
-        let url = "https://localhost";
+        let url = "mongodb://localhost:27017";
         url += "/html";
         url = url + "?" + query.toString();
         let response = await fetch(url);
@@ -24,7 +24,8 @@ var Praktikumsaufgabe_3_4;
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        let url = "https://monikagissose2021.herokuapp.com"; //>> mongo
+        //let url: RequestInfo = "https://monikagissose2021.herokuapp.com"; >> mongo
+        let url = "mongodb://localhost:27017";
         url += "/json";
         url = url + "?" + query.toString();
         let response = await fetch(url);

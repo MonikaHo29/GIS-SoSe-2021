@@ -14,16 +14,18 @@ var Praktikumsaufgabe_3_4;
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
+    let databaseURL = "mongodb://localhost:27017";
     async function connectToDBMongo(_url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         let students = mongoClient.db("Test").collection("Students");
-        let cursor = students.find({ name: "Andreas Reich hallo" });
+        let cursor = students.find();
         let result = await cursor.toArray();
         console.log(result);
     }
-    connectToDBMongo("");
+    Praktikumsaufgabe_3_4.connectToDBMongo = connectToDBMongo;
+    connectToDBMongo(databaseURL);
     function handleListen() {
         console.log("Listening");
     }
