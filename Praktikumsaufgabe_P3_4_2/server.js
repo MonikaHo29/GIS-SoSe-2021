@@ -12,9 +12,10 @@ var Praktikumsaufgabe_P3_4_2;
         port = 8100;
     let databaseURL = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEyC@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     //let databaseURL: string = "mongodb://localhost:27017";
-    function startServer(_port) {
+    async function startServer(_port) {
         let server = Http.createServer();
         console.log("Starting server");
+        await connectToDatabase(databaseURL);
         server.listen(_port);
         server.addListener("request", handleRequest);
         server.addListener("listening", handleListen);
@@ -27,7 +28,6 @@ var Praktikumsaufgabe_P3_4_2;
         studentsCollection = mongoClient.db("test").collection("students");
         console.log("Database conncetion", studentsCollection != undefined);
     }
-    connectToDatabase(databaseURL);
     function handleListen() {
         console.log("Listening");
     }

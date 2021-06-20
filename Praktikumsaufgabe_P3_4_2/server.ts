@@ -18,9 +18,11 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-    function startServer(_port: number | string): void {
+    async function startServer(_port: number | string): Promise <void> {
         let server: Http.Server = Http.createServer();
         console.log("Starting server");
+
+        await connectToDatabase(databaseURL);
 
         server.listen(_port);
         server.addListener("request", handleRequest);
@@ -38,7 +40,6 @@ export namespace Praktikumsaufgabe_P3_4_2 {
         studentsCollection = mongoClient.db("test").collection("students");
         console.log("Database conncetion", studentsCollection != undefined);
     }
-    connectToDatabase(databaseURL);
 
 
 
@@ -78,7 +79,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
         if (url.pathname == "/delete") {
 
-            studentsCollection.deleteOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
+            studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
 
         _response.end();
