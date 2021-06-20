@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Praktikumsaufgabe_3_4 = void 0;
+exports.Praktikumsaufgabe_P3_4 = void 0;
 const Http = require("http");
 const Url = require("url");
 const Mongo = require("mongodb");
-var Praktikumsaufgabe_3_4;
-(function (Praktikumsaufgabe_3_4) {
+var Praktikumsaufgabe_P3_4;
+(function (Praktikumsaufgabe_P3_4) {
     /*interface Students {
         name: string;
         matrikel: number;
         studiengang: string;
         semester: number;
-        beginn: number;
+        studienbeginn: number;
     }*/
     let students; // Collection anlegen 
     let port = Number(process.env.PORT);
@@ -68,5 +68,5 @@ var Praktikumsaufgabe_3_4;
         students.insertOne(_student);
     }
     storeStudent({name: "Max Mustermann", matrikel: 12345, studiengang: "OMB", semester: 1, beginn: 1});*/
-})(Praktikumsaufgabe_3_4 = exports.Praktikumsaufgabe_3_4 || (exports.Praktikumsaufgabe_3_4 = {}));
+})(Praktikumsaufgabe_P3_4 = exports.Praktikumsaufgabe_P3_4 || (exports.Praktikumsaufgabe_P3_4 = {}));
 //# sourceMappingURL=server.js.map

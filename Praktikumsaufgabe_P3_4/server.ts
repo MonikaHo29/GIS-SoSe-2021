@@ -2,14 +2,14 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
-export namespace Praktikumsaufgabe_3_4 {
+export namespace Praktikumsaufgabe_P3_4 {
 
     /*interface Students {
         name: string;
         matrikel: number;
         studiengang: string;
         semester: number;
-        beginn: number;
+        studienbeginn: number;
     }*/
 
     let students: Mongo.Collection;                                                                        // Collection anlegen 

@@ -35,24 +35,22 @@ var Praktikumsaufgabe_P3_4_2;
         _response.setHeader("Access-control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         let url = URL.parse(_request.url, true);
-        if (url.pathname == "/send") {
+        if (url.pathname == "/insert") {
+            studentsCollection.insertOne(url.query);
             for (let key in url.query) {
-                _response.write("<p>" + key + ":" + url.query[key]);
+                _response.write("<p>" + key + ":" + url.query[key] + "</p>");
             }
         }
         if (url.pathname == "/show") {
+            _response.setHeader("content-type", "application/json");
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
-            storeStudent(url.query);
         }
         if (url.pathname == "/delete") {
             let id = new Mongo.ObjectID();
             studentsCollection.deleteOne(id);
         }
         _response.end();
-    }
-    function storeStudent(_student) {
-        studentsCollection.insertOne(_student);
     }
 })(Praktikumsaufgabe_P3_4_2 = exports.Praktikumsaufgabe_P3_4_2 || (exports.Praktikumsaufgabe_P3_4_2 = {}));
 //# sourceMappingURL=server.js.map

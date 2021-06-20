@@ -3,11 +3,8 @@ import * as URL from "url";
 import * as Mongo from "mongodb";
 
 
-export namespace Praktikumsaufgabe_P3_4_2 {
 
-    interface Students {
-        [key: string]: string | string[];
-    }
+export namespace Praktikumsaufgabe_P3_4_2 {
 
     let studentsCollection: Mongo.Collection;
 
@@ -56,20 +53,25 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
         let url: URL.UrlWithParsedQuery = URL.parse(_request.url, true);
 
-        if (url.pathname == "/send") {
-
+        if (url.pathname == "/insert") {
+            
+            studentsCollection.insertOne(url.query);
             for (let key in url.query) {
-                _response.write("<p>" + key + ":" + url.query[key]);
+                _response.write("<p>" + key + ":" + url.query[key] + "</p>");
             }
         }
 
+
         if (url.pathname == "/show") {
+
+            _response.setHeader("content-type", "application/json");
+
             let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
-
-            storeStudent(url.query);
+            
         }
 
+        
         if (url.pathname == "/delete") {
             let id: Mongo.ObjectID = new Mongo.ObjectID();
             studentsCollection.deleteOne(id);
@@ -79,8 +81,5 @@ export namespace Praktikumsaufgabe_P3_4_2 {
     }
 
 
-    function storeStudent(_student: Students): void {
-        studentsCollection.insertOne(_student);
-    }
 
 }

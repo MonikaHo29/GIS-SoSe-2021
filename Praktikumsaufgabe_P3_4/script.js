@@ -1,6 +1,6 @@
 "use strict";
-var Praktikumsaufgabe_3_4;
-(function (Praktikumsaufgabe_3_4) {
+var Praktikumsaufgabe_P3_4;
+(function (Praktikumsaufgabe_P3_4) {
     let buttonHTML = document.getElementById("buttonAbsenden"); // Buttons um die Daten zu versenden
     buttonHTML.addEventListener("click", dataSenden);
     let buttonJSON = document.getElementById("buttonAnzeigen");
@@ -33,5 +33,5 @@ var Praktikumsaufgabe_3_4;
         let display = document.getElementById("serverantwort");
         display.innerHTML = JSON.stringify(answer);
     }
-})(Praktikumsaufgabe_3_4 || (Praktikumsaufgabe_3_4 = {}));
+})(Praktikumsaufgabe_P3_4 || (Praktikumsaufgabe_P3_4 = {}));
 //# sourceMappingURL=script.js.map

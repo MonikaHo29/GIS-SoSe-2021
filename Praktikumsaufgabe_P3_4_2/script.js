@@ -10,7 +10,7 @@ var Praktikumsaufgabe_P3_4_2;
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         let url = "http://localhost:8100";
-        url += "/send";
+        url += "/insert";
         url = url + "?" + query.toString();
         let response = await fetch(url);
         let answer = await response.text();
