@@ -5,8 +5,8 @@ var Praktikumsaufgabe_P3_4_2;
     buttonAbsenden.addEventListener("click", dataSenden);
     let buttonAnzeigen = document.getElementById("buttonAnzeigen");
     buttonAnzeigen.addEventListener("click", dataAnzeigen);
-    let buttonDelete = document.getElementById("buttonDelete");
-    buttonDelete.addEventListener("click", deleteData);
+    //let buttonDelete: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonDelete");
+    //buttonDelete.addEventListener("click", deleteData);
     async function dataSenden() {
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
@@ -33,17 +33,21 @@ var Praktikumsaufgabe_P3_4_2;
         let display = document.getElementById("serverantwort");
         display.innerHTML = JSON.stringify(answer);
     }
-    async function deleteData() {
-        let formData = new FormData(document.forms[0]);
+    /*async function deleteData(): Promise<void> {
+    
+        let formData: FormData = new FormData(document.forms[0]);
+    
         // tslint:disable-next-line: no-any
-        let query = new URLSearchParams(formData);
-        let url = "https://monikagissose2021.herokuapp.com";
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        let url: RequestInfo = "https://monikagissose2021.herokuapp.com";
         //let url: RequestInfo = "http://localhost:8100";
+    
         url += "/delete";
+    
         url = url + "?" + query.toString();
-        let response = await fetch(url);
-        let answer = await response.text();
+        let response: Response = await fetch(url);
+        let answer: string = await response.text();
         console.log(answer);
-    }
+    }*/
 })(Praktikumsaufgabe_P3_4_2 || (Praktikumsaufgabe_P3_4_2 = {}));
 //# sourceMappingURL=script.js.map

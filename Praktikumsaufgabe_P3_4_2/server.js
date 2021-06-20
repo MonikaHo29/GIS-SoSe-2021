@@ -47,10 +47,13 @@ var Praktikumsaufgabe_P3_4_2;
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
         }
-        if (url.pathname == "/delete") {
+        /*if (url.pathname == "/delete") {
+
             studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
+
         _response.end();
+    }*/
     }
 })(Praktikumsaufgabe_P3_4_2 = exports.Praktikumsaufgabe_P3_4_2 || (exports.Praktikumsaufgabe_P3_4_2 = {}));
 //# sourceMappingURL=server.js.map

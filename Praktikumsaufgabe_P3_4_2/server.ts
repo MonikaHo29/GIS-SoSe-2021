@@ -18,7 +18,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-    async function startServer(_port: number | string): Promise <void> {
+    async function startServer(_port: number | string): Promise<void> {
         let server: Http.Server = Http.createServer();
         console.log("Starting server");
 
@@ -77,14 +77,15 @@ export namespace Praktikumsaufgabe_P3_4_2 {
         }
 
 
-        if (url.pathname == "/delete") {
+        /*if (url.pathname == "/delete") {
 
             studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
 
         _response.end();
+    }*/
+
+
+
     }
-
-
-
 }
