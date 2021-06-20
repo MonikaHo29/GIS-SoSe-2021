@@ -10,8 +10,8 @@ var Praktikumsaufgabe_P3_4_2;
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-    //let databaseURL: string = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEyC@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-    let databaseURL = "mongodb://localhost:27017";
+    let databaseURL = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEyC@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    //let databaseURL: string = "mongodb://localhost:27017";
     function startServer(_port) {
         let server = Http.createServer();
         console.log("Starting server");
