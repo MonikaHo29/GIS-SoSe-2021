@@ -77,15 +77,15 @@ export namespace Praktikumsaufgabe_P3_4_2 {
         }
 
 
-        /*if (url.pathname == "/delete") {
+        if (url.pathname == "/delete") {
 
             studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
 
         _response.end();
-    }*/
-
-
-
     }
+
+
+
 }
+

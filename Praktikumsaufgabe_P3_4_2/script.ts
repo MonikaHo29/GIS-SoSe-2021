@@ -12,8 +12,8 @@ namespace Praktikumsaufgabe_P3_4_2 {
     buttonAbsenden.addEventListener("click", dataSenden);
     let buttonAnzeigen: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonAnzeigen"); 
     buttonAnzeigen.addEventListener("click", dataAnzeigen);
-    //let buttonDelete: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonDelete");
-    //buttonDelete.addEventListener("click", deleteData);
+    let buttonDelete: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonDelete");
+    buttonDelete.addEventListener("click", deleteData);
 
 
     
@@ -58,7 +58,7 @@ namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-    /*async function deleteData(): Promise<void> {
+    async function deleteData(): Promise<void> {
     
         let formData: FormData = new FormData(document.forms[0]);
     
@@ -73,7 +73,7 @@ namespace Praktikumsaufgabe_P3_4_2 {
         let response: Response = await fetch(url);
         let answer: string = await response.text();
         console.log(answer);
-    }*/
+    }
 
 
 }
