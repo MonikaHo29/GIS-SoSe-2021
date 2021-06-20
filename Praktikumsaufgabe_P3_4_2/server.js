@@ -12,6 +12,7 @@ var Praktikumsaufgabe_P3_4_2;
         port = 8100;
     let databaseURL = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     //let databaseURL: string = "mongodb://localhost:27017";
+    //Asynchrone Funktion um den Server zu starten + Aufruf für die Verbindung zur Database (Zeile 25) 
     async function startServer(_port) {
         let server = Http.createServer();
         console.log("Starting server");
@@ -21,6 +22,7 @@ var Praktikumsaufgabe_P3_4_2;
         server.addListener("listening", handleListen);
     }
     startServer(port);
+    //Asynchrone Funktion um eine Verbindung zur Database aufzubauen 
     async function connectToDatabase(_url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
@@ -47,7 +49,7 @@ var Praktikumsaufgabe_P3_4_2;
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
         }
-        if (url.pathname == "/delete") {
+        if (url.pathname == "/delete") { //Bonusaufgabe --> NUR ein Ansatz um die angezeigten Daten auf der HTML-Seite zu löschen,  
             // tslint:disable-next-line: typedef
             let studentid = new Mongo.ObjectId(url.query["id"].toString());
             studentsCollection.deleteOne({ _id: studentid });

@@ -17,7 +17,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-
+    //Asynchrone Funktion um den Server zu starten + Aufruf für die Verbindung zur Database (Zeile 25) 
     async function startServer(_port: number | string): Promise<void> {
         let server: Http.Server = Http.createServer();
         console.log("Starting server");
@@ -31,7 +31,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
     startServer(port);
 
 
-
+    //Asynchrone Funktion um eine Verbindung zur Database aufzubauen 
     async function connectToDatabase(_url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
@@ -76,7 +76,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
         }
 
-        if (url.pathname == "/delete") {
+        if (url.pathname == "/delete") {               //Bonusaufgabe --> NUR ein Ansatz um die angezeigten Daten auf der HTML-Seite zu löschen,  
 
             // tslint:disable-next-line: typedef
             let studentid = new Mongo.ObjectId(url.query["id"].toString());

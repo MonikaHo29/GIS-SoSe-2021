@@ -5,6 +5,7 @@ var Praktikumsaufgabe_P3_4_2;
     buttonAbsenden.addEventListener("click", dataSenden);
     let buttonAnzeigen = document.getElementById("buttonAnzeigen");
     buttonAnzeigen.addEventListener("click", dataAnzeigen);
+    //Asynchrone Funktion um die Daten global an den Server Heroku zu schicken 
     async function dataSenden() {
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
@@ -17,6 +18,7 @@ var Praktikumsaufgabe_P3_4_2;
         let answer = await response.text();
         console.log(answer);
     }
+    //Asynchrone Funktion um Daten als Serverantwort anzeigen zu lassen
     async function dataAnzeigen() {
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any

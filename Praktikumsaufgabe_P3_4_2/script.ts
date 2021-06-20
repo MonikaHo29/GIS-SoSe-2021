@@ -14,7 +14,7 @@ namespace Praktikumsaufgabe_P3_4_2 {
     buttonAnzeigen.addEventListener("click", dataAnzeigen);
 
 
-    
+    //Asynchrone Funktion um die Daten global an den Server Heroku zu schicken 
     async function dataSenden(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
@@ -33,7 +33,7 @@ namespace Praktikumsaufgabe_P3_4_2 {
     }
 
     
-
+    //Asynchrone Funktion um Daten als Serverantwort anzeigen zu lassen
     async function dataAnzeigen(): Promise<void> {
         
         let formData: FormData = new FormData(document.forms[0]);
