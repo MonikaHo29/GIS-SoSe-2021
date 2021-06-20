@@ -12,7 +12,9 @@ export namespace Praktikumsaufgabe_P3_4_2 {
     if (!port)
         port = 8100;
 
-    let databaseURL: string = "mongodb://localhost:27017";
+    let databaseURL: string = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    //let databaseURL: string = "mongodb://localhost:27017";
+
 
 
 
@@ -54,13 +56,9 @@ export namespace Praktikumsaufgabe_P3_4_2 {
         let url: URL.UrlWithParsedQuery = URL.parse(_request.url, true);
 
         if (url.pathname == "/insert") {
-            
-            studentsCollection.insertOne(url.query);
-            for (let key in url.query) {
-                _response.write("<p>" + key + ":" + url.query[key] + "</p>");
-            }
-        }
 
+            studentsCollection.insertOne(url.query);
+        }
 
         if (url.pathname == "/show") {
 
@@ -68,10 +66,10 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
             let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
-            
+
         }
 
-        
+
         if (url.pathname == "/delete") {
             let id: Mongo.ObjectID = new Mongo.ObjectID();
             studentsCollection.deleteOne(id);
