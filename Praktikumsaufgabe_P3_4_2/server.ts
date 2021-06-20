@@ -61,10 +61,10 @@ export namespace Praktikumsaufgabe_P3_4_2 {
             studentsCollection.insertOne(url.query);
         }
 
-        // if (url.pathname == "/find") {
-
-        //     studentsCollection.findOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
-        // }
+        if (url.pathname == "/find") {
+            
+        studentsCollection.findOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
+        }
 
 
         if (url.pathname == "/show") {
@@ -76,10 +76,11 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
         }
 
-
         if (url.pathname == "/delete") {
 
-            studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
+            // tslint:disable-next-line: typedef
+            let studentid = new Mongo.ObjectId(url.query["id"].toString());
+            studentsCollection.deleteOne({ _id: studentid });
         }
 
         _response.end();
