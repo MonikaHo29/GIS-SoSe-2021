@@ -60,6 +60,12 @@ export namespace Praktikumsaufgabe_P3_4_2 {
             studentsCollection.insertOne(url.query);
         }
 
+        // if (url.pathname == "/find") {
+
+        //     studentsCollection.findOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
+        // }
+
+
         if (url.pathname == "/show") {
 
             _response.setHeader("content-type", "application/json");
@@ -71,8 +77,8 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
         if (url.pathname == "/delete") {
-            let id: Mongo.ObjectID = new Mongo.ObjectID();
-            studentsCollection.deleteOne(id);
+
+            studentsCollection.deleteOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
         }
 
         _response.end();

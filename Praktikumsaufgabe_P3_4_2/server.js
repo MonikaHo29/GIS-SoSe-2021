@@ -39,14 +39,16 @@ var Praktikumsaufgabe_P3_4_2;
         if (url.pathname == "/insert") {
             studentsCollection.insertOne(url.query);
         }
+        // if (url.pathname == "/find") {
+        //     studentsCollection.findOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
+        // }
         if (url.pathname == "/show") {
             _response.setHeader("content-type", "application/json");
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
         }
         if (url.pathname == "/delete") {
-            let id = new Mongo.ObjectID();
-            studentsCollection.deleteOne(id);
+            studentsCollection.deleteOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
         _response.end();
     }
