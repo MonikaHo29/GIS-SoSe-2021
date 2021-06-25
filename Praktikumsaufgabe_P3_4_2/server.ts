@@ -71,7 +71,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
             _response.setHeader("content-type", "application/json");
 
-            let jsonString: string = JSON.stringify(url.query);
+            let jsonString: string = JSON.stringify(studentsCollection.find());
             _response.write(jsonString);
 
         }
