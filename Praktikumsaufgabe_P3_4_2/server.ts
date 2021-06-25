@@ -8,9 +8,9 @@ export namespace Praktikumsaufgabe_P3_4_2 {
     interface Data {
         name: string;
         matrikel: number;
-        studiengang: string; 
-        semester: number; 
-        studienbeginn: number; 
+        studiengang: string;
+        semester: number;
+        studienbeginn: number;
     }
 
     let studentsCollection: Mongo.Collection;
@@ -56,7 +56,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> {
+    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> {
         console.log("I hear voices!");
         _response.setHeader("Access-control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -69,8 +69,8 @@ export namespace Praktikumsaufgabe_P3_4_2 {
         }
 
         if (url.pathname == "/find") {
-            
-        studentsCollection.findOne({"name": url.query ["name"], "E-Mail": url.query ["email"], "Nachricht": url.query ["message"]});
+
+            studentsCollection.findOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
 
 
@@ -78,12 +78,13 @@ export namespace Praktikumsaufgabe_P3_4_2 {
             let cursor: Mongo.Cursor = studentsCollection.find();
             let allData: Data[] = await cursor.toArray();
             _response.write(JSON.stringify(allData));
-
+            console.log(allData);
         }
+
 
         if (url.pathname == "/delete") {               //Bonusaufgabe --> NUR ein Ansatz um die angezeigten Daten auf der HTML-Seite zu löschen,  
 
-            // tslint:disable-next-line: typedef
+            // tslint:disable-next-line: typedefS
             let studentId = new Mongo.ObjectId(url.query["id"].toString());
             studentsCollection.deleteOne({ _id: studentId });
         }
