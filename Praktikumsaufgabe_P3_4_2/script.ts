@@ -1,12 +1,5 @@
 namespace Praktikumsaufgabe_P3_4_2 {
 
-    interface Data {
-        name: string;
-        matrikel: number;
-        studiengang: string; 
-        semester: number; 
-        studienbeginn: number; 
-    }
 
     let buttonAbsenden: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonAbsenden"); 
     buttonAbsenden.addEventListener("click", dataSenden);
@@ -47,11 +40,10 @@ namespace Praktikumsaufgabe_P3_4_2 {
         url = url + "?" + query.toString();
 
         let response: Response = await fetch(url);
-        let answer: Data = await response.json();
-        console.log(answer);
+        let answer: string = await response.text();
 
         let display: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("serverantwort");
-        display.innerHTML = JSON.stringify(answer);
+        display.innerHTML = answer;
         
     }
 
