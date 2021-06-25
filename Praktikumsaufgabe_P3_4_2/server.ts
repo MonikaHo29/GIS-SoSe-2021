@@ -71,16 +71,15 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
             _response.setHeader("content-type", "application/json");
 
-            let jsonString: string = JSON.stringify(studentsCollection.find().toArray());
-            _response.write(jsonString);
+            _response.write(JSON.stringify(studentsCollection.find().toArray()));
 
         }
 
         if (url.pathname == "/delete") {               //Bonusaufgabe --> NUR ein Ansatz um die angezeigten Daten auf der HTML-Seite zu löschen,  
 
             // tslint:disable-next-line: typedef
-            let studentid = new Mongo.ObjectId(url.query["id"].toString());
-            studentsCollection.deleteOne({ _id: studentid });
+            let studentId = new Mongo.ObjectId(url.query["id"].toString());
+            studentsCollection.deleteOne({ _id: studentId });
         }
 
         _response.end();
