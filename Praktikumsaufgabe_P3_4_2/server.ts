@@ -68,9 +68,6 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
         if (url.pathname == "/show") {
-
-            _response.setHeader("content-type", "application/json");
-
             _response.write(JSON.stringify(studentsCollection.find()));
 
         }
