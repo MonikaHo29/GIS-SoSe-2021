@@ -75,8 +75,8 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
         if (url.pathname == "/show") {
-
-            let allData: Data[] = await studentsCollection.find().toArray();
+            let cursor: Mongo.Cursor = studentsCollection.find();
+            let allData: Data[] = await cursor.toArray();
             _response.write(JSON.stringify(allData));
 
         }
