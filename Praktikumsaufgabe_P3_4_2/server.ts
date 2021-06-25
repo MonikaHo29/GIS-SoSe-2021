@@ -19,7 +19,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
     if (!port)
         port = 8100;
 
-    let databaseURL: string = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    let databaseURL: string = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/test?retryWrites=true&w=majority";
     //let databaseURL: string = "mongodb://localhost:27017";
 
 
