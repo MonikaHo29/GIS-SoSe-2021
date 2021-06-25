@@ -3,8 +3,15 @@ import * as URL from "url";
 import * as Mongo from "mongodb";
 
 
-
 export namespace Praktikumsaufgabe_P3_4_2 {
+
+    interface Data {
+        name: string;
+        matrikel: number;
+        studiengang: string; 
+        semester: number; 
+        studienbeginn: number; 
+    }
 
     let studentsCollection: Mongo.Collection;
 
@@ -49,7 +56,7 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> {
         console.log("I hear voices!");
         _response.setHeader("Access-control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -68,7 +75,9 @@ export namespace Praktikumsaufgabe_P3_4_2 {
 
 
         if (url.pathname == "/show") {
-            _response.write(JSON.stringify(studentsCollection.find()));
+
+            let allData: Data[] = await studentsCollection.find().toArray();
+            _response.write(JSON.stringify(allData));
 
         }
 
