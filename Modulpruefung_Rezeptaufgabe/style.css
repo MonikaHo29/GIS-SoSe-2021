@@ -81,13 +81,14 @@ html,body{
     grid-area: sidebar;
 
 
-@media screen and (max-width: 1000px) {    
+@media screen and (min-width: 800px){
+
     .grid-box {
         grid-template-areas: 
-        "header header header sidebar"
-        "main main main sidebar"
-        "main main main sidebar"
-        "footer footer footer sidebar"
+            "header header header sidebar"
+            "main main main sidebar"
+            "main main main sidebar"
+            "footer footer footer sidebar"
     }
 }
 
