@@ -79,9 +79,9 @@ html,body{
 .box-4{
     background-color: green;
     grid-area: sidebar;
+}
 
-
-@media screen and (min-width: 800px){
+@media screen and (max-width: 800px) {  
 
     .grid-box {
         grid-template-areas: 
@@ -90,7 +90,10 @@ html,body{
             "main main main sidebar"
             "footer footer footer sidebar"
     }
-}
 
 
+
+
+    
 }
+
