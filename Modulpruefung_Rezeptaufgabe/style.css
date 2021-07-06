@@ -3,7 +3,10 @@ html,body{
     height: 100%;
     margin: 0;
     padding: 0;
+    
+    background-color: coral;
 }
+
 
 /*
 .grid-box{
@@ -61,23 +64,25 @@ html,body{
 }
 
 .head{
-    background-color: red;
+    background-color: cornflowerblue;
     grid-area: header;
 }
 
 .navi{
-    background-color: green;
     grid-area: navi;
+    background-color: cornflowerblue;
 }
 
 .main{
-    background-color: black;
-    color: white;
+    background-color: white;
+    margin:auto;
+    width: 80%;
+    height: 100%;
     grid-area: main;
 }
 
 .footer{
-    background-color: blue;
+    background-color: cornflowerblue;
     grid-area: footer;
 }
 
