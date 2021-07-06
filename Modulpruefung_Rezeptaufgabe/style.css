@@ -86,8 +86,8 @@ html,body{
     .grid-box {
         grid-template-areas: 
             "header header header header"
+            "navi navi navi navi"
             "main main main main"
-            "sidebar sidebar sidebar sidebar"
             "footer footer footer footer"
     }
 
