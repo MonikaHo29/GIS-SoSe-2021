@@ -55,28 +55,28 @@ html,body{
     grid-template-rows: 20% 10% 50% 20%;
     grid-template-areas: 
         "header header header header"
-        "sidebar sidebar sidebar sidebar"
+        "navi navi navi navi"
         "main main main main"
         "footer footer footer footer"
 }
 
-.box-1{
+.head{
     background-color: red;
     grid-area: header;
 }
 
-.box-2{
+.navi{
     background-color: green;
-    grid-area: sidebar;
+    grid-area: navi;
 }
 
-.box-3{
+.main{
     background-color: black;
     color: white;
     grid-area: main;
 }
 
-.box-4{
+.footer{
     background-color: blue;
     grid-area: footer;
 }
