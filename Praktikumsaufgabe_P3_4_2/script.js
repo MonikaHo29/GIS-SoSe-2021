@@ -28,10 +28,9 @@ var Praktikumsaufgabe_P3_4_2;
         url += "/show";
         url = url + "?" + query.toString();
         let response = await fetch(url);
-        let answer = await response.json();
-        console.log(answer);
+        let answer = await response.text();
         let display = document.getElementById("serverantwort");
-        display.innerHTML = JSON.stringify(answer);
+        display.innerHTML = answer;
     }
 })(Praktikumsaufgabe_P3_4_2 || (Praktikumsaufgabe_P3_4_2 = {}));
 //# sourceMappingURL=script.js.map

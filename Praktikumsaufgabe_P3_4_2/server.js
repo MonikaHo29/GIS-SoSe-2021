@@ -10,7 +10,7 @@ var Praktikumsaufgabe_P3_4_2;
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-    let databaseURL = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    let databaseURL = "mongodb+srv://monika_ho:zgHxU74hnaeWkiEy@cluster0.xnkfm.mongodb.net/test?retryWrites=true&w=majority";
     //let databaseURL: string = "mongodb://localhost:27017";
     //Asynchrone Funktion um den Server zu starten + Aufruf für die Verbindung zur Database (Zeile 25) 
     async function startServer(_port) {
@@ -33,7 +33,7 @@ var Praktikumsaufgabe_P3_4_2;
     function handleListen() {
         console.log("Listening");
     }
-    function handleRequest(_request, _response) {
+    async function handleRequest(_request, _response) {
         console.log("I hear voices!");
         _response.setHeader("Access-control-Allow-Origin", "*");
         _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -45,14 +45,15 @@ var Praktikumsaufgabe_P3_4_2;
             studentsCollection.findOne({ "name": url.query["name"], "E-Mail": url.query["email"], "Nachricht": url.query["message"] });
         }
         if (url.pathname == "/show") {
-            _response.setHeader("content-type", "application/json");
-            let jsonString = JSON.stringify(url.query);
-            _response.write(jsonString);
+            let cursor = studentsCollection.find();
+            let allData = await cursor.toArray();
+            _response.write(JSON.stringify(allData));
+            console.log(allData);
         }
         if (url.pathname == "/delete") { //Bonusaufgabe --> NUR ein Ansatz um die angezeigten Daten auf der HTML-Seite zu löschen,  
-            // tslint:disable-next-line: typedef
-            let studentid = new Mongo.ObjectId(url.query["id"].toString());
-            studentsCollection.deleteOne({ _id: studentid });
+            // tslint:disable-next-line: typedefS
+            let studentId = new Mongo.ObjectId(url.query["id"].toString());
+            studentsCollection.deleteOne({ _id: studentId });
         }
         _response.end();
     }
