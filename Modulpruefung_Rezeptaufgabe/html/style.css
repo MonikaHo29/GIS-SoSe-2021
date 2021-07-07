@@ -3,56 +3,72 @@ html,body{
     height: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
     
-    background-color: white;
+    background-image: url(kitchen-3597348_1920.png);
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 100%;
 }
 
-h1{
-    font-size: 300%;
+
+.text{
+    background-color: white;
+    color: black;
+    opacity: 70%;
+    padding: 5%;
+    margin-top:5%
 }
 
 input{
-    display: inline-block;
+    display: block;
+    padding: 3%;
+}
+
+.anmelden{
+    display: flex;
+    text-align: left;
+    padding: 10%;
+}
+
+button{
+margin-top: 10%;
+padding: 3%;
 }
 
 .grid-box{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 10% 60% 10%;
+    grid-template-columns: 25% 30% 25% 20%;
+    grid-template-rows: 20% 10% 50% 20%;
     grid-template-areas: 
-        "header header header header"
-        "navi navi navi navi"
-        "main main main main"
-        "footer footer footer footer"
+        "header header header sidebar"
+        "main main main sidebar"
+        "main main main sidebar"
+        "footer footer footer sidebar"
 }
 
 .head{
-    background-color: cornflowerblue;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 150%;
     grid-area: header;
-
-    font-size: 1em;
+    margin-bottom: 10%;
 }
 
-.navi{
-    grid-area: navi;
-    background-color: cornflowerblue;
+.sidebar{
+    background: #1E1E1E;
+    grid-area: sidebar;
+    
 }
 
 .main{
-    background-image: url(hintergrundbild.png);
-    margin:auto;
-    width: 80%;
-    height: 100%;
     grid-area: main;
+    font-size: 150%;
 }
 
 .footer{
-    background-color: cornflowerblue;
     grid-area: footer;
 }
 
@@ -60,15 +76,11 @@ input{
 
     .grid-box {
         grid-template-areas: 
-            "header header header header"
-            "navi navi navi navi"
-            "main main main main"
-            "footer footer footer footer"
+            "header header header sidebar"
+            "main main main sidebar"
+            "main main main sidebar"
+            "footer footer footer sidebar"
     }
-
-
-
-
 
 }
 
