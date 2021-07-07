@@ -3,59 +3,27 @@ html,body{
     height: 100%;
     margin: 0;
     padding: 0;
+    text-align: center;
     
-    background-image: url(hintergrundbild.jpg);
+    background-color: white;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/*
-.grid-box{
-    width: 100vw;
-    height: 10vh;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100px 200px 100px 350px;
+h1{
+    font-size: 300%;
 }
 
-.box-1{
-    background-color: red;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start:1;
-    grid-row-end:2;
+input{
+    display: inline-block;
 }
-
-.box-2{
-    background-color: black;
-    color: white;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start:1;
-    grid-row-end:2;
-}
-
-.box-3{
-    background-color: blue;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start:1;
-    grid-row-end:2;
-}
-
-.box-4{
-    background-color: green;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start:1;
-    grid-row-end:2;
-*/
 
 .grid-box{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 10% 50% 20%;
+    grid-template-rows: 20% 10% 60% 10%;
     grid-template-areas: 
         "header header header header"
         "navi navi navi navi"
@@ -66,6 +34,8 @@ html,body{
 .head{
     background-color: cornflowerblue;
     grid-area: header;
+
+    font-size: 1em;
 }
 
 .navi{
@@ -74,7 +44,7 @@ html,body{
 }
 
 .main{
-    background-color: white;
+    background-image: url(hintergrundbild.png);
     margin:auto;
     width: 80%;
     height: 100%;
